@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <mata http-eQuiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width=scale=1,0">
+        <title>javascript</title>
+
+        <style>
+            @font-face {
+                font-family: 'NexonLv1Gothic';
+                font-weight: 300;
+                font-style: normal;
+                src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+                src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'NexonLv1Gothic';
+                font-weight: 400;
+                font-style: normal;
+                src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+                src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'NexonLv1Gothic';
+                font-weight: 700;
+                font-style: normal;
+                src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
+                src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
+                font-display: swap;
+            }
+
+            * {
+                margin: 0%;
+                padding: 0%;
+                font-family: 'NexonLv1Gothic';
+                line-height: 1.6;
+
+            }
+
+            body {
+                padding: 5%;
+
+            }
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: #333;
+
+            }
+
+            hr {
+                margin: 5% 0;
+                border-style: dashed;
+                border-color: #e6e6e6
+            }
+
+            h1 {
+                padding-bottom: 20px;
+                font-size: 50px;
+            }
+
+            .list1 li {
+                display: inline;
+            }
+
+
+            .list1 li a {
+                border: 1px solid #333;
+                padding: 10px 30px 10px 30px;
+                border-radius: 40px;
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+
+            .refer {
+                background: #000;
+                color: #fff;
+                padding: 2px;
+            }
+
+            h2 {
+                margin-top: 30px;
+                background-color: #000;
+                color: #fff;
+                display: inline-block;
+                margin-bottom: 10px;
+                font-weight: 400;
+                padding: 3px 10px 0 10px;
+                font-size: 24px;
+
+            }
+
+            .sample {
+                border-radius: 5px;
+
+            }
+
+            .sample h3 {
+                background: #f2f2f2;
+                font-size: 16px;
+                padding: 20px 20px 15px 15px;
+                border-radius: 5px 5px 0 0;
+                border: 1px solid #e6e6e6;
+            }
+
+            .sample pre {
+                margin: 0 !important;
+                border-radius: 0 0 5px 5px !important;
+            }
+        </style>
+        <link rel="stylesheet" href="../assets/prism.css">
+
+</head>
+
+<body>
+<h1>객체란?</h1>
+<p>자바스크립트는 객체(Object)기반 언어 입니다.<br>객체는 기능과 속성을 가지고있습니다. 가령, TV에는 켜다, 끄다, 음을 소거하다,볼륨을 높이다, 볼륨을 낮추다 등의 기증이 있습니다. 이렇듯 tv라는ㄴ 객체에는 다양한 기능이 있습니다. 이러한주변의 모든 사물들을 객체라고 합니다<br>자바스크립트 역시 다양한 객체가가 있습니다. 우리는 앞에서 도큐먼트라는 객체를 사용해 보았고, 그 객체 해당하는 출력 기능도 사용해 보았습니다. 자바스크립트에서는 이런 기능들을 메서드(method)라고 합니다. 또한 객체는 속성(Property)을 가지고 있습니다. TV를 에로들며 TV의 크기나 색상 그리고 무게 등을 속성이라고 할 수 있죠.
+<br>자바스크립트 객체의 메서드와 속성을 사용하는 기본형은 다음과 같습니다.</p>
+
+        <!-- sample5 -->
+        <div id="sample5" class="sample">
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">
+기본형   1.객체.메서드();
+        2.객체.속성; 또는 3.객체.속성=값             
+                </code></pre>
+            </div>
+        </div>
+
+        <!-- sample5 -->
+
+
+</body>

@@ -258,13 +258,54 @@
         </div>
 
         <!-- sample6 -->
-
+        <hr>
         <h3>null&undefined 데이터</h3>
         <p>undefined는 다음과 같이 변수s에 값이 등록돠기 전의 기본값이고,null은 변수에 저장된 값이 null인 경우를 가리킵니다.null은 변수에 저장된 데이터를 비우고자 할때 사용하는
             값입니다.</p>
-        <h3>typeof</h3>
-        <p>typeof는 지정한 데이터 또는 변수에 저장된 자료형을 알고 싶을 때 사용합니다.</p>
+                    <!-- sample7 -->
+        <div id="sample7" class="sample">
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">
+기본형  var s; //undefined
+        var t=hello;   
+        t=null;
+               
+                </code></pre>
+            </div>
+        </div>
 
+        <!-- sample7 -->
+        <h3>typeof</h3>
+        <p>typeof는 지정한 데이터 또는 변수에 저장된 자료형을 알고 싶을 때 사용합니다. 기본형은 다음과 같습니다.</p>
+                    <!-- sample7 -->
+                    <div id="sample7" class="sample">
+                        <div class="code">
+                            <pre class="line-numbers"><code class="language-js">
+            기본형  typeof변수 또는 데이터;
+                           
+                            </code></pre>
+                        </div>
+                    </div>
+            
+                    <!-- sample7 -->
+<hr>
+다음은 typeof를 이용하여 변수에 저장된 자료형을 알아내는 예제입니다.
+
+    <!-- sample2 -->
+    <div id="sample2" class="sample">
+        <h3>코딩해 보세요!</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+    06: &lt;script&gt;
+    07: var num=100;
+    08: var = "자바스크립트";
+    09: 
+    10: document.write(typeof num,"<br>"); //number
+    11: document.write(typeof str);       //string
+    12: &lt;/script&gt;
+            </code></pre>
+        </div>
+    </div>
         <script src="../assets/prism.js"></script>
 </body>
 
