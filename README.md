@@ -1,7 +1,7 @@
 # webs_class
 
 ## 메인페이지
- /class/index.html
+ https://namhajun.github.io/webs_class/
 
 ## 자바스크립트
  /script/javascript/index.html
