@@ -97,9 +97,24 @@ a {
  #main {
      padding: 40px;
  }
- .list { }
- .list ul {}
+ .list{
+     border-bottom: 1px dotted #cdcdcd;
+     padding-bottom: 40px;
+ }
  .list ul li {
      font-size: 18px;
      line-height: 1.8;
  }
+
+ @media (max-width: 800px) {
+    #main {
+        padding: 20px;
+    }
+    .list ul li {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .list{
+        padding-bottom: 20px;
+    }
+}
