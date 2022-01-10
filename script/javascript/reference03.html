@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <mata http-eQuiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width=scale=1,0">
+        <title>javascript</title>
+
+        <style>
+            @font-face {
+                font-family: 'NexonLv1Gothic';
+                font-weight: 300;
+                font-style: normal;
+                src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+                src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'NexonLv1Gothic';
+                font-weight: 400;
+                font-style: normal;
+                src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+                src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'NexonLv1Gothic';
+                font-weight: 700;
+                font-style: normal;
+                src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
+                src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
+                    url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
+                font-display: swap;
+            }
+
+            * {
+                margin: 0%;
+                padding: 0%;
+                font-family: 'NexonLv1Gothic';
+                line-height: 1.6;
+
+            }
+
+            body {
+                padding: 5%;
+
+            }
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: #333;
+
+            }
+
+            hr {
+                margin: 5% 0;
+                border-style: dashed;
+                border-color: #e6e6e6
+            }
+
+            h1 {
+                padding-bottom: 20px;
+                font-size: 50px;
+            }
+
+            .list1 li {
+                display: inline;
+            }
+
+
+            .list1 li a {
+                border: 1px solid #333;
+                padding: 10px 30px 10px 30px;
+                border-radius: 40px;
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+
+            .refer {
+                background: #000;
+                color: #fff;
+                padding: 2px;
+            }
+
+            h2 {
+                margin-top: 30px;
+                background-color: #000;
+                color: #fff;
+                display: inline-block;
+                margin-bottom: 10px;
+                font-weight: 400;
+                padding: 3px 10px 0 10px;
+                font-size: 24px;
+
+            }
+
+            .sample {
+                border-radius: 5px;
+
+            }
+
+            .sample h3 {
+                background: #f2f2f2;
+                font-size: 16px;
+                padding: 20px 20px 15px 15px;
+                border-radius: 5px 5px 0 0;
+                border: 1px solid #e6e6e6;
+            }
+
+            .sample pre {
+                margin: 0 !important;
+                border-radius: 0 0 5px 5px !important;
+            }
+        </style>
+        <link rel="stylesheet" href="../assets/css/prism.css">
+
+</head>
+
+
+<body>
+    <h1>자료형이란?</h1>
+    <p>자료형(Type)이란 어떤 프로그래밍 언어에서든 기초가 되는 부분입니다.<br>
+    프로그래밍 언어에서는 변수에 할당된 값의 유형에 따라 자료형을 구분 짓게 됩니다.
+     <br>Primitive(기본형)과 참조형 (Reference Type) 타입이 존재합니다.
+     기본적으로 자바스크립트는 인터프리터가 알아서 변수의 타입을 파악하고 값을 저장해, 변수의 타입을 따로 쓰지 않고 var 를 씁니다.</p>
+
+         
+        <!-- sample1 -->
+    <div id="sample1" class="sample">
+        <h3>예시</h3>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">
+var a = 10;
+var b = 'k';
+</code></pre>
+        </div>
+    </div>
+    <!-- //sample1 -->
+
+    <hr>
+    <h2>기본형</h2>
+        <p>을 그대로 할당하는 자료형으로, Number, Strignm Boolean, null, undefined가 이에 해당합니다.
+            <br>기본형의 변수는 특정 메모리의 주소를 가지고 해당 메모리에 값을 저장한다. 변수에 새로운 값을 대입하는 것은 값을 변경하는 것이 아닌 새로 덮어쓰는 행위입니다. </p>
+        <!-- sample2 -->
+        <div id="sample2" class="sample">
+            <h3>기본형 종류</h3>
+            <div class="code">
+    <pre class="line-numbers"><code class="language-js">
+Boolean : 논리적인 요소, true와 false값이 있다.
+null : 빈 값
+undefined : 값을 할당하지 않은 변수가 가지는 값
+Number : 숫자형으로 정수와 부동 소수점, 무한대 및 NaN(숫자가 아님)값을 포함한다.
+String : 문자열
+</code></pre>
+            </div>
+        </div>
+        <!-- //sample2 -->
+    <hr>
+    <h2>참조형 (Reference Type)</h2>
+    <p>자바스크립트에선 원시 자료형이 아닌 모든 것은 참조 자료형입니다. 참조형은 원시형 데이터의 집합입니다 그리고 배열([])과 객체({}), 함수(function(){})가 대표적입니다.<br>
+        참조 자료형은 기존에 고정된 크기의 보관함이 아닙니다.
+        참조 자료형을 변수에 할당할 때는 변수에 값이 아닌 주소를 저장합니다. 또한, 동적으로 크기가 변하는 데이터를 보관하기위해 변수가 아닌 다른곳에 데이터를 저장하고 변수에는 그 주소만 할당합니다.</p>
+<!-- sample2 -->
+<div id="sample2" class="sample">
+    <h3>참조형 종류</h3>
+    <div class="code">
+<pre class="line-numbers"><code class="language-js">
+객체(Object)
+배열(Array)
+함수(Function)
+날짜(Date)
+정규표현식(RegExp)
+Map
+</code></pre>
+    </div>
+</div>
+<hr>
+
+
+
+    <script src="../assets/js/prism.js"></script>    
+</body>
+</html>

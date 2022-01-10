@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <mata http-eQuiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width=scale=1,0">
+        <title>javascript</title>
+
+        <link rel="stylesheet" href="../assets/css/prism.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+        
+
+</head>
+<script src="/assets/css/prism.css"></script>
+<body>
+    <dive class="arrangement">
+    
+   <h1>자바스크립트 기초 문법</h1>자바스크립트 기초 문법
+
+    <hr>
+    <h2>자바스크립트 선언문</h2>
+    <h2>자바스크립트 주적 처리</h2>
+    <h2>내부 스크립트 외부로 분리하기</h2>
+    <h2>내부 스크립트 분리하기</h2>
+    <p>선언문은 자바스크립트 코드를 작성할 영역을 선전하는 것이라고 이해하면됩니다.<br>&lt;script&gt;라는 태그로 선언문이 시작된 곳부터&lt;/script&gt;라는 태그로 종료된 곳까지를 스크립트 영역이라고
+        부릅니다.</p>
+    </dive>
+    <hr>
+    <!-- sample1 -->
+    <div id="sample1" class="sample">
+        <h3>기본형</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+   &lt;script&gt; 
+   자바스크립트 코드;
+   &lt;/script&gt;
+
+</code></pre>
+        </div>
+
+    </div>
+<!-- sample1 -->
+
+<p>선언문은 &lt;head&gt; 태그 영역 또는 &lt;body&gt; 태그 영역애 선언하면 됩니다. 우리나라 개발자의 대부분은 &lt;head&gt;태크 영역에 선언하고 있습니다.우리도 &lt;head&gt; 태그 영역에 선언하게습니다.
+    <br><br>다음은 선언문을 작성하는 예제입니다. 비주얼 스튜디오 코드를 실행한 후 [파일->열기->statememt-test.html]을 선택해 실습파일을 엽니다. 그런 다음 예제를 보면서 문서를 작성해 보세요.</p>
+
+    <!-- sample2 -->
+    <div id="sample2" class="sample">
+        <h3>코딩해 보새요!</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+
+    01: &lt;!DOCTYPE html&gt;
+    02: &lt;html lang="ko"&gt;
+    03: &lt;head&gt;
+    04: &lt;mata cherset="UTC-8"&gt;
+    05: &lt;title&gt;Document &lt;/title&gt;
+    06: &lt;script&gt;
+    07:  document.write("환영합니다");
+    08: &lt;/script&gt;
+    09: &lt;/head&gt;
+    10: &lt;body&gt;
+    11: &lt;/body&gt;
+    12: &lt;/html&gt;
+
+            </code></pre>
+</div>
+
+</div>
+    <!-- sample2-->
+<p>7행 documentsms는 문서 객채이체 이며 문서출력 메서드인 write()를 이용하여 데이터를 문서의 출력할 때 사용합니다.<br>작성한 문서를 저장한후 ctrl + Atl + O 를 줄려 실행하면 오른쪽과 같은 결과 화면이 나타납니다.</p>
+
+
+<h2>자바스크립트 주적 처리</h2>
+  <p>자바스크립트 선언문 안에서 코드가 아닌 설명글을 넣고 싶을때는 주석 처리를 하면 됩니다.
+      <br>이때 한줄 주석일 경우에는 '//한 줄 설명글'로 작성하고, 여러 줄 주석일 경우애는 '/*여러 줄 설명글*/'로 작성하면 됩니다.</p>
+ 
+
+     <!-- sample3 -->
+     <div id="sample3" class="sample">
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+      //한 줄 설명글인 경우
+            /*
+           설명글이 여러줄인 경우 이렇게 처리합니다 
+           */  
+    &lt;!-- html 소스의 설명글은 이렇게 처리합니다 --&gt;
+</code></pre>
+</div>
+
+</div>
+
+<!-- sample3-->
+    <p>코드를 작성할 때 이렇게 설명글을 달아놓으면 시간이 흘러도 잊어버리지 않겠죠?</p>
+
+
+    <h2>내부 스크립트 외부로 분리하기</h2>
+    <p>앞의 예제[statememt-c.html]에서 HTML 내부에 작성된 자바스크립트는 마지막에는 외부로 분리하는 작업을 해야합니다. 그렇게 하면 자바스크립트 소스 찾기도 쉬울 뿐 만 아니라 누군가가 소스를 손산시킬 염려도 없습니다. 즉 외부로 분리하는 주된 목적은 프로잭트 괸리를 원할하게 하기 위합입니다.<br>다음은 외부 자바스크립트 연동 코드로 파일을 연결하는 기본형입니다.</p>
+     
+    
+    <!-- sample4 -->
+     <div id="sample4" class="sample">
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+    기본형   &lt;script ssrc="JS 파일 경로"&gt;&lt;/script&gt;
+</code></pre>
+</div>
+
+</div>
+<!-- sample4-->
+
+<p>내부 스크립트를 외부로 분리하려면 따로 파일을 만들어서 저장해야 합니다.<br>즉, HTML 파일과 JS(자바스크립트)파일을 분리하여 HTML내에서 JS(자바스크립트)파일을 연동하면 됩니다.</p>
+
+<h2>내부 스크립트 분리하기</h2>
+<p>1. JS파일을 만들어 보계습니다. 먼저 비주얼 스튜디오 코드에서[파일->새 파일->보통 문서]를 선택하거나 단축키 Ctrl+N 늘 눌러 빈 문서를 엽니다. 그런 다음 다음과 같이 코드를 작성하고 문서를 저장합니다. </p>
+
+    <!-- sample5 -->
+    <div id="sample5" class="sample">
+        <h3>코딩해 보세요!</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+01: document.write("환영합니다");
+            </code></pre>
+</div>
+
+</div>
+    <!-- sample5-->
+    <hr>
+    <p>2. [statememt-test.html] 파일을 열어 앞에서 작성한 [eaxmple.js]를 연동해 보겠습니다.<br>다음과 같은 코드를 작성합니다. 만약 연동이 잘 되지 않으면 src 값에 파일의 전체 경로를 넣어보서요.</p>
+    <!-- sample6 -->
+    <div id="sample6" class="sample">
+        <h3>코딩해 보세요!</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+
+    01: &lt;!DOCTYPE html&gt;
+    02: &lt;html lang="ko"&gt;
+    03: &lt;head&gt;
+    04: &lt;mata cherset="UTC-8"&gt;
+    05: &lt;title&gt;외부 자바스크립트 연동 &lt;/title&gt;
+    06: &lt;script src="js/eaxmple.js"&gt;&lt;/script&gt;
+    07: &lt;/head&gt;
+    08: &lt;body&gt;
+    09: &lt;/body&gt;
+    10: &lt;/html&gt;
+            </code></pre>
+</div>
+
+</div>
+    <!-- sample6-->
+    
+<p>내부 스크립트가 분리되었습니다. 이렇게 분리하면 소스를 분석할 때 찾기 쉬울 뿐 아니라 다른 개발자가 잘못하여 소스를 손상시킬 일도 없겠죠</p>
+
+
+    <hr>
+
+</body>
+ <script src="../assets/prism.js"></script>
+
+</html>
