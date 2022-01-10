@@ -233,34 +233,69 @@ a {
     font-weight: 500;
     margin: 40px 0 5px;
 }
+
 .doc h3 {
     font-weight: 500;
     margin: 20px 0 5px;
-text-decoration: underline;
+    text-decoration: underline;
 }
-.doc li{
+
+.doc li {
     list-style: square;
     margin-left: 20px;
 }
+
 .doc p {
     margin-bottom: 5px;
 }
 
 .doc .line {
-    border: 1px solid #cdcdcd; 
+    border: 1px solid #cdcdcd;
     padding: 17px 20px 15px 20px;
     border-radius: 10px;
 }
+
 .doc .code {
     border: 1px solid #cdcdcd;
     padding: 20px 20px 15px 20px;
     border-radius: 10px;
     background: #f4f8fa;
 }
+
 .doc strong {
     background: #dff4ff;
     font-weight: normal;
     border-radius: 20px;
-    padding:  2px 5px 0px 5px;
+    padding: 2px 5px 0px 5px;
     display: inline-block;
+}
+
+/* result */
+
+.result h4 {
+    background: #f2f2f2;
+    padding: 10px;
+    font-weight: normal;
+    margin-top: 10px;
+    border-radius: 5px 5px 0 0;
+    font-size: 16px;
+
+}
+
+.result div {
+    background: #272822;
+    padding: 20px;
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+}
+
+@media (max-width: 800px) {
+    .result h4 {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    .result div {
+        font-size: 14px;
+        padding: 15px;
+    }
 }

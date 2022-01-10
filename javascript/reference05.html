@@ -7,8 +7,8 @@
     <title>자바스크립트</title>
 
     <!-- style -->
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- script -->
     <script src="assets/js/prism.js"></script>
@@ -21,15 +21,94 @@
                 <li><a href="reference01.html">기초 문법</a></li>
                 <li><a href="reference02.html">변수</a></li>
                 <li><a href="reference03.html">자료형</a></li>
+                <li><a href="reference04.html">for(문)</a></li>
+            <li class="active"><a href="reference05.html">연산자</a></li>
             </ul>
         </nav>
     </header>
     
     <main id="main">
         <div class="doc">
-            
-            
+            <h2>연산자</h2>
+            <p>컴퓨터에서도 다양한 연산 자를 통해 계산 작업을 합니다. 자바스크립트 프로그래밍에서 사용하는 연산자에는 산술.문자결합 대입(복학 대입), 즐감, 비교, 논리, 삼항 조건 연산자가 있습니다<br>
+            예를 들어 자신의 평균 체중을 구할 때 빼고 곱하는 작업 등은 산술 연산자를 이영합니다, 그리고 이렇게 빼기, 더하기, 곱하기, 나누기, 비교 등을 하는 일련의 작업을 연산 작업이라 합니다.</p>
+
+            <h2>산술연산자</h2>
+            <p>산술 연산자에는 산수 시간에 배운 더하기(+), 빼기(-), 나누기(/), 나머지(%)가 있습니다. 산술 연산자로 연산을 하기 위해서는 연상 대상 데이터가 반드시 2개 있어야 합니다다음은 산술 연산자의 종류와 기본형을 정리한 표입니다.
+            </p>
+        
+            <table class="table border">
+                <tr>
+                    <td class="ce va">종류</td>
+                    <td class="ce va">기본형</td>
+                    <td class="ce va">설명</td>
+                </tr>
+                <tr>
+                    <td class="ce va">+</td>
+                    <td class="ce va">A+B</td>
+                    <td class="ce va">더하기</td>
+                </tr>
+                <tr>
+                    <td class="ce va">-</td>
+                    <td class="ce va">A-B</td>
+                    <td class="ce va">빼기</td>
+                </tr>
+                <tr>
+                    <td class="ce va">x</td>
+                    <td class="ce va">AxB</td>
+                    <td class="ce va">곱하기</td>
+                </tr>
+                <tr>
+                    <td class="ce va">/</td>
+                    <td class="ce va">A/B</td>
+                    <td class="ce va">나누기</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>A%B</td>
+                    <td>나머지</td>
+                </tr>
+            </table>
+
+            <h3>문자 결합 연산자</h3>
+            <p>문자 결합 연산자는 피연ㄴ산자(연산 대상 데이터)가 문자형 데이터입니다. 여러개의 문자를 하나의 문자형 테이터로 결합할때 사용합니다. 
+               여러개의 문자를 하나의 문자형 데이터로 결합할때 사용합니다. 다음과 같이 더하기에 피연산자로 문자형 데이터로 형 변환되고 문자 결합이 이루어져 하나의 문자형 테이터를 반환합니다.
+            </p>
+            <div class="code">
+                <pre><code>기본형
+    문자형데이터+문자형 데이터=하나의 문자형 데이터
+    ex)"do it" + "javascript" = "do it javascript";  
+
+    문자형데이터+수자형 데이터=하나의 문자형 데이터
+    ex)"100" + 200 = "100200";</pre></code>
+                  </div>
+      <hr>
+<p>다음은 t1, t2, t3, t4라는 변수에 문자와 숫자 데이터를 각각 넣고 하나의 문자 데이터로 결합하는 예제 입니다.</p>
+<div class="code">
+    <pre><code>
+        &lt;script&gt;
+         var t1 = "학교종이";
+         var t2 ="땡땡이";
+         var t3 =8282;
+         var t4 ="어서모이자";
+         var result;
+
+         result = t1+t2+t3+t4
+         document,write(result); //"학교종이 땡땡땡 8282 어서 모이자"
+         &lt;/script&gt;
+;             
+    </pre></code>
+      </div>
+
+
+
+            <h3>대입 연산자</h3>
+            <h3>증감 연산자</h3>
+            <h3>문자 결합 연산자</h3>
+            <h3>문자 결합 연산자</h3>
         </div>
+        <script src="assets/css/prism.css"></script>
     </main>
+   
 </body>
 </html>
