@@ -1,7 +1,7 @@
 # webs_class
 
 ## 메인페이지
- https://github.com/namhajun/webs_class.git
+  https://namhajun.github.io/webs_class/
 
 ## 자바스크립트
  
