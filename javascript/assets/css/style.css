@@ -67,7 +67,15 @@ a {
     color: #fff;
     display: block;
 }
-
+/* table */
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+  }
 /* header */
 #header {
     padding: 40px;
