@@ -352,6 +352,18 @@ a {
     border: 8px solid #0243f1;
     box-sizing: border-box;
     border-radius: 20px;
+    position:  relative;
+
+}
+.javascript::before {
+    content: '';
+    width: 100%;
+    height: calc(100vh - 16px);
+    border: 8px solid #50B5F9;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0; top: 0;
+    border-radius: 13px;
 }
 .javascript h1{
     font-size: 8vw;

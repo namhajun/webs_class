@@ -97,6 +97,38 @@ label:
                 
           </code></pre>  </div>
     <hr>
+    <h2>mac</h2>
+            <p> map함수는 callbackFunction을 실행한 결과를 가지고 새로운 배열을 만들 때 사용한다.
+                map() 함수는 모든 배열의 값에 Function을 실행하는 Method이다. </p>
+            <div class="code">             
+                <pre><code>
+1. break; // 가장 안쪽의 반복문을 빠져 나온다.
+2. break label이름; // 특정 label문에서 끝내고 나온다.
+                
+          </code></pre>  </div>
+    <hr>
+
+    <h2>hasOwnProperty()</h2>
+            <p> 객체가 특정 프로퍼티를 가지고 있는지를 나타내는 Boolean 값을 반환합니다
+                모든 객체는 hasOwnProperty 를 상속하는 Object 의 자식이고
+이 메소드는 객체가 특정 프로퍼티를 자기만의 직접적인 프로퍼티로서 소유하고있는지 판단합니다
+in 연산과는 다른게, 이 메소드는 객체의 프로토타입 체인을 확인하지 않습니다. </p>
+            <div class="code">             
+                <pre><code>
+const object1 = {};
+object1.property1 = 42;
+
+console.log(object1.hasOwnProperty('property1'));
+// expected output: true
+
+console.log(object1.hasOwnProptery('toString'));
+// expected output: false
+
+console.log(object1.hasOwnProperty('hasOwnProperty'));
+// expected output: false
+                
+          </code></pre>  </div>
+    <hr>
     </main>
 </body>
-</html>
+</html>객체가 특정 프로퍼티를 가지고 있는지를 나타내는 Boolean 값을 반환한다
