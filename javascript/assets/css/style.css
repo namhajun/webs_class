@@ -277,6 +277,58 @@ table {
     padding: 2px 5px 0px 5px;
     display: inline-block;
 }
+.doc .table{
+    overflow-x: auto;
+}
+.doc .tacble table {
+    width: 100%;
+    border: 1px solid #cdcdcd;
+    border-collapse: collapse
+}
+.doc .tacble table th {
+    border-bottom: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+    padding: 5px;
+}
+
+.doc .tacble table td {
+    border-bottom: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+    padding: 5px;
+}
+.doc .table table .middle {
+    vertical-align: middle;
+}
+
+@media (max-width: 800px){
+    .doc h2 {
+        font-size: 18px;
+    }
+    .doc {
+        font-size: 14px;
+    }
+    .doc .line {
+        padding: 10px
+    }
+
+    
+    .doc .tacble table {
+        width: 100%;
+        
+    }
+    .doc .table table th {
+        border-bottom: 1px solid #cdcdcd;
+        border-right: 1px solid #cdcdcd;
+        padding: 5px;
+    }
+
+    .doc .table table td {
+        border-bottom: 1px solid #cdcdcd;
+        border-right: 1px solid #cdcdcd;
+        padding: 5px;
+    }
+   
+}
 
 /* result */
 
