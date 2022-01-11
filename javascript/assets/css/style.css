@@ -178,6 +178,7 @@ a {
 
 
 /* script */
+
 .script {
     padding: 40px 0;
 }
@@ -386,4 +387,8 @@ a {
 .javascript .menu li a:hover {
     background: #0243f1;
     color:#fff
+}
+
+@media (max-width: 800px){
+    
 }
