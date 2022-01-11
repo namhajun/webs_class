@@ -67,15 +67,6 @@ a {
     color: #fff;
     display: block;
 }
-/* table */
-table {
-    width: 100%;
-    border: 1px solid #444444;
-    border-collapse: collapse;
-  }
-  th, td {
-    border: 1px solid #444444;
-  }
 /* header */
 #header {
     padding: 40px;
@@ -282,12 +273,14 @@ table {
 }
 .doc .tacble table {
     width: 100%;
+    min-width: 880px;
     border: 1px solid #cdcdcd;
     border-collapse: collapse
 }
 .doc .tacble table th {
     border-bottom: 1px solid #cdcdcd;
     border-right: 1px solid #cdcdcd;
+    background-color: #F5F5F5;
     padding: 5px;
 }
 
@@ -298,6 +291,9 @@ table {
 }
 .doc .table table .middle {
     vertical-align: middle;
+}
+.doc .table table .center {
+    text-align: center;
 }
 
 @media (max-width: 800px){
@@ -310,24 +306,10 @@ table {
     .doc .line {
         padding: 10px
     }
-
+    .doc .table table {
+        overflow-x: scroll;
+    }
     
-    .doc .tacble table {
-        width: 100%;
-        
-    }
-    .doc .table table th {
-        border-bottom: 1px solid #cdcdcd;
-        border-right: 1px solid #cdcdcd;
-        padding: 5px;
-    }
-
-    .doc .table table td {
-        border-bottom: 1px solid #cdcdcd;
-        border-right: 1px solid #cdcdcd;
-        padding: 5px;
-    }
-   
 }
 
 /* result */
@@ -358,4 +340,38 @@ table {
         font-size: 14px;
         padding: 15px;
     }
+}
+
+/* javascript */
+.javascript {
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    flex-direction: column;
+    height:  100vh;
+    border: 8px solid #0243f1;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.javascript h1{
+    font-size: 8vw;
+    color: #0243f1;
+    font-weight: 700;
+} 
+.javascript .menu{
+    text-align: center;
+}
+.javascript .menu li {
+   display: inline;
+}
+.javascript .menu li a {
+    border: 1px dashed #0243f1;
+    color: #0243f1;
+    border-radius: 50px;
+    padding: 10px 30px;
+    display: inline-block;
+}
+.javascript .menu li a:hover {
+    background: #0243f1;
+    color:#fff
 }
