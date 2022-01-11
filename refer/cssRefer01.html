@@ -21,9 +21,10 @@
         <strong>남하준</strong>
     </header>
     <main id="contents">
-        <h2>CSS <em>기초문법</em></h2>
+        <h2><a herf="css.html"></a>CSS <em>기초문법</em></a></h2>
         <div class="menu">
             <ul>
+                <li><a href="/refer/css.html">속성</a></li>
                 <li class="active"><a href="cssRefer01.html">기초 문법</a></li>
                 <li><a href="cssRefer02.html">block/inline</a></li>
                 <li><a href="cssRefer03.html">CSS 단위</a></li>
@@ -32,13 +33,53 @@
         </div>
         <!-- //menu -->
         <div class="refer">
+            <div class="doc">
+                <h3>CSS란?</h3>
+                <p>CSS 변하는 데이터(값)을 저장할 수 있는 메모리 공간 변수에는 데이터가 오직 한 개만 저장된다. 새로운 데이터가 들어오면 기존에 있던 데이터는 메모리 공간에서 지워지게 된다.
+                    변수에 저장할 수 있는 데이터의 종류로는 문자형(Srting), 숫자형(Number), 논리형(Boolean), 그리고 빈(Null) 데이터가 있다.</p>
+                <h3>CSS 주석 표시</h3>
+                <p>css 파일의 내용이 많아지면 이를 관리하기 위해서 주석을 활용하면 좋습니다. 주석은 소스상에서만 표시될뿐 실제적으로는 아무 영향을 미치지 않는 코드입니다.css의 주석은 /*로
+                    시작하여 */로 끝납니다.</p>
+                <div class="code">
+                    <pre><code>{/* CSS 주석 */ 
+                      /* CSS 여러줄 주석
+                        CSS 여러줄 주석
+                        */</pre></code>
+                </div>
+                <h3>CSS 선언 방법</h3>
+                <h4>내부 스타일</h4>
+                <p>HTML 문서 내부 상단에 &lt;style&gt; 태그를 이용해 별도로 스타일 정의</p>
+                <div class="code">
+<pre><code> &lt;style&gt;
+    #text {
+        color: red;
+        size: 10px;
+    }
+    &lt;/style&gt;</pre></code></div>
+                <p>&lt;style&gt; &lt;/style&gt; 형식으로 HTML 태그 상단에 (#이나 .) 이용해 스타일 정의 후,
+                id나 class선택자로 html 문서에 불러옵니다</p>
 
+                <h4>외부 스타일</h4>
+                <p>HTML 문서와 별도로 확장자가 css인 파일 (예: style.css) 생성 후,
+                    HTML 문서에 상단에 &lt;link&gt;태그로 불러와 스타일을 적용하는 법입니다.</p>
+                    <div class="code">
+<pre><code> &lt;link rel="stylesheet" href="/examples/media/expand_style.css"&gt;</pre></code></div>
+                <h4>인라인 스타일</h4>
+                <p>인라인 스타일이란 HTML 요소 내부에 style 속성을 사용하여 CSS 스타일을 적용하는 방법입니다.
+                    이러한 인라인 스타일은 해당 요소에만 스타일을 적용할 수 있습니다.</p>
+                <div class="code">
+<pre><code> &lt;style&gt;
+    body { background-color: lightyellow; }
 
+    p { color: red; text-decoration: underline; }                   
+&lt;/style&gt;</code></div>
+                </div>
+            </div>
         </div>
-
-        <!-- script -->
+        <!-- //refer -->
     </main>
+    <!-- script -->
     <script src="assets/js/prism.js"></script>
 </body>
 
-</html
+</html>

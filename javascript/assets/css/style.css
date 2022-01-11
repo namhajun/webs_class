@@ -365,6 +365,7 @@ a {
     position: absolute;
     left: 0; top: 0;
     border-radius: 13px;
+    z-index: -1;
 }
 .javascript h1{
     font-size: 8vw;
@@ -391,4 +392,14 @@ a {
 
 @media (max-width: 800px){
     
+}
+
+/* table */
+.table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.th, td{
+    padding: 10px 20px;
+    border: 1px solid #000;
 }
