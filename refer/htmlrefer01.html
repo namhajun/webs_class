@@ -32,88 +32,106 @@
         <div class="refer">
             <div class="doc">
                 <h3>HTML</h3>
-                <p>웹을 이루는 가장 기초적인 구성 요소로, 웹 콘텐츠의 의미와 구조를 정의할 때 사용합니다 <br>HTML 이외의 다른 기술은 일반적으로 웹 페이지의 모양/표현 (CSS), 또는 기능/동작 (JavaScript)을 설명하는 데 사용됩니다.</p>
+                <p>웹을 이루는 가장 기초적인 구성 요소로, 웹 콘텐츠의 의미와 구조를 정의할 때 사용합니다 <br>HTML 이외의 다른 기술은 일반적으로 웹 페이지의 모양/표현 (CSS), 또는
+                    기능/동작 (JavaScript)을 설명하는 데 사용됩니다.</p>
 
+                h3>&lt;!DOCTYPE&gt; 선언</h3>
+                <p>DOCTYPE 선언은 HTML 문서에서 &lt;html&gt; 태그를 정의하기 전에 가장 먼저 선언되어야만 합니다.
+                    이러한 DOCTYPE 선언은 HTML 태그는 아니지만, 선언된 페이지의 HTML 버전이 무엇인지를 웹 브라우저에 알려주는 역할을 하는 선언문으로, 대소문자를 구분하지 않습니다.
+                    HTML 4.01에서 DOCTYPE 선언은 SGML을 기반으로 하기 때문에 DTD를 참조해야 합니다. DTD는 브라우저가 콘텐츠를 정확하게 표현하도록 마크업 언어에 대한 규칙을
+                    명시합니다.
+                    하지만 HTML5는 SGML을 기반으로 하지 않기 때문에 DTD를 참조할 필요가 없습니다.
+                </p>
+                <hr>
                 <h3>HTML 태그(tag)</h3>
                 <p>HTML 태그는 태그 이름을 꺾쇠 괄호(&lt;&gt;)로 감싸서 표현합니다.</p>
                 <div class="code">
-                    <pre><code>1. &lt;태그이름&gt;  // 시작 태그
+<pre><code>1. &lt;태그이름&gt;  // 시작 태그
 
-                        2. &lt;/태그이름&gt; // 종료 태그</pre></code>
-    </div>
-<hr>
-<h3>head</h3>
-<p>html의 머리말에 해당되는 부분, title 태그, script등을 기록한다.
+    2. &lt;/태그이름&gt; // 종료 태그</pre></code>
+                </div>
+                <hr>
+                <h3>&lt;!DOCTYPE&gt; 선언</h3>
+                <p>DOCTYPE 선언은 HTML 문서에서 &lt;html&gt; 태그를 정의하기 전에 가장 먼저 선언되어야만 합니다.
 
-    title을제외하고는 head부분에 기술한 내용은 웹 브라우저를 통해 사용자에게 보이지 않는다.
-    
-    html문서에 관한 정보들을 알릴 뿐이다.</p>
+                    이러한 DOCTYPE 선언은 HTML 태그는 아니지만, 선언된 페이지의 HTML 버전이 무엇인지를 웹 브라우저에 알려주는 역할을 하는 선언문으로, 대소문자를 구분하지 않습니다.
+                    HTML 4.01에서 DOCTYPE 선언은 SGML을 기반으로 하기 때문에 DTD를 참조해야 합니다. DTD는 브라우저가 콘텐츠를 정확하게 표현하도록 마크업 언어에 대한 규칙을
+                    명시합니다.
+                    하지만 HTML5는 SGML을 기반으로 하지 않기 때문에 DTD를 참조할 필요가 없습니다.
+                </p>
+                <hr>
+                <h3>head</h3>
+                <p>html의 머리말에 해당되는 부분, title 태그, script등을 기록한다.
 
-<h3>title</h3>
-<p>HTML문서의 제목을 지정하는 태그</p>
-<hr>
-<h3>body</h3>
-<p> html문서를 표현하는 본문이다.</p>
+                    title을제외하고는 head부분에 기술한 내용은 웹 브라우저를 통해 사용자에게 보이지 않는다.
 
-<hr>
-<div class="table">
-    <table>
-        <thead>
-            <tr>
-                <th>속성</th>
-                <th>설명</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>bgcolor (color value) </td>
-                <td>배경 색상 설정</td>
-            </tr>
-            <tr>
-                <td>bbackground (경로\파일명.확장자)</td>
-                <td>배경의 이미지 설정</td>
-            </tr>
-            <tr>
-                <td>leftmargin (pixel)</td>
-                <td>본문 내용의 시작 위치(좌측부터 떨어진 위치)</td>
-            </tr>
-            <tr>
-                <td>topmargin (pixel) </td>
-                <td>본문 내용의 시작 위치(위부터 떨어진 위치)</td>
-            </tr>
-            <tr>
-                <td>link (color value)</td>
-                <td>하이퍼링크 색상</td>
-            </tr>
-            <tr>
-                <td>alink (color value)</td>
-                <td>하이퍼링크 방문한 적 있을 경우 색상</td>
-            </tr>
-            <tr>
-                <td>vlink (color value) </td>
-                <td>마우스로 누르고 있는 상태의 색상</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<h3>br</h3>
-<p>엔터에 의한 줄바꿈은 되지 않으며 필요 시 &lt;br&gt;로 표시한다.</p>
+                    html문서에 관한 정보들을 알릴 뿐이다.</p>
 
-<h3>pre</h3>
-<p>해당 태그 내에 글자 작성 시 있는 그대로 출력한다.</p>
-<h3>p</h3>
-<p>문단을 나누는 역할을 한다. 연달아 사용할 경우 중복 입력은 되지 않고 하나로 인식된다</p>
-<h3>h</h3>
-<p>문서의 제목을 위해 사용. 제목이라기 보다는 강조 글 같은 형태.
+                <h3>title</h3>
+                <p>HTML문서의 제목을 지정하는 태그</p>
+                <hr>
+                <h3>body</h3>
+                <p> html문서를 표현하는 본문이다.</p>
 
-    &lt;h1&gt;&lt;/h1&gt; 형태로 사용하며 1(크다) ~ 6(작다) 까지 사용한다.
-    
-    단락 기능을 포함한다. (p사용한 것 같은 형태)</p>
+                <hr>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>bgcolor (color value) </td>
+                                <td>배경 색상 설정</td>
+                            </tr>
+                            <tr>
+                                <td>bbackground (경로\파일명.확장자)</td>
+                                <td>배경의 이미지 설정</td>
+                            </tr>
+                            <tr>
+                                <td>leftmargin (pixel)</td>
+                                <td>본문 내용의 시작 위치(좌측부터 떨어진 위치)</td>
+                            </tr>
+                            <tr>
+                                <td>topmargin (pixel) </td>
+                                <td>본문 내용의 시작 위치(위부터 떨어진 위치)</td>
+                            </tr>
+                            <tr>
+                                <td>link (color value)</td>
+                                <td>하이퍼링크 색상</td>
+                            </tr>
+                            <tr>
+                                <td>alink (color value)</td>
+                                <td>하이퍼링크 방문한 적 있을 경우 색상</td>
+                            </tr>
+                            <tr>
+                                <td>vlink (color value) </td>
+                                <td>마우스로 누르고 있는 상태의 색상</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>br</h3>
+                <p>엔터에 의한 줄바꿈은 되지 않으며 필요 시 &lt;br&gt;로 표시한다.</p>
 
-    <h3>font</h3>
-    <p>말 그대로 폰트 속성인데 이도 css로 넘어가지만 css에서 쓸라면 대충 뭔지는 알아두어야 함</p>
+                <h3>pre</h3>
+                <p>해당 태그 내에 글자 작성 시 있는 그대로 출력한다.</p>
+                <h3>p</h3>
+                <p>문단을 나누는 역할을 한다. 연달아 사용할 경우 중복 입력은 되지 않고 하나로 인식된다</p>
+                <h3>h</h3>
+                <p>문서의 제목을 위해 사용. 제목이라기 보다는 강조 글 같은 형태.
+
+                    &lt;h1&gt;&lt;/h1&gt; 형태로 사용하며 1(크다) ~ 6(작다) 까지 사용한다.
+
+                    단락 기능을 포함한다. (p사용한 것 같은 형태)</p>
+
+                <h3>font</h3>
+                <p>말 그대로 폰트 속성인데 이도 css로 넘어가지만 css에서 쓸라면 대충 뭔지는 알아두어야 함</p>
+            </div>
         </div>
-            </div> 
         <!-- script -->
     </main>
     <script src="assets/js/prism.js"></script>
