@@ -6,34 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자바스크립트</title>
-
-    <!-- 파비콘 -->
-    <link rel="shortcut icon" href="assets/face/javarscipt.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/face/javarscipt.png">
-    <link rel="icon" href="../assets/face/javascript.png">
-
-    <!-- sytle -->
-    <link rel="stylesheet" href="assets/css/prism.css">
+    <!-- style -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!--script-->
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <!-- script -->
     <script src="assets/js/prism.js"></script>
 </head>
 
 <body>
-
-    <main class="javascript">
-        <h1>Javascript</h1>
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
         <nav>
             <ul>
-                <li><a href="javascript01.html">데이터 저장하기</a></li>
-                <li><a href="javascript02.html">데이터 불러하기</a></li>
+                <li class="active"><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 불러오기</a></li>
                 <li><a href="javascript03.html">데이터 실행하기</a></li>
                 <li><a href="javascript04.html">데이터 제어하기</a></li>
             </ul>
         </nav>
-    </main>
-   
+    </header>
     <main id="main">
         <div class="list">
         <!-- //list -->
@@ -63,11 +54,11 @@
      
         <!-- list -->
         <div class="note">
-            <li><a href="reference01.html">기초문법</a></li>
-            <li><a href="reference02.html">변수</a></li>
-            <li><a href="reference03.html">자료형</a></li>
-            <li><a href="reference04.html">for(문)</a></li>
-            <li><a href="reference05.html">연산자</a></li>
+            <a href="reference01.html">기초문법</a>
+            <a href="reference02.html">변수</a>
+            <a href="reference03.html">자료형</a>
+            <a href="reference04.html">for(문)</a>
+            <a href="reference05.html">연산자</a>
         </div>
         <!-- list -->
         <div class="script">
@@ -85,7 +76,15 @@ document.write(y);
 document.write(z);
 </code></pre>
                 </div>
-
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+*** 01.변수 ***<br>
+100<br>
+200<br>
+javascript<br>
+                    </div>
+                </div>
             </div>
             <!-- sample1 -->
             <hr>
@@ -109,7 +108,15 @@ document.write(y);
 document.write(z);
 }</code></pre>
                 </div>
-
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+*** 02.변수 ***<br>
+100<br>
+200<br>
+javascript<br>
+                    </div>
+                </div>
             </div>
             <!-- sample2 -->
             <hr>
@@ -133,7 +140,15 @@ document.write(y);
 document.write(z);   
 </code></pre>
                 </div>
-
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+*** 03.변수 ***<br>
+400<br>
+600<br>
+javascriptjquery
+                    </div>
+                </div>
             </div>
 
             <!-- sample3 -->
@@ -152,7 +167,20 @@ document.write(x);
 document.write(y);
 document.write(z);</code></pre>
                 </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+                        ***04. 변수 :변수의 종류***<br>
 
+                        함수안<br>
+                        200 <br>
+                        300 <br>
+                        함수 밖<br>
+                        100 <br>
+                        200 <br>
+                        javascript <br>
+                    </div>
+                </div>
             </div>
 
 
@@ -178,7 +206,16 @@ document.write(y);
 document.write(z);
 </code></pre>
                 </div>
-
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+                        ***05 상수*** <br>
+                        100 <br>
+                        200 <br>
+                        javascript <br>
+                        
+                    </div>
+                </div>
             </div>
             <!-- sample5-->
 
@@ -198,6 +235,16 @@ document.write("*** 06. 배열 ***>")
 document.write(arr[0]);
 document.write(arr[1]);
 document.write(arr[2]);</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+                        *** 06. 배열 *** <br>
+                        100 <br>
+                        200 <br>
+                        javascipt <br>
+                        
+                    </div>
                 </div>
             </div>
 
@@ -219,7 +266,17 @@ const arr = new Array();
     document.write(arr[1]);
     document.write(arr[2]);</code></pre>
                 </div>
-            </div>
+            
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+                        *** 07. 배열 *** <br>
+                        100 <br>
+                        200 <br> 
+                        javascipt <br>
+                        
+                    </div>
+                </div></div>
 
 
             <!-- sample7 -->
@@ -240,6 +297,15 @@ const arr = [];
     document.write(arr[1]);
     document.write(arr[2]);</code></pre>
                 </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+                        *** 08. 배열 *** <br>
+                        100 <br>
+                        200 <br>
+                        javascipt <br>
+                    </div>
+                </div>
             </div>
 
 
@@ -258,6 +324,16 @@ const arr = [100, 200, "javascipt"];
     document.write(arr[1]);
     document.write(arr[2]);</code></pre>
                 </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+                        *** 09. 배열 *** <br>
+                        100 <br>
+                        200 <br>
+                        javascipt <br>
+                        
+                    </div>
+                </div>
             </div>
             <!-- sample9 -->
             <hr>
@@ -275,6 +351,15 @@ const obj = new Object();
     document.write(obj[0]);
     document.write(obj[1]);
     document.write(obj[2]);</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+                        *** 10. 객체 ***<br>
+                        100<br>
+                        200<br>
+                        javascipt<br>
+                    </div>
                 </div>
             </div>
             <!-- sample10 -->
@@ -295,6 +380,15 @@ const obj = new Object();
     document.write(obj.c);
 </code></pre>
                 </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+                        *** 11. 객체 *** <br>
+                        100 <br>
+                        200<br>
+                        javascript<br>
+                    </div>
+                </div>
             </div>
             <!-- sample11 -->
             <hr>
@@ -314,6 +408,16 @@ const obj = {};
     document.write(obj.c);
 </code></pre>
                 </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+                        *** 12. 객체 ***<br>
+                        100<br>
+                        200<br>
+                        javascript<br>
+                        
+                    </div>
+                </div>
             </div>
 
             <!-- sample12 -->
@@ -330,6 +434,15 @@ const obj = { a:100, b:200, c:"javascript" };
     document.write(obj.b);
     document.write(obj.c);
 </code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+                        *** 13. 객체 ***<br>
+                        100<br>
+                        200<br>
+                        javascrip<br>
+                    </div>
                 </div>
             </div>
 
@@ -353,6 +466,15 @@ document.write(obj[0].a);
 document.write(obj[0].b);
 document.write(obj[1].c);
 </code></pre>
+            </div>
+            <div class="result">
+                <h4>결과보기</h4>
+                <div class="result01">
+                    *** 14. 객체 ***<br>
+                    100<br>
+                    200<br>
+                    javascript<br>
+                </div>
             </div>
         </div>
 
@@ -382,6 +504,18 @@ document.write(obj[1].c);
     document.write(obj.d);
 </code></pre>
             </div>
+            <div class="result">
+                <h4>결과보기</h4>
+                <div class="result01">
+                    *** 15. 객체 ***<br>
+                    100<br>
+                    200<br>
+                    300<br>
+                    300<br>
+                    500<br>
+                    javarscipt
+                </div>
+            </div>
         </div>
 
 
@@ -406,6 +540,16 @@ document.write(obj.a);
 document.write(obj.b);
 document.write(obj.c);
 </code></pre>
+            </div>
+            <div class="result">
+                <h4>결과보기</h4>
+                <div class="result01">
+                    *** 16. 객체 ***<br>
+                    100<br>
+                    200<br>
+                    javarscript<br>
+                    
+                </div>
             </div>
         </div>
 
@@ -440,6 +584,19 @@ document.write(obj.b[1]);
 document.write(obj.c.x);
 document.write(obj.c.y);
 obj.e()               </code></pre>
+            </div>
+            <div class="result">
+                <h4>결과보기</h4>
+                <div class="result01">
+                    *** 17. 객체 ***<br>
+                    100<br>
+                    200,300<br>
+                    300<br>
+                    300<br>
+                    400<br>
+                    500<br>
+                    javarscript가 실행되었습니다. <br>
+                </div>
             </div>
         </div>
         <!-- sample17 -->

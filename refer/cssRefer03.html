@@ -21,7 +21,7 @@
         <strong>남하준</strong>
     </header>
     <main id="contents">
-        <h2><a herf="css.html">CSS <em>CSS 단위</em></a></h2>
+        <h2><a href="css.html">CSS <em>CSS 단위</em></a></h2>
         <div class="menu">
             <ul>
                 <li><a href="css.html">속성</a></li>
@@ -35,8 +35,23 @@
         <div class="refer">
             <div class="doc">
                 <h3>CSS 단위</h3>
-
-
+                <p>CSS에서 사용하는 단위는 font-size, text-indent, line-height, width, height, padding 등 크기를 나타내는 값에 쓰인다. 크게는 절대 크기가 변하지 않는 절대 단위와 상황에 따라 크기가 변하는 상대 단위로 나뉩니다</p>
+                <h3>rem</h3>
+                <p>rem은 최상위 엘리먼트의 폰트 사이즈를 기준으로 한 단위입니다</p>
+                <div class="code">
+                    <pre><code>
+&lt;body&gt;
+    &lt;div class="test" &lt;Test &lt;/div &gt;
+    &lt;/body&gt;
+body {
+    font-size: 14px;
+}
+div {
+    font-size: 1.2em; // calculated at 14px * 1.2, or 16.8px
+}
+                    </pre></code>
+                                </div>
+            
             </div>
         </div>
 
