@@ -27,42 +27,51 @@
                 <li><a href="reference05.html">연산자</a></li>
                 <li class="active"><a href="reference06.html">조건문</a></li>
                 <li><a href="reference07.html">반복문</a></li>
-            </ul> 
+            </ul>
         </nav>
     </header>
 
     <main id="main">
         <div class="doc">
             <h2>조건문</h2>
-            <p>조건문은 조건식의 값이 참(true)dlswl,거짓(false)인지에 따라 자바스크립트 코드를 제어합니다. 예를 들어 질의응답 창을 이용해 방문자가 좋아하는 숫자를 입력받습니다. 이때 입력된 값을 2호 나누어 나머지 값이 0이면 "단신이 좋아하는 숫자는 짝수입니다."라고 출력하게 한다고 합시다. 이렇게 수를 나눈 나머지 값에 따라 다른 결과를 출력하게 하려면 조건문을 사용해야 합니다. 조건문의 종류에는 if 문else문 그리고 else if문이 있습니다.
+            <p>조건문은 조건식의 값이 참(true)dlswl,거짓(false)인지에 따라 자바스크립트 코드를 제어합니다. 예를 들어 질의응답 창을 이용해 방문자가 좋아하는 숫자를 입력받습니다. 이때
+                입력된 값을 2호 나누어 나머지 값이 0이면 "단신이 좋아하는 숫자는 짝수입니다."라고 출력하게 한다고 합시다. 이렇게 수를 나눈 나머지 값에 따라 다른 결과를 출력하게 하려면 조건문을
+                사용해야 합니다. 조건문의 종류에는 if 문else문 그리고 else if문이 있습니다.
             </p>
 
 
             <h3>if문</h3>
-            <p>if문은 조건식을 만족(true)할 경우에만 코드를 실행합니다. 다음은 if문의 기본형입니다. 조건식은 앞에서 배웟던 Boolean() 내장 메서드와 마찬가지로 그 어던 데이터를 입력해도 true또는 false를 반환합니다. 이 내용은 적용 예제를 보며 자세히 살펴보겠습니다. </p>
+            <p>if문은 조건식을 만족(true)할 경우에만 코드를 실행합니다. 다음은 if문의 기본형입니다. 조건식은 앞에서 배웟던 Boolean() 내장 메서드와 마찬가지로 그 어던 데이터를 입력해도
+                true또는 false를 반환합니다. 이 내용은 적용 예제를 보며 자세히 살펴보겠습니다. </p>
             <div class="line">
-    <div class="code"><pre><code>if(조건식){ 
+                <div class="code">
+                    <pre><code>if(조건식){ 
 자바스크립트 코드;
 } </pre></code>
                 </div>
-            </div> 
-                <p>[적용예제 1]에서 num&lt;500의 비교 결과는 10&lt;500이므로 true를 반환합니다. 조건문 내외 코드를 실행하면 "hello"가 출력되죠 </p>
-                <div class="line">
-                    <div class="code"><pre><code> va rum=10;
+            </div>
+            <hr>
+            <p>[적용예제 1]에서 num&lt;500의 비교 결과는 10&lt;500이므로 true를 반환합니다. 조건문 내외 코드를 실행하면 "hello"가 출력되죠 </p>
+            <div class="line">
+                <div class="code">
+                    <pre><code> va rum=10;
 if(num&lt;500){ //true를 반환합니다.
     document.write("hello");
 }</pre></code></div>
-                            </div>
-                            <p>[적용예제 2]의 도건식에 있는0은 Boolean() 메서드에 0을 입력했을 때와 결과가 같습니다. 그 결과 false를 반환하여  조건문의 코드를 실행하지 않습니다.</p> 
-                            <div class="line">
-<div class="code"><pre><code>
+            </div>
+            <p>[적용예제 2]의 도건식에 있는0은 Boolean() 메서드에 0을 입력했을 때와 결과가 같습니다. 그 결과 false를 반환하여 조건문의 코드를 실행하지 않습니다.</p>
+            <hr>
+            <div class="line">
+                
+                <div class="code">
+                    <pre><code>
 if(0){ //true를 반환합니다.
 document.write("hello");
 }</pre></code></div>
-    </div>
-<p>그럼 예제를 통해 if문을 살펴 보겠습니다. 다음 예제는 방문자로서 입력받은 걸음 수를 조건문으로 만들고, 걸음수가</p>
-
-            </div>   
+            </div>
+            <p>그럼 예제를 통해 if문을 살펴 보겠습니다. 다음 예제는 방문자로서 입력받은 걸음 수를 조건문으로 만들고, 걸음수가</p>
+           
+        </div>
     </main>
 </body>
 
