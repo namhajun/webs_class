@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
     <!-- script -->
     <script src="assets/js/prism.js"></script>
 </head>
+
 <body>
     <header id="header">
         <h1><a href="index.html">Javascript</a></h1>
@@ -22,13 +24,15 @@
                 <li><a href="reference02.html">변수</a></li>
                 <li class="active"><a href="reference03.html">자료형</a></li>
                 <li><a href="reference04.html">for(문)</a></li>
-            <li><a href="reference05.html">연산자</a></li>
+                <li><a href="reference05.html">연산자</a></li>
+                <li><a href="reference06.html">조건문</a></li>
+                <li><a href="reference07.html">반복문</a></li>
             </ul>
         </nav>
     </header>
-        <!-- list -->
-            </ul>
-        </nav>
+    <!-- list -->
+    </ul>
+    </nav>
     </header>
 
     <main id="main">
@@ -42,92 +46,96 @@
             </p>
 
             <h3>숫자(Number)</h3>
-            <p>숫자형 데이터는 단어 의미 그대로 숫자를 의미합니다 만약"100"과 같이 큰따음표 숫자를 감싸고 있다면 숫자가 아니 문자형 데이터입니다. 이 경우에는 Number("100")를 이용하면 문자형
+            <p>숫자형 데이터는 단어 의미 그대로 숫자를 의미합니다 만약"100"과 같이 큰따음표 숫자를 감싸고 있다면 숫자가 아니 문자형 데이터입니다. 이 경우에는 Number("100")를 이용하면
+                문자형
                 데이터를 숫자형 데이터로 바꿀수 있습니다.</p>
             <div class="code">
-          <pre><code>기본형   var 변수=숫자; 또는 Number("문자형 숫자");
+                <pre><code>기본형   var 변수=숫자; 또는 Number("문자형 숫자");
 
 var s=100;
 var t=Number("500"); //"500"->500 
 </pre></code>
             </div>
-<hr>
+            <hr>
 
             <h3>문자열(String)</h3>
             <p>문자형 데이터는 다음과 같이 문자나 숫자를 큰따음표("")또는 작은 따음표('')로 감싸고 있습니다. 또한 문자형 데이터에 HTML태그를 포함하여 출력하면 태그로 인식합니다.</p>
-                <div class="code">
-                    <pre><code>기본형 var 변수="사용할 문자나 숫자";
+            <div class="code">
+                <pre><code>기본형 var 변수="사용할 문자나 숫자";
               
 var s="javascript";
 var rum="100";
 var tag="&lt;h1&gt; String &lt;/h1&gt;"</pre></code>
-                      </div>
-          <hr>
+            </div>
+            <hr>
             <h3>논리값(Boolean)</h3>
             <p>논리형 데이터는 true(참) 또는 fales(거짓)가 있습니다. 이 데이터는 주로 2개의 데이터를 비교할 때 나오는 결과입니다. 예를 들어`100보다 10이 크다`는 잘못돤 비교이므로
                 false라는 결과를 반환하게 됩니다. 논리형 데이터의 기본형은 다음과 같습니다.</p>
-                <div class="code">
-                    <pre><code>기본형   var 변수=true or false; 또는 Boolean(데이터);
+            <div class="code">
+                <pre><code>기본형   var 변수=true or false; 또는 Boolean(데이터);
             
 var s=true; 
 var t=10>=100;           //false, 
 var k=Boolean("hello"); //true</pre></code>
-</div>
-          <hr>
+            </div>
+            <hr>
             <h3>특수값(Null)</h3>
             <p>null은 비어있거나, 존재하지 않는 값의 Javascript 리터럴 표현이다.
                 <br>Javascript의 원시값들 중의 하나로, 반드시 할당되어야 한다.</p>
-                <div class="code">
-                    <pre><code>기본형   var 변수=true or false; 또는 Boolean(데이터);
+            <div class="code">
+                <pre><code>기본형   var 변수=true or false; 또는 Boolean(데이터);
             
 var s=true; 
 var t=10>=100;           //false, 
 var k=Boolean("hello"); //true</pre></code>
-</div>
-          <hr>
+            </div>
+            <hr>
             <h3>특수값(Undefined)</h3>
             <p>undefined 타입의 값은 undefined만 존재한다.
                 <br>느슨한모드에서 전역스코프에서 undefined에 값을 할당 할 수 있고, 모드 상관없이 undefined라는 이름을 가지는 지역변수를 생성할 수 있다. </p>
-<hr>
+            <hr>
             <h3>심벌(Symbol)</h3>
-            <p>심벌(symbol)'은 유일한 식별자(unique identifier)를 만들고 싶을 때 사용합니다.                Symbol()을 사용하면 심볼값을 만들 수 있습니다.</p>
+            <p>심벌(symbol)'은 유일한 식별자(unique identifier)를 만들고 싶을 때 사용합니다. Symbol()을 사용하면 심볼값을 만들 수 있습니다.</p>
             <div class="code">
                 <pre><code>// id는 새로운 심볼이 됩니다.
 let id = Symbol();</pre></code>
-</div>
-      <hr>
+            </div>
+            <hr>
             <h3>객체(Object)</h3>
-            <p>JavaScript는 객체기반의 스크립트 언어이며 JavaScript를 이루고 있는 거의 모든 것은 객체이다. 객체란 여러 속성을 하나의 변수에 저장할 수 있도록 해주는 데이터 타입으로 Key / Value Pair를 저장할 수 있는 구조이다.
+            <p>JavaScript는 객체기반의 스크립트 언어이며 JavaScript를 이루고 있는 거의 모든 것은 객체이다. 객체란 여러 속성을 하나의 변수에 저장할 수 있도록 해주는 데이터 타입으로
+                Key / Value Pair를 저장할 수 있는 구조이다.
             </p>
             <div class="code">
                 <pre><code>var user = new Object(); 	// "object constructor" syntax
 var user = {};  		 	// "object literal" syntax</pre></code>
-</div>
-      <hr>
+            </div>
+            <hr>
             <h3>배열(Array)</h3>
             <p>키를 사용해 식별할 수 있는 값을 담은 컬렉션은 객체라는 자료구조를 이용해 저장하는데, 객체만으로도 다양한 작업을 할 수 있습니다.
-                <br>그런데 개발을 진행하다 보면 첫 번째 요소, 두 번째 요소, 세 번째 요소 등과 같이 순서가 있는 컬렉션이 필요할 때가 생기곤 합니다. 사용자나 물건, HTML 요소 목록같이 일목요연하게 순서를 만들어 정렬하기 위해서 말이죠.
-                
-                <br>순서가 있는 컬렉션을 다뤄야 할 때 객체를 사용하면 순서와 관련된 메서드가 없어 그다지 편리하지 않습니다. 객체는 태생이 순서를 고려하지 않고 만들어진 자료구조이기 때문에 객체를 이용하면 새로운 프로퍼티를 기존 프로퍼티 ‘사이에’ 끼워 넣는 것도 불가능합니다.
-                
+                <br>그런데 개발을 진행하다 보면 첫 번째 요소, 두 번째 요소, 세 번째 요소 등과 같이 순서가 있는 컬렉션이 필요할 때가 생기곤 합니다. 사용자나 물건, HTML 요소 목록같이
+                일목요연하게 순서를 만들어 정렬하기 위해서 말이죠.
+
+                <br>순서가 있는 컬렉션을 다뤄야 할 때 객체를 사용하면 순서와 관련된 메서드가 없어 그다지 편리하지 않습니다. 객체는 태생이 순서를 고려하지 않고 만들어진 자료구조이기 때문에 객체를
+                이용하면 새로운 프로퍼티를 기존 프로퍼티 ‘사이에’ 끼워 넣는 것도 불가능합니다.
+
                 이럴 땐 순서가 있는 컬렉션을 저장할 때 쓰는 자료구조인 배열을 사용할 수 있습니다.</p>
-                <div class="code">
-                    <pre><code>let arr = new Array();
+            <div class="code">
+                <pre><code>let arr = new Array();
                         let arr = [];</pre></code>
-    </div>
-          <hr>
+            </div>
+            <hr>
             <h3>함수(Function)</h3>
             <p>함수(function)란 하나의 특별한 목적의 작업을 수행하도록 설계된 독립적인 블록을 의미합니다.
                 <br>이러한 함수는 필요할 때마다 호출하여 해당 작업을 반복해서 수행할 수 있습니다.</p>
-                <div class="code">
-                    <pre><code>unction addNum(x, y) {
+            <div class="code">
+                <pre><code>unction addNum(x, y) {
    return x + y;}
 
 document.write(addNum(2, 3));
                     
                     </pre></code>
-    </div>
-          <hr>
+            </div>
+            <hr>
         </div>
     </main>
 </body>
