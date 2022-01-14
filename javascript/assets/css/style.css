@@ -35,12 +35,14 @@
 }
 
 /* reset */
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'NexonLv1Gothic';
+:root {
+    font-size: 16px;
 }
-
+@media (max-width:800){
+    :root{
+        font-size: 14px;
+    }
+}
 li {
     list-style: none;
 }
@@ -404,6 +406,31 @@ a {
     border: 1px solid #000;
 }
 
+/* test */
+.test {
+    max-width: 1000px;
+    width: 100%;
+    margin: 100px auto;
+}
+.test h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.test h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-top: 3em;
+}
+.test p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+.test .code {
+    margin-top: 1em;
+}
 /* 간격 설정 */
 .mt0 {margin-top: 0px !important;}
 .mt5 {margin-top: 5px !important;}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+                <li><a href="reference04.html">for(문)</a></li>
+                <li><a href="reference05.html">연산자</a></li>
+                <li><a href="reference06.html">조건문</a></li>
+                <li><a href="reference07.html">반복문</a></li>
+                <li class="active"><a href="reference08.html">함수</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2>함수란?</h2>
+            <p>우리는 앞에서 데이터를 저장할 때 변수를 선언하여 저장했습니다. 변수에는 데이터만 저장할 수 있고, 코드는 저장할 수 없습니다. 하지만  함수를 사용하면 코드를 메모리에 저장했다가 필요할 때마다 호출하여 사용할 수 있습니다. 예를 들어 다음 그림의 TV 리모컨을 보면 각 채널의 버튼이 있습니다. 그리고 각 버튼에는 tv의 해당 채널로 바꿀 수 있는 코드가 저장되어 있죠. 이 코드는 사용자가 리모콘의 버튼을 눌러(호출)래야만 실행 됩니다. 이대 TV 리모컨의 버튼은 함수로 저장하고 있으며 버튼을 누를 째마다 함수가 호출 된다고 할 수 있습니다.</p>
+           
+           <h3>기본 함수 정의문</h3>
+           <p>함수를 사용하여 코드를 저장한 것을 '함수 정의문'이라고 합니다. 변수를 선언할때 var 키워드를 사용한 것처럼 함수엣서는 function 키워드를 사용해 변수를 선언합니다</p>
+           <div class="code">
+               <h3>기본형</h3>
+<pre><code>funcataion 함수명(){
+자바스크립트 코드;
+} </pre>  </code>  </div>
+            <p>다음과 같이 익명 함수(함수명이 없는 함수)를 선언하고 변수에 참조해도 됩니다</p>
+
+            <div class="code">
+ <pre><code>참조 변수 = function
+자바스크립트 코드
+} </pre>  </code>  </div>
+           <p>함수 정의문({...})안에 작성되 코드는 즉시 실행하지 않습니다. 함수는 멤리에 할당되어 대기하고 잇다가 함수가 호출되면 실행됩니다. 정의되어 있는 함수를 호출하는 기본형은 다음과 같습니다.</p>
+           <div class="code">
+            <h3>기본형</h3>
+            <pre><code>함수명();
+또는 참조 변수();
+            </pre>  </code>  </div>
+            <div class="line">
+           <h3>전문가의 조언</h3>
+           <p>일반 함수 정의는 함수 호출 시 호이스팅 기술을 지원합니다. 그러나 익명 함수 선언 참조 방식은 호이스팅을 지원하지 않습니다. 호이스팅을 적용하면 함수 정의문보다 호출문이 먼저 나와도 함수 정의문을 끌어올려 함수를 호출합니다</p>
+           </div>
+           <p>다음 예제는 함수 정의문과 익명 함수를 변수에 참조한 예입니다. 이렇게 두가지 방식으로 함수를 선언한 다음 각각 호출하여 코드를 실행합니다</p>
+          
+           <h3>코딩해 보세요</h3>
+           <div class="code">
+            <pre><code>
+06: &lt;script&gt;
+07: va count = 0;
+08: 
+09:     myFnc();
+10: 
+11:     funcayion myFnc();
+12:         count++;
+13:         document.write("hello"+count, &lt;br&gt;)
+14:         }
+15: 
+16:    myFnc();
+17:
+18:    funcayion myFnc();
+19:    count++;
+20:    document.write("hello"+count, &lt;br&gt;)
+21   }
+22: 
+23:       theFnc();
+24: &lt;/script&gt;
+           </pre>  </code>  </div>
+           
+       <p>다음은 함수 정의문을 이용해 [배경색 바꾸기]버튼을 클릭할때마다 배경색이 바뀌도록 만든 예제 입니다</p>    
+           
+       <div class="code">
+        <pre><code>
+06: &lt;script&gt;
+07:     va color = ["white", "yellow", "aqua", "purple"]
+08: 
+09:     
+10:     var i=0;
+11:     funcayion changeColor(){
+12:         i++;
+13:         if(i&gt;=color.length)  //i의 값이 4 이상이면 i에 0을 대입합니다
+14:          i=0;
+15:     }
+16:    
+17:    var body Tag=document.getElementByld("theBody")
+18:    bodyTag.style.backgroundColor=colcr[i];
+19:    }
+20:    &lt;/script&gt;
+21   &lt;/head&gt;
+22:    &lt;body id="theboDy"&gt;
+23:       &lt;button onclick="changeColor();"&gt; 배경색 바꾸기&lt;/burtton&gt; //버튼을 클릭하면 changeColor() 함수를 호출합니다.
+24: &lt;/body&gt;
+       </pre>  </code>  </div>
+           
+           <p>getElementByld() 메서드는 id 값을 이용해 문서 객페(태그)를 선택하는 메서드 입니다 </p>
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           <h3>선언적 함수</h3>
+            <p>문법</p>
+            <p>설명</p>
+            <div class="code">코드</div>
+
+            <h3>익명 함수</h3>
+            <p>문법</p>
+            <p>설명</p>
+            <div class="code">코드</div>
+
+            <h3>매개변수 함수</h3>
+            <p>문법</p>
+            <p>설명</p>
+            <div class="code">코드</div>
+
+            <h3>리턴값 함수</h3>
+            <p>문법</p>
+            <p>설명</p>
+            <div class="code">코드</div>
+            <div class="code">코드</div>
+
+
+
+
+
+
+
+</div>
+</main>
+</body>
+</html>

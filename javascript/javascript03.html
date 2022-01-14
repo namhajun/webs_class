@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
     <!-- script -->
     <script src="assets/js/prism.js"></script>
 </head>
+
 <body>
     <header id="header">
         <h1><a href="index.html">Javascript</a></h1>
@@ -22,9 +24,13 @@
                 <li><a href="javascript02.html">데이터 불러오기</a></li>
                 <li class="active"><a href="javascript03.html">데이터 실행하기</a></li>
                 <li><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li class="active"><a href="practice01.html">데이터 연습하기</a></li>
+            </ul>
         </nav>
     </header>
-    
+    <!-- list -->
     <main id="main">
         <div class="list">
             <ul>
@@ -48,22 +54,57 @@
                 <li>18. 클래스:</li>
                 <li>19. 내부 함수 :</li>
                 <li>20. 내부 함수 :</li>
-                
-               
-                
-        
+            </ul>
         </div>
+        <!-- list -->
+
         <div class="note">
-        <ul>          
-            <a href="reference01.html">기초문법</a>
-        <a href="reference02.html">변수</a>
-        <a href="reference03.html">자료형</a>
-        <a href="reference04.html">for(문)</a>
-        <a href="reference05.html">연산자</a>
-        <a href="reference06.html">조건문</a>
-        <a href="reference07.html">반복문</a>
-    </ul>
-    </div>
+            <a href="reference08.html">함수</a>
+        </div>
+
+        <div class="script">
+
+
+        </div>
+        <script>
+            //01선언적 함수
+            {
+                function fun() {
+                    document.write("함수가 실행되었습니다.");
+                }
+                fun();
+            }
+
+
+            //02 익명함수
+            {
+                const func = function (){
+                    document.write("함수가 실행되었습니다.");
+                }
+                fun();
+            }
+
+            //매개변수 함수
+            {
+                function func(str) {
+                    document.write(str);
+                }
+                fun("함수가 실행되었습니다.");
+            }
+
+            //04 리턴값 함수
+            {
+                function func(){
+                    const str = "함수가 실행되었습니다";
+                    return str;
+                }
+                document.write(func());
+            }
+        </script>
+
+        </ul>
+        </div>
     </main>
 </body>
+
 </html>
