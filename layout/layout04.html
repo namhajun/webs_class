@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #wrap {
+        width: 1200px;
+        height: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        background-color: #E1F5FE;
+    }
+
+    #header {
+        width: 1200px;
+        height: 100px;
+        background-color: #81D4FA;
+    }
+
+    #nav {
+        width: 1200px;
+        display: flex;
+    }
+
+    #nav .left {
+        width: 600px;
+        height: 100px;
+        background-color: #29B6F6;
+    }
+
+    #nav .right {
+        width: 600px;
+        height: 100px;
+        background-color: #677b85;
+    }
+
+    #contents {
+        width: 1200px;
+        display: flex;
+    }
+
+    #contents .aside {
+        width: 260px;
+        height: 520px;
+        background-color: #4FC3F7;
+    }
+
+    #contents .aside .article1 {
+        width: 260px;
+        height: 520px;
+        background-color: #4FC3F7;
+    }
+
+    #contents .aside .article2 {
+        width: 260px;
+        height: 260px;
+        background-color: #0288D1;
+    }
+
+    #contents .content {
+        width: 940px;
+    }
+
+    #contents .content .article1 {
+        width: 940px;
+        height: 260px;
+        background-color: #039BE5;
+    }
+
+    #contents .content .article2 {
+        width: 940px;
+        height: 260px;
+        background-color: #0277BD;
+    }
+
+    #contents .content .article3 {
+        width: 940px;
+        height: 260px;
+        background-color: #0288D1;
+    }
+
+    #footer {
+        width: 1200px;
+        height: 100px;
+        background-color: #2487B5;
+    }
+</style>
+
+<body>
+    <div id=wrap>
+        <header id="header"></header>
+        <nav id="nav">
+            <nav class="left"></nav>
+            <nav class="right"></nav>
+        </nav>
+        <section id="contents">
+            <aside class="aside">
+                <article class="article1"></article>
+                <article class="article2"></article>
+            </aside>
+            <section class="content">
+                <article class="article1"></article>
+                <article class="article2"></article>
+                <article class="article3"></article>
+            </section>
+        </section>
+        <footer id=footer></footer>
+    </div>
+</body>
+
+</html>
