@@ -119,15 +119,13 @@
             <p>매새변수가 있는 함수 정의문은 함수를 호출할 때 전달하고자 하는 값을 입력하여 호출할 수 있습니다. 이렇게 전달된 값은 매개변수가 받아 정의문에서 사용할 수 있게 됩니다.</p>
           
             <div class="code"><pre><code>
-function multiply(a,b = 1) {
-    return a * b;
-}
+{
+    document.write("안녕하세요." + name +"입니다.", "&lt;br&gt;"); 
+    document.write("사는곳은" + area + "입니다.", "&lt;br&gt;");
+    }
 
-console.log (multiply(5,2));
-// expected out put : 10
-
-console.log (multiply(5));
-// expected out put : 5
+    myFnc("홍당무","서울");      //안녕하세요.홍당무입니다.
+                                  사는곳은서울입니다.
        </code> </pre>   </div>
 
             <h3>리턴값 함수</h3>
