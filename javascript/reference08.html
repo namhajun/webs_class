@@ -113,42 +113,43 @@
            
            <p>getElementByld() 메서드는 id 값을 이용해 문서 객페(태그)를 선택하는 메서드 입니다 </p>
            
+               
            
-           
-           
-           
-           
-           
-           
-           
-           
-           
-           
-           
-           
-           
-           
-           
-           <h3>선언적 함수</h3>
-            <p>문법</p>
-            <p>설명</p>
-            <div class="code">코드</div>
-
-            <h3>익명 함수</h3>
-            <p>문법</p>
-            <p>설명</p>
-            <div class="code">코드</div>
-
             <h3>매개변수 함수</h3>
-            <p>문법</p>
-            <p>설명</p>
-            <div class="code">코드</div>
+            <p>매새변수가 있는 함수 정의문은 함수를 호출할 때 전달하고자 하는 값을 입력하여 호출할 수 있습니다. 이렇게 전달된 값은 매개변수가 받아 정의문에서 사용할 수 있게 됩니다.</p>
+          
+            <div class="code"><pre><code>
+function multiply(a,b = 1) {
+    return a * b;
+}
+
+console.log (multiply(5,2));
+// expected out put : 10
+
+console.log (multiply(5));
+// expected out put : 5
+       </code> </pre>   </div>
 
             <h3>리턴값 함수</h3>
-            <p>문법</p>
-            <p>설명</p>
-            <div class="code">코드</div>
-            <div class="code">코드</div>
+            <p>return 문은 함수에서 결괏괎을 반환할 때 사용합니다. 그리고 함수에서 return문이 실행되면 반복문의 brak 문과 비슷하게 코드가 강제로 종료됩니다. 다시 만해 함수 정의문에 return문이 사요되면 함수를 호출했을 때 결괏값을 반환합니다</p>
+            <p>다음의 기본 예제는 함수 호출과 함께 인자값 10,20을 전달합니다.calc()함수는 num1(10)과num2(20)의 데이터를 더한 값인 30을 반환합니다. 변수 result에 저장되어 화면에 출력됩니다</p>
+            <div class="code"><pre><code>
+function 함수명(){
+    실행문;
+    return 데이터;
+    }
+
+    var 변수 = 함수명();
+
+
+function sum(num1,num2){
+    return num1+num2;
+}
+
+var result = sum(10,20);
+document.write(result); 
+                       </code> </pre>   </div>
+           
 
 
 
