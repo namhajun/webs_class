@@ -5,100 +5,113 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout05</title>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #EFEBE9;
+        }
+
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #BCAAA4;
+        }
+
+        #contents {
+            width: 100%;
+            height: 780px;
+            background-color: #8D6E63;
+        }
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #4E342E;
+        }
+
+        .container {
+            width: 1200px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+        }
+
+        #nav .container {
+            display: flex;
+
+        }
+
+        #nav .container .h1 {
+            width: 390px;
+            height: 100px;
+            background-color: #A1887F;
+        }
+
+        #nav .container .h2 {
+            width: 810px;
+            height: 100px;
+            background-color: #caa497;
+        }
+
+        #contents .container {
+            flex-wrap: wrap;
+            flex-direction: column;
+            display: flex;
+
+        }
+
+        #contents .container .h1 {
+            width: 810px;
+            height: 390px;
+            background-color: #6D4C41;
+        }
+
+        #contents .container .h2 {
+            width: 810px;
+            height: 390px;
+            background-color: #492d24;
+        }
+
+        #contents .container .h3 {
+            width: 390px;
+            height: 780px;
+            background-color: #795548;
+        }
+    </style>
 </head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    #wrap {
-        width: 1200px;
-        height: 1080px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    body {
-        background-color: #bee9bf;
-    }
-    #header {
-        width: 1200px;
-        height: 100px;
-        background-color: #81C784;
-    }
-
-    #nav {
-        width: 1200px;
-        display: flex;
-    }
-    #nav .left {
-        width: 400px;
-        height: 100px;
-        background-color: #6BCC70;
-    }
-    #nav .center {
-        width: 400px;
-        height: 100px;
-        background-color: #1EBD25;
-    }
-    #nav .right {
-        width: 400px;
-        height: 100px;
-        background-color: #6BCC70;
-    }
-
-    #contents {
-        width: 1200px;
-        display: flex;
-    }
-    #contents .aside {
-        width: 300px;
-        height: 780px;
-        background-color: #4DC564;
-    }
-    #contents .content {
-        width: 600px;
-    
-    }
-    #contents .content .article1 {
-        width: 600px;
-        height: 390px;
-        background-color: #41CE4F;
-    }
-    #contents .content .article2 {
-        width: 600px;
-        height: 390px;
-        background-color: #338E3C;
-    }
-
-
-
-    footer {
-        width: 1200px;
-        height: 100px;
-        background-color: #1B5E20;
-    }
-</style>
 
 <body>
     <div id="wrap">
-        <header id="header"></header>
+        <header id="header">
+            <div class="container"></div>
+        </header>
         <nav id="nav">
-            <nav class="left"></nav>
-            <nav class="center"></nav>
-            <nav class="right"></nav>
+            <div class="container">
+                <div class="h1"></div>
+                <div class="h2"></div>
+            </div>
         </nav>
         <section id="contents">
-            <aside class="aside"></aside>
-                <section class="content">
-                <article class="article1"></article>
-                <article class="article2"></article>
-                <article class="article3"></article>
-            </section>
-            <section class="left"></section>
+            <div class="container">
+                <div class="h1"></div>
+                <div class="h2"></div>
+                <div class="h3"></div>
+            </div>
         </section>
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
     </div>
 </body>
 
