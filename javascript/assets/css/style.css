@@ -255,6 +255,11 @@ img {
     background-color: rgb(187, 43, 43);
     border-radius: 1.3em;
 }
+.script .sample .view > div.selected2 {
+    border: 4px solid rgb(57, 43, 187);
+    background-color: rgb(60, 12, 236);
+    border-radius: 1.3em;
+}
 .script .sample .view > div.selected img {
     opacity: 0.3;
 }
@@ -415,9 +420,9 @@ img {
 .result>div {
     background: #272822;
     padding: 20px;
-    color: #fff;
+    color: rgb(69, 19, 204);
     border-radius: 0 0 5px 5px;
-    /* display: none; */
+     display: none; 
 }
 
 @media (max-width: 800px) {
