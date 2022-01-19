@@ -48,6 +48,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'NexonLv1Gothic';
 }
 
 li {
@@ -412,19 +413,28 @@ img {
     padding: 10px;
     font-weight: normal;
     margin-top: 10px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px;
     font-size: 16px;
 
 }
 
-.result>div {
+.result > div {
     background: #272822;
     padding: 20px;
-    color: rgb(69, 19, 204);
+    color: rgb(243, 242, 247);
     border-radius: 0 0 5px 5px;
+    font-size: 16px;
+    line-height: 1.4;
      display: none; 
 }
+.result.active h4 {
+    border-radius: 5px 5px 0 0;
+}
+.result.active > div {
+    display: block;
+    border-radius: 0 0 5px 5px;
 
+}
 @media (max-width: 800px) {
     .result h4 {
         font-size: 14px;

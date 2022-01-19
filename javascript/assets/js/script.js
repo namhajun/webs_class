@@ -1,3 +1,13 @@
+//결과보기 버튼을 클릭하면 경고창을 띄어 주세요
+document.querySelectorAll(".result").forEach(function (el) {
+  el.addEventListener("click", function () {
+    el.classList.toggle("active");
+  });
+})
+
+
+
+
 // //결과보기
 // //제목을클릭했을때 ~~을 실행하라
 
@@ -87,9 +97,6 @@
 //     console.log(el) //100 200 300 400 500
 //     console.log(index) // 0 1 2 3 4
 // });
-//결과보기 버튼을 클릭하면 경고창을 띄어 주세요
-document.querySelectorAll(".result").forEach(function(el){
-  addEventListener("click", function(){
-    alert("ddd")
-});
-})
+
+
+
