@@ -159,7 +159,7 @@
                             <div class="btn">
                                 <a href="#c" class="btn0">리셋</a>
                                 <a href="#c" class="btn1">이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 삭제합니다.</a>
-                                <a href="#c" class="btn2">이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 파란색으로 나오게 하세요.
+                                <a href="#c" class="btn2">이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 파란색으로 나오게 하세요.</a>
                             </div>
                             <div class="code">
                                 <pre class="line-numbers"><code class="language-js">
@@ -183,7 +183,7 @@ const num =
 document.querySelector("#sample3 .btn2").addEventListener("click", function () {
     document.querySelectorAll("#sample3 .view > div").forEach(function (el) {
         if (el.classList.contains("selected")) {
-            el.classList.toggle("selected2");
+            el.classList.add("selected2");
         }
     })
 })
@@ -280,8 +280,8 @@ document.querySelector("#sample3 .btn2").addEventListener("click", function () {
         //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 파란색으로 나오게 하세요.
         document.querySelector("#sample3 .btn2").addEventListener("click", function () {
             document.querySelectorAll("#sample3 .view > div").forEach(function (el) {
-                if (el.classList.contains("blue")) {
-                    el.classList.toggle("blue");
+                if (el.classList.contains("selected")) {
+                    el.classList.add("blue");
                 }
             })
         })
