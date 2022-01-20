@@ -39,19 +39,26 @@
             <p>1~25까지 숫자를 넣으시오!</p>
             <div class="code">
                 <pre class="line-numbers"><code class="language-js">
-    
-                        let table = "&lt;table&gt; 
-                
-                        for (let i = 1; i &lt;= 5; i++) {
-                            table += "&lt;tr&gt;";
-                            for (let j = 1; j &lt;= 5; j++) {
-                                table += "&lt;td&gt;1&lt;/td&gt;"
-                            }
-                
-                            table += "&lt;/tr&gt;";
-                
-                        }
+    {
+        let num = 1;
+        let table = "&lt;table&gt;";
+
+        for (let i=1; i&lt;=5; i++){                  
+            table += "&lt;tr&gt;";
+                for (let j=1; j&lt;=5; j++){
+                table += "&lt;td&gt;"+ num +"&lt;/td&gt;";
+                num++;
+                }
+            table += "&lt;/tr&gt;";
+        }
+        table += "&lt;/table&gt;";
+
+        document.querySelector(".result02").innerHTML = table;
+    }           
      </code></pre>
+            </div>
+            <div class="result02">
+                
             </div>
 
 
@@ -62,11 +69,27 @@
             <p>1~25까지 숫자를 넣으시오!</p>
             <div class="code">
                 <pre class="line-numbers"><code class="language-js">
+{
+    let num = 1;
+    let table = "&lt;table&gt;";
+        
+    for ( let i=1; i&lt;=5; i++ ){
+        table += "&lt;tr&gt;";
+            for ( let j=1; j&lt;=5; j++ ){
+                table += "&lt;td&gt;"+ num +"&lt;/td&gt;";
+                num++;
+            }
+        table += "&lt;/tr&gt;";   
+    }
+    table += "&lt;/table&gt;";
     
-                      
+    document.write(table);
+}
      </code></pre>
             </div>
-
+            <div class="result03">
+                
+            </div>
 
             <!-- 02 -->
             <!-- <table border="1">
@@ -121,46 +144,65 @@
     <!-- script -->
 
     <script>
-        {
-            let table = "<table>";
-            let num = 1;
+         //for문을 이용해서 테이블 출력하기!
+        // {
+        //     let table = "<table>";
+        //     let num = 1;
  
-            for (let i = 1; i <= 5; i++) {
-                table += "<tr>";
-                for (let j = 1; j <= 5; j++) {
-                    table += "<td>1</td>"
+        //     for (let i = 1; i <= 5; i++) {
+        //         table += "<tr>";
+        //         for (let j = 1; j <= 5; j++) {
+        //             table += "<td>1</td>"
+        //         }
+
+        //         table += "</tr>";
+
+        //     }
+
+        //     table += "</table>"
+
+        //     document.write(table);
+        //     document.querySelector(".result01").innerHTML = table
+
+        // }
+
+//for문을 이용해서 테이블 출력하기! 1~25까지
+{
+        let num = 1;
+        let table = "<table>";
+
+        for (let i=1; i<=5; i++){                  
+            table += "<tr>";
+                for (let j=1; j<=5; j++){
+                table += "<td>"+ num +"</td>";
+                num++;
                 }
-
-                table += "</tr>";
-
-            }
-
-            table += "</table>"
-
-            document.write(table);
-            document.querySelector(".result01").innerHTML = table
-
+            table += "</tr>";
         }
-        //02
-        {
-            let table = "<table>";
-            let num = 1;
+        table += "</table>";
 
+        document.querySelector(".result02").innerHTML = table;
+    }
 
-            for (let i = 1; i <= 5; i++) {
-                table += "<tr>";
-                for (let j = 1; j <= 5; j++) {
-                    table += "<td>" + num + "<td>";
-                    num++;
-                }
+//while문을 사용하여 테이블 출력하기
 
-                table += "<tr>";
-            }
+{
+     let num = 1;
+     let table = "<table>";
+         
+     for ( let i=1; i<=5; i++ ){
+         table += "<tr>";
+             for ( let j=1; j<=5; j++ ){
+                 table += "<td>"+ num +"</td>";
+                 num++;
+             }
+         table += "</tr>";   
+     }
+     table += "</table>";
+     
+     document.write(table);
+ }
 
-            table = "</table>"
-
-            document.querySelector("result02").innerHTML = table;
-        }
     </script>
 
 </body>

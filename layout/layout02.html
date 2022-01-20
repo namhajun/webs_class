@@ -53,13 +53,13 @@
         #header {
             width: 1200px;
             height: 100px;
-            background-color: #81C784;
+            background-color: #77aa4e;
         }
 
         #nav {
             width: 1200px;
             height: 100px;
-            background-color: #66BB6A;
+            background-color: #F2E71E;
         }
 
         #footer {
@@ -71,29 +71,43 @@
 
         #contants {
             width: 1200px;
-
+            display: flex
         }
 
         #contants .left {
             width: 300px;
             height: 780px;
-            background-color: #4CAF5F;
+            background-color: #BBCF3E;
             float: left;
         }
 
         #contants .center {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        #contants .center .center1 {
 
             width: 600px;
-            height: 780px;
-            background-color: #338E3C;
-            float: left;
+            height: 390px;
+            background-color: #C5BC25;
+
         }
+
+        #contants .center .center2 {
+
+            width: 600px;
+            height: 390px;
+            background-color: #938C1A;
+
+        }
+
 
         #contants .right {
             width: 300px;
             height: 780px;
-            background-color: #43A047;
-            float: left;
+            background-color: #BBCF3E;
+            float: right;
         }
     </style>
 </head>
@@ -104,7 +118,10 @@
         <div id="nav"></div>
         <div id="contants">
             <div class="left"></div>
-            <div class="center"></div>
+            <div class="center">
+                <div class="center1"></div>
+                <div class="center2"></div>
+            </div>
             <div class="right"></div>
         </div>
         <div id="footer"></div>

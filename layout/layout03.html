@@ -14,47 +14,75 @@
     }
 
     body {
-        background-color: #E1F5FE;
+        background-color: #E9E1FE;
     }
 
     #wrap {
-        width: 1200px;
-        height: 1080px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
+       
     }
 
     #header {
         width: 1200px;
         height: 100px;
-        background-color: #81D4FA;
+        background-color: #B681FA;
+        margin: 0 auto;
     }
 
     #nav {
         width: 1200px;
         height: 100px;
-        background-color: #29B6F6;
+        background-color: #9C75EE;
+        margin: 0 auto;
     }
 
     #contents {
         width: 1200px;
-        
+        display: flex;
+        margin: 0 auto;
+
     }
     #contents .aside {
-        width: 260px;
+        width: 300px;
         height: 780px;
-        background-color: #4FC3F7;
+        background-color: #AD4FF7;
     }
     #contents .content {
-        width: 940px;
-        height: 780px;
-        background-color: #039BE5;
+      width: 900px;
     }
+    #contents .content .h1 {
+        width: 900px;
+        height: 260px;
+        background-color: #854DCC;
+    }
+    #contents .content .h2 {
+        width: 900px;
+       display: flex;
+       
+    }
+    #contents .content .h2 .h2-1 {
+        width: 450px;
+        height: 260px;
+        background-color: #4D17E8;
+    }
+    #contents .content .h2 .h2-2 {
+        width: 450px;
+        height: 260px;
+        background-color: #B015FA
+    }
+
+    #contents .content .h3 {
+        width: 900px;
+        height: 260px;
+        background-color: #6C32B5;
+    }
+
 
     #footer {
         width: 1200px;
         height: 100px;
-        background-color: #2487B5;
+        background-color: #770DFF;
+        margin: 0 auto;
     }
 </style>
 
@@ -63,8 +91,15 @@
         <header id="header"></header>
         <nav id="nav"></nav>
         <section id="contents">
-            <aside class="aside"></aside>
-            <section class="content"></section>
+            <div class="aside"></div>
+            <section class="content">
+                <div class="h1"></div>
+                <div class="h2">
+                    <div class="h2-1"></div>
+                    <div class="h2-2"></div>
+                </div>
+                <div class="h3"></div>
+            </section>
         </section>
         <footer id="footer"></footer>
     </div>
