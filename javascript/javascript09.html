@@ -135,6 +135,7 @@
                                 </div>
                                 <!-- //script -->
     </main>
+    <script src="assets/js/prism.css"></script>
     <!-- script -->
     <script>
         //01
@@ -147,13 +148,19 @@
         }
 
         //02  confirm()
-        {
-            const btn = document.querySelector("#sample2 .btn1")
+        {   
+            const btn = document.querySelector("#sample2 .btn1");
 
             btn.addEventListener("click", () => {
-                const donf = confirm("오늘 농구할 준비가 되었나요?")
+                const conf = confirm("오늘 공부할 준비가 되었나요?");
 
-                document.querySelector("#sample2 .view").innerHTML = conf;
+                // document.querySelector("#sample2 .view").innerText = conf;
+
+                if(conf){
+                    document.querySelector("#sample2 .view").innerText="네 준비되었습니다.";
+                }else {
+                    document.querySelector("#sample2 .view").innerText="아직 준비 안되었습니다.";
+                }
             });
         }
         //만약의 true이면 네 준비 되었습니다
@@ -169,7 +176,7 @@
                 const donf = prompt("오늘 공부할 준비가 되었나요?")
                 
 
-                document.querySelector("#sample2 .view").innerText = donf;
+                document.querySelector("#sample3 .view").innerText = donf;
                 
 
             });
