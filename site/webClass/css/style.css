@@ -1,4 +1,5 @@
-#warp {}
+/* #warp {}
+
 
 #header {
     padding: 10px;
@@ -51,3 +52,24 @@
     border: 1px solid #000;
     border-radius: 50px;
 }
+ */
+
+ /* 헤더 03 flex를 사용한경우 */
+
+ #header{
+    border-bottom: 1px solid #eee;
+    display: grid;
+    align-items: center;
+ }
+
+ #header .logo{
+ }
+ #header .menu{
+    
+ }
+ #header .menu li {
+   
+ }
+ #header .member{
+  
+ }

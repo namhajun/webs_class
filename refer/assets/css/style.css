@@ -139,6 +139,7 @@ body {
 
     display: inline;
 }
+
 .refer title li a {
     background-color: #00DB72;
     color: #fff;
@@ -146,14 +147,37 @@ body {
     display: inline-block;
     margin-bottom: 5px;
 }
-.refer title li.active a {
+
+.refer title li.active li {
     background-color: #000;
     color: #fff;
 }
 
+.refer .subtitle {
+    margin-top: 10px;
+}
+
+.refer .subtitle li {
+    display: inline-block;
+}
+
+.refer .subtitle li a {
+    margin-right: 10px;
+}
+
+.refer .subtitle li .active a {
+    border-bottom: 2px solid #000;
+
+}
+
+
 .refer .table {
     margin-top: 40px;
     overflow-x: auto;
+}
+.refer .table h3 {
+    font-weight: normal;
+    margin-bottom: 5px;
 }
 
 .refer .table table {
@@ -180,6 +204,7 @@ body {
     font-weight: 300;
     line-height: 1.4;
 }
+
 
 /* doc */
 .doc {
@@ -291,4 +316,30 @@ body {
     .doc h3 {
         font-size: 20px;
     }
+}
+
+
+/* 간격세팅 */
+.mt0 {
+    margin-top: 0 !important;
+}
+
+.mt10 {
+    margin-top: 10px !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mt30 {
+    margin-top: 30px !important;
+}
+
+.mt40 {
+    margin-top: 40px !important;
+}
+
+.mt50 {
+    margin-top: 50px !important;
 }

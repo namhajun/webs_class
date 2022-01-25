@@ -35,22 +35,28 @@
                 <li><a href="cssRefer03.html">CSS 단위</a></li>
                 <li><a href="cssRefer04.html">CSS 색상</a></li>
                 <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssRefer06.html">>float</a></li>
+
             </ul>
         </div>
         <!-- //menu -->
 
         <div class="refer">
 
-            <div class="title">
+            <div class="menu">
                 <ul>
-                    <li><a href="ccs.html">Alphabet</a></li>
+                    <li><a href="css.html">Alphabet</a></li>
                     <li class="active"><a href="cssSellector.html">Selector</a></li>
+                    <li><a href="cssflex.html">flex</a></li>
+                    <li><a href="cssgrid.html">grid</a></li>
+                    <li><a href="csstransform.html">transform</a></li>
+                    <li><a href="cssaimation.html">aimation</a></li>
                 </ul>
             </div>
 
-            <div class="title">
+            <div class="subtitle">
                 <ul>
-                    <li><a href="active">기본 선택자</a></li>
+                    <li a href="active"><a a href="#">기본 선택자</a></li>
                     <li><a href="#">계층 선택자</a></li>
                     <li><a href="#">속성 선택자</a></li>
                     <li><a href="#">가상 요소</a></li>
@@ -61,19 +67,335 @@
                 </ul>
             </div>
 
-            <div class="table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>속성</th>
-                            <th>설명</th>
-                        </tr>
-                    </thead>
-                </table>
-    </main>
+            <div class="table-warp">
+                <div class="table">
+                    <H3>기본 선택자</H3>
+                    <table>
+                        <colgroup>
+                            <col style="width: 20%">
+                            <col style="width: 20%">
+                            <col style="width: 60%">
 
+                        </colgroup>
+                        <thead>
+
+                            <tr>
+                                <th>속성</th>
+                                <th>예시</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>태그 선택자</th>
+                                <td>p {color:#fff}</td>
+                                <td>p 태그를 선택하여 글씨랙을 하얀색으로 변경합니다</td>
+                            </tr>
+                            <tr>
+                                <th>클래스 선택자</th>
+                                <td>.class {color:#fff}</td>
+                                <td>class 클래스를 아이디를 선택하여 글씨랙을 하얀색으로 변경합니다</td>
+                            </tr>
+                            <tr>
+                                <th>아이다 선택자</th>
+                                <td>#id {color:#fff}</td>
+                                <td>id를 아이디를 선택하여 글씨랙을 하얀색으로 변경합니다</td>
+                            </tr>
+
+                            <th>그룹 선택자</th>
+                            <td>div ,p {color:#fff}</td>
+                            <td>div 패그와 p 태그를 선택하여 글씨랙을 하얀색으로 변경합니다</td>
+                            </tr>
+                            <tr>
+                                <th>전체 선택자<br>
+                                </th>
+                                <td>*{color:#fff}</td>
+                                <td>전체 태그를 선택하여 글씨랙을 하얀색으로 변경합니다</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table">
+                        <H3>속성 선택자</H3>
+                        <table>
+                            <colgroup>
+                                <col style="width: 20%">
+                                <col style="width: 25%">
+                                <col style="width: 55%">
+
+                            </colgroup>
+                            <thead>
+
+                                <tr>
+                                    <th>속성</th>
+                                    <th>예시</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>하위 선택자<br>(Descendant Selector)</th>
+                                    <td>div p {color:#fff}</td>
+                                    <td>후손이라는 말은 특정 태그에 종속되어 있는 모든 하위 요소들을 의미합니다. 위 구조에서 html 태그의 후손에 해당하는 태그들인
+                                        &lt;head&gt;&lt;body&gt;&lt;h1&gt;&lt;div&gt; 태그들에 이에 해당합니다.
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>자식 선택자<br>(Child selector)</th>
+                                    <td>div >p {color:#fff}</td>
+                                    <td> 첫 번째 선택자와 일치하는 요소의 직계 자식인 두 번째 선택자와 일치하는 요소만 일치합니다.</td>
+                                </tr>
+                                <tr>
+                                    <th>형제 선택자<br> (Sibling Selector)
+                                    </th>
+                                    <td>div~ p {color:#fff}</td>
+                                    <td>일반 형제 선택자는 해당 요소와 형제 관계에 있으며, 해당 요소보다 뒤에 존재하는 특정 타입의 요소를 모두 선택한다.</td>
+                                </tr>
+                                <tr>
+                                    <th>인접 형제 선택자(Adjacent Sibling Selector)</th>
+                                    <td>div+ p {color:#fff}</td>
+                                    <td>인접 형제 선택자는 해당 요소와 형제 관계에 있으며, 해당 요소의 바로 뒤에 존재하는 특정 타입의 요소를 모두 선택한다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="table">
+                            <H3>속성 선택자</H3>
+                            <table>
+                                <colgroup>
+                                    <col style="width: 20%">
+                                    <col style="width: 20%">
+                                    <col style="width: 60%">
+
+                                </colgroup>
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 20%">
+                                        <col style="width: 20%">
+                                        <col style="width: 60%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>종류</th>
+                                            <th>예시</th>
+                                            <th>설명</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>firs-tline</th>
+                                            <td>p:: first-letter {color: #fff}</td>
+                                            <td>a 태그 href 속성의 값이 'web'이거나 'web'으로 시작하는 요소를 선택합니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>first-letter</th>
+                                            <td>p:: first-letter {color: #fff}</td>
+                                            <td>a 태그 href 속성의 값이 'web'이거나 'web'으로 시작하는 요소를 선택합니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>::before</th>
+                                            <td>p::::before{content: '시작'}</td>
+                                            <td>a 태그 href 속성의 값이 'web'으로 시작하는 태그를 선택합니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>::after</th>
+                                            <td>p::after{content: '끝'}</td>
+                                            <td>a 태그 href 속성의 값이 'web'이 포함되어 있는 태그를 선택합니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>selection</th>
+                                            <td>p::seleection {color:red}</td>
+                                            <td>a 태그 href 속성의 값이 'com'으로 끝나는 태그를 선택합니다.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                                </tbody>
+                            </table>
+                            <div class="table">
+                                <H3>가상 선택자</H3>
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 20%">
+                                        <col style="width: 28%">
+                                        <col style="width: 52%">
+
+                                    </colgroup>
+                                    <thead>
+
+                                        <tr>
+                                            <th>속성</th>
+                                            <th>예시</th>
+                                            <th>설명</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>:first-child</th>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>:first-child</th>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>:first-of-type</th>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>:last-of-type</th>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>:nth-child()</th>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>:nth-last-child()</th>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>:nth-of-type()</th>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>:nth-last-of-type()</th>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>:only-child</th>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>:only-of-type()</th>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>:not()</th>
+                                            <td>li:not(:nyh-child(2){color: #fff;}</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>:root</th>
+                                            <td>root{color: #fff;}</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>:empty</th>
+                                            <td>empty{color: #fff;}</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                    </thead>
+                                </table>
+                                <div class="table">
+                                    <H3>링크가상 선택자</H3>
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: 20%">
+                                            <col style="width: 28%">
+                                            <col style="width: 52%">
+
+                                        </colgroup>
+                                        <thead>
+
+                                            <tr>
+                                                <th>속성</th>
+                                                <th>예시</th>
+                                                <th>설명</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>link</th>
+                                                <td>a link {color:@fff></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>:first-child</th>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>:first-of-type</th>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>:last-of-type</th>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+
+
+                                    </table>
+                                </div>
+                                <div class="table">
+                                    <H3>링크가상 선택자</H3>
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: 20%">
+                                            <col style="width: 25%">
+                                            <col style="width: 55%">
+
+                                        </colgroup>
+                                        <thead>
+
+                                            <tr>
+                                                <th>속성</th>
+                                                <th>예시</th>
+                                                <th>설명</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>checked</th>
+                                                <td>a link {color:@fff></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>enable</th>
+                                                <td>f</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>:disablr</th>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>:last-of-type</th>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+
+
+                                    </table>
+                                </div>
+                            </div>
+
+    </main>
     <!-- script -->
     <script src="assets/js/prism.js"></script>
+
+    <script>
+        document.querySelectorAll(".subTitle ul li").forEach((el) => {
+            el.addEventListener("click", (e) => {
+                e.preventDefault();
+                el.classList.toggle("active");
+            });
+        });
+    </script>
 </body>
 
 </html>
