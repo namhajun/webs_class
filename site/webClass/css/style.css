@@ -224,12 +224,12 @@
     margin-right: 20px;
     background-image: url(../img/text@2x.jpg);
  }
- @media (-webkit-min-divice-pixel-ratio: 2){
+ @media (-webkit-min-divice-pixel-ratio: 1.5){
      .ittype .img{
         background-image: url(../img/test@1x.jpg);
      }
  }
- @media (-webkit-min-divice-pixel-ratio: 3){
+ @media (-webkit-min-divice-pixel-ratio: 2.5){
     .ittype .img{
        background-image: url(../img/text@2x.jpg);
     }
