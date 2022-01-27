@@ -2,14 +2,15 @@
      width: 2000px;
  }
 
- 
+
  /* 컨테이너 */
  .container {
      width: 1200px;
      margin: 0 auto;
      /* background-color: rgb(128, 120, 120); */
  }
-/* 
+
+ /* 
 #header {
     padding: 10px;
     border: 1px solid #eee;
@@ -61,7 +62,7 @@
     border: 1px solid #000;
     border-radius: 50px;
 }
- */ 
+ */
 
  /* 헤더 02 flex를 사용한경우 */
 
@@ -79,8 +80,8 @@
      flex-basis: 20%;
      flex-shrink: 0; */
 
-     /* three values: flex-grow ㅣ flex-skrik ㅣflex-basis */
-     /* flex: 0 0 20%;
+ /* three values: flex-grow ㅣ flex-skrik ㅣflex-basis */
+ /* flex: 0 0 20%;
  }
  #header .logo a {
     font-size: 30px;
@@ -112,78 +113,88 @@
 
  /* 헤더 03 GRid를 사용한경우 */
  #header {
-    padding: 10px;
-    border: 1px solid #eee;
-    min-width: 1200px;
-    white-space: nowrap;
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
+     padding: 10px;
+     border: 1px solid #eee;
+     min-width: 1200px;
+     white-space: nowrap;
+     display: grid;
+     grid-template-columns: 20% 60% 20%;
  }
+
  #header .logo a {
-    font-size: 30px;
-    padding: 12px 18px;
-    display: inline-block;
-}
-#header .logo a em {
-    font-size: 18px;
-    font-weight: 300;
-}
-#header .menu {
-    text-align: center;
-}
-#header .menu li {
-    display: inline;
-}
+     font-size: 30px;
+     padding: 12px 18px;
+     display: inline-block;
+ }
+
+ #header .logo a em {
+     font-size: 18px;
+     font-weight: 300;
+ }
+
+ #header .menu {
+     text-align: center;
+ }
+
+ #header .menu li {
+     display: inline;
+ }
+
  #header .menu li a {
-    padding: 20px 30px;
-    display: inline-block;
-    position: relative;
-    transition: "background" 0.4s;
+     padding: 20px 30px;
+     display: inline-block;
+     position: relative;
+     transition: "background"0.4s;
 
-}
-#header .menu li a ::before {
-    content: '';
-    width: 60px;
-    height: 2px;
-    background: #000;
-    left: 30px; bottom: 18px;
-}
-#header .menu li a:hover {
- background: #f5f5f5;
- border-radius: 0px;
-}
-
-
- #header .member{
-    
-    text-align: right;
-    padding: 10px 18px;
  }
+
+ #header .menu li a ::before {
+     content: '';
+     width: 60px;
+     height: 2px;
+     background: #000;
+     left: 30px;
+     bottom: 18px;
+ }
+
+ #header .menu li a:hover {
+     background: #f5f5f5;
+     border-radius: 0px;
+ }
+
+
+ #header .member {
+
+     text-align: right;
+     padding: 10px 18px;
+ }
+
  #header .member a {
-    padding: 9px 22px;
-    display: inline-block;
-    border: 1px solid #000;
-    border-radius: 50px;
+     padding: 9px 22px;
+     display: inline-block;
+     border: 1px solid #000;
+     border-radius: 50px;
  }
 
- #header .member a:hover{
-     background:  #000;
+ #header .member a:hover {
+     background: #000;
      color: #fff;
  }
-   
+
  /* 배너 */
-#banner {}
-.img_type{
-    width: 100%;
-    height: 700px;
-    /* background-image:url(/assets/img/bg01.jpg);
+ #banner {}
+
+ .img_type {
+     width: 100%;
+     height: 700px;
+     /* background-image:url(/assets/img/bg01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; */
 
 
-    background: url(/assets/img/bg01.jpg) no-repeat center / cover;
-}
+     background: url(/assets/img/bg01.jpg) no-repeat center / cover;
+ }
 
  /* 
  웹사이트에서 이미지를 표현하는 방법 
@@ -200,37 +211,131 @@
      padding: 150px 0;
      overflow: hidden;
  }
+
  .ittype01 .text {
      float: left;
      width: 386.66px;
      height: 530px;
+     margin-right: 20px;
+ }
+
+ .ittype01 .text .text_title {
+     font-family: 'GmarketSans';
+     font-size: 50px;
+     font-weight: 500;
+     margin: 70px 0 45px -4px;
+
+ }
+
+ .ittype01 .text .text_desc {
+     font-family: 'NexonLv1Gothic';
+     font-size: 18px;
+     font-weight: 300;
+     color: #888;
+     margin-bottom: 55px;
+
+ }
+
+ .ittype01 .text .text_more {
+     font-family: 'NexonLv1Gothic';
+     font-size: 18px;
+ }
+
+ .ittype01 .text .text_more a {
+     color: #af3029;
+ }
+
+ .itType01 .text .text_more svg {
+    vertical-align : 2px;
+    }
+ .ittype01 .img1 {
+     float: left;
+     height: 530px;
+     width: 386.66px;
      background-color: #ccc;
      margin-right: 20px;
-    
+     background-image: url(../img/img_text_bg1.jpg);
+     background-size: 100%;
  }
- .ittype01 .img1 {
-    float: left;
-    height: 530px;
-    width: 386.66px;
-    background-color: #ccc;
-    margin-right: 20px;
-    background-image: url(../img/text@1x.jpg);
- }
+
  .ittype01 .img2 {
-    float: left;
-    height: 530px;
-    width: 386.66px;
-    background-color: #ccc;
-    margin-right: 20px;
-    background-image: url(../img/text@2x.jpg);
+     float: right;
+     height: 530px;
+     width: 386.66px;
+     background-color: #ccc;
+     background-image: url(../img/img_text_bg2.jpg);
  }
- @media (-webkit-min-divice-pixel-ratio: 1.5){
-     .ittype .img{
-        background-image: url(../img/test@1x.jpg);
+
+ @media (-webkit-min-divice-pixel-ratio: 1.5) {
+     .ittype .img1 {
+         background-image: url(../img/img_text_bg1@2x.jpg);
+     }
+
+     .ittype .img2 {
+         background-image: url(../img/img_text_bg2@2x.jpg);
      }
  }
- @media (-webkit-min-divice-pixel-ratio: 2.5){
-    .ittype .img{
-       background-image: url(../img/text@2x.jpg);
-    }
+
+ @media (-webkit-min-divice-pixel-ratio: 2.5) {
+     .ittype .img1 {
+         background-image: url(../img/img_text_bg1@3x.jpg);
+     }
+
+     .ittype .img2 {
+         background-image: url(../img/img_text_bg2@3x.jpg);
+     }
+ }
+
+ /* ittype02 */
+
+ .ittype02 {
+    background: #F5F5F5;
+    overflow: hidden;
+    padding: 150px 0;
+    min-width: 1920px;
+}
+.ittype02_left {
+    float: left;
+    width: 48.5%;
+    height: 535px;
+    background: url(../img/img_text_bg3.jpg) no-repeat center center;
+    background-size: cover;
+    margin-right: 1.5%;
+}
+.ittype02_right {
+    font-family: 'GmarketSans';
+    float: left;
+    width: 48.5%;
+    height: 535px;
+    margin-left: 1.5%;
+}
+.ittype02_right .sub {
+    font-size: 16px;
+    color: #7C7C7C;
+    margin-top: 43px;
+    margin-bottom: 10px;
+    display: inline-block;
+    /* text-decoration: underline;
+    text-underline-position: under; */
+    border-bottom: 1px solid #7C7C7C;
+}
+.ittype02_right .title {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 38px;
+    white-space: nowrap;
+}
+.ittype02_right .desc {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 38px;
+    white-space: nowrap;
+}
+.ittype02_right .view {
+    font-size: 24px;
+    font-weight: 300;
+    background: #000;
+    padding: 9px 46px;
+    display: inline-block;
+    color: #fff;
 }

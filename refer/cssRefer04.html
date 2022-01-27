@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Reference</title>
+    <title>CSS 색상</title>
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../assets/face/css.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
@@ -31,6 +31,9 @@
                 <li class="active"><a href="cssRefer04.html">CSS 색상</a></li>
                 <li><a href="cssRefer05.html">id/class 차이점</a></li>
                 <li><a href="cssRefer06.html">>float</a></li>
+                <li><a href="cssRefer07.html">이미지 표현방법</a></li>
+                <li><a href="cssRefer08.html">ir 효과</a></li>
+                <li><a href="cssRefer09.html">벤더 프리픽스</a></li>
             </ul>
         </div>
         <!-- //menu -->
@@ -40,45 +43,49 @@
                 <p>CSS의 색상값은 적색, 녹색, 청색의 혼합의 결과로 16진수를 이용한 표기법(HEX)과, RGB 표기법, HSL 표기법, 색상 이름을 직접 입력하는 방식들을 지원한다.</p>
 
                 <h3>16진수</h3>
-                <p>주요 브라우저에서 모두 지원한다. 16진수 색상은 #RRGGBB와 같은 형태로 RR(적색), GG(녹색), BB(청색)을 진수로 나타내며, 0~FF사이의 값을 가지게 된다(대소문자 구분하지 않음).</p>
-                    <p>예를 들어, #0000FF의 값은 RR과 GG는 0의 값이고, 청색인 BB만 가장 밝은 FF의 값을 가지게 되니 청색으로 표현된다.</p>
-                    <div class="code">
-                        <pre><code>CSS
+                <p>주요 브라우저에서 모두 지원한다. 16진수 색상은 #RRGGBB와 같은 형태로 RR(적색), GG(녹색), BB(청색)을 진수로 나타내며, 0~FF사이의 값을 가지게 된다(대소문자
+                    구분하지 않음).</p>
+                <p>예를 들어, #0000FF의 값은 RR과 GG는 0의 값이고, 청색인 BB만 가장 밝은 FF의 값을 가지게 되니 청색으로 표현된다.</p>
+                <div class="code">
+                    <pre><code>CSS
 #p1 {background-color: #ff0000;}   /* red */
 #p2 {background-color: #00ff00;}   /* green */
 #p3 {background-color: #0000ff;}   /* blue */ </pre></code>
-                    </div>
-                   
-                   <h3>RGB</h3>
-                <p>주요 브라우저에 모두 지원한다. RGB 색상은 rgb(적색, 녹색, 청색)의 형태로, 각 변수값(적색, 녹색, 청색) 의 색상의 강도를 정의하고, 0~255의 정수로 된 퍼센트 값(0%~255%)을 가지게 된다.</p>
-                    <p>예를 들어, rgb(0,0,255)의 값은 청색이 255로 가장 높은 값으로 지정되고 나머지는 0%의 값이니 청색으로 표현된다.</p>
-                    <div class="code">
-                        <pre><code>CSS
+                </div>
+
+                <h3>RGB</h3>
+                <p>주요 브라우저에 모두 지원한다. RGB 색상은 rgb(적색, 녹색, 청색)의 형태로, 각 변수값(적색, 녹색, 청색) 의 색상의 강도를 정의하고, 0~255의 정수로 된 퍼센트
+                    값(0%~255%)을 가지게 된다.</p>
+                <p>예를 들어, rgb(0,0,255)의 값은 청색이 255로 가장 높은 값으로 지정되고 나머지는 0%의 값이니 청색으로 표현된다.</p>
+                <div class="code">
+                    <pre><code>CSS
 #p1 {background-color: rgb(255, 0, 0);} /* red */ 
 #p2 {background-color: rgb(0, 255, 0);} /* green */ 
 #p3 {background-color: rgb(0, 0, 255);} /* blue */</pre></code>
-                    </div>
-                   
-                   <h3>RGBA</h3>
-                   <p>E9+, Firefox 3+, Opera 10+, Chrome, Safari에서 지원한다. RGBA 색상은 rgba(적색, 녹색, 청색, 투명도)의 형태로, RGB의 색상 값에 알파채널을 확장한 것으로 투명도를 추가로 지정할 수 있게 한 것이며, 0.0(투명)~1.0(불투명) 사이의 값을 가지게 된다.</p>
-                       <div class="code">
-                           <pre><code> CSS
+                </div>
+
+                <h3>RGBA</h3>
+                <p>E9+, Firefox 3+, Opera 10+, Chrome, Safari에서 지원한다. RGBA 색상은 rgba(적색, 녹색, 청색, 투명도)의 형태로, RGB의 색상 값에
+                    알파채널을 확장한 것으로 투명도를 추가로 지정할 수 있게 한 것이며, 0.0(투명)~1.0(불투명) 사이의 값을 가지게 된다.</p>
+                <div class="code">
+                    <pre><code> CSS
 #p1 {background-color: rgba(255, 0, 0, 0.3);} /* red with opacity */
 #p2 {background-color: rgba(0, 255, 0, 0.3);} /* green with opacity */
 #p3 {background-color: rgba(0, 0, 255, 0.3);} /* blue with opacity */
                            </pre></code>
-                       </div>
-                      
-                      <h3>HSLA</h3>
-                   <p>IE9+, Firefox 3+, Opera 10+, Chrome, Safari에서 지원한다. HSLA 색상은 hsla(색조, 채도, 명도, 투명도)의 형태로, 위에서 설명한 HSL 색상 값에 알파채널을 확장한 것으로 투명도를 추가로 지정할 수 있게 한 것이며, 0.0(투명)~1.0(불투명) 사이의 값을 가지게 된다.</p>
-                       <div class="code">
-                           <pre><code> CSS
+                </div>
+
+                <h3>HSLA</h3>
+                <p>IE9+, Firefox 3+, Opera 10+, Chrome, Safari에서 지원한다. HSLA 색상은 hsla(색조, 채도, 명도, 투명도)의 형태로, 위에서 설명한 HSL
+                    색상 값에 알파채널을 확장한 것으로 투명도를 추가로 지정할 수 있게 한 것이며, 0.0(투명)~1.0(불투명) 사이의 값을 가지게 된다.</p>
+                <div class="code">
+                    <pre><code> CSS
 #p1 {background-color: hsla(120, 100%, 50%, 0.3);}   /* green with opacity */
 #p2 {background-color: hsla(120, 100%, 75%, 0.3);}   /* light green with opacity */
 #p3 {background-color: hsla(120, 100%, 25%, 0.3);}   /* dark green with opacity */
 #p4 {background-color: hsla(120, 60%, 70%, 0.3);}    /* pastel green with opacity */</pre></code>
-                       </div>
-                      
+                </div>
+
             </div>
         </div>
 

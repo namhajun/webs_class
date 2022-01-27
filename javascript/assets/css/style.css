@@ -505,7 +505,17 @@ img {
     color: #fff
 }
 
-@media (max-width: 800px) {}
+
+@media (max-width: 800px) {
+    .javascript h1 {
+        font-size: 55px;
+        padding: 10px 0;
+    }
+    .javascript .menu {
+        display: none;
+    }
+    
+}
 
 /* table */
 .table {
