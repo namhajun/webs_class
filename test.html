@@ -6,6 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 표준 사이트 만들기</title>
+
+    <!-- SEO(검색엔진최적화) -->
+    <meta name="acthor" content="webstroyboy">
+    <meta name="description" content="웹 표준을 준수한 사이트입니다.">
+    <meta name="keywords" content="웹표준, 웹접근성, 웹호환성, 사이트제작, 사이트만들기, 포트폴리오">
+    <meta name="robots" content="all">
+
+    <!-- 메타 정보 -->
+    <meta property="og:title" content="웹표준 사이트 제작">
+    <meta property="og:url" content="https://webstoryboy.github.io/webs_class/site/webClass/index.html">
+    <meta property="og:image" content="https://webstoryboy.github.io/webs_class/site/webClass/img/icon.png">
+    <meta property="og:description" content="웹 표준을 준수한 사이트 튜토리얼입니다.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="웹표준 사이트 제작">
+    <meta name="twitter:url" content="https://webstoryboy.github.io/webs_class/site/webClass/index.html">
+    <meta name="twitter:image" content="https://webstoryboy.github.io/webs_class/site/webClass/img/icon.png">
+    <meta name="twitter:description" content="웹 표준을 준수한 사이트 튜토리얼입니다.">
+
+    <!-- 아이콘 & 파비콘 -->
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/icon114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/icon114.png">
+    <link rel="apple-touch-icon-precomposed" href="img/icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="167x167" href="img/icon167.png" />
+
+
     <style>
         * {
             margin: 0;
@@ -45,14 +76,14 @@
         }
 
 
-        #contents1 {
+        #contents {
             width: 1920px;
             height: 640px;
             background-color: #B99E9E;
 
         }
 
-        #contents1 .container {
+        #contents .container {
             width: 1200px;
             height: 640px;
             background-color: #9EA9B9;
@@ -86,24 +117,96 @@
             background-color: #6A3434;
             margin: 0 auto;
         }
+
         #contents3 {
             width: 1920px;
-            height: 1076px;
-            background-color: #ffffff;
-
+            display: flex;
         }
 
-        #contents3 .container {
-            width: 1200px;
-            height: 1076px;
-            background-color: #ffffff;
-            margin: 0 auto;
-        }
 
         #footer {
             width: 1920px;
             height: 399px;
-            background-color: #B99E9E;
+            background-color: #bd2121;
+        }
+
+        #contents3 .h1 {
+            width: 360px;
+            height: 1076px;
+            background-color: #fcfcfc;
+
+        }
+
+        #contents3 .h2 {
+            width: 1200px;
+            height: 1076px;
+            background-color: #fcfcfc;
+        }
+
+        #contents3 .h3 {
+            width: 360px;
+            height: 1076px;
+            background-color: #ffffff;
+        }
+
+        .ittype01 .text .text_title {
+            width: 459px;
+            height: 58px;
+            font-family: 'NEXONLv1Gothic';
+            font-size: 50px;
+            margin-top: 116px;
+
+        }
+
+        .ittype01 .img1 {
+            float: left;
+            width: 370px;
+            height: 466px;
+            background-color: #fff;
+            background-size: 100%;
+            margin-top: 150px;
+            margin-right: 50px;
+        }
+
+        .ittype01 .img1 .text {
+            width: 60px;
+            height: 30px;
+            font-family: 'NEXONLv1Gothic';
+            font-size: 20px;
+        }
+
+        .ittype01 .img2 {
+            float: left;
+            width: 370px;
+            height: 466px;
+            background: url(site/webClass/img/t2.jpg) no-repeat center;
+            margin-top: 150px;
+            background-size: 100%;
+
+        }
+
+        .ittype01 .img2 .text {
+            width: 60px;
+            height: 30px;
+            font-family: 'NEXONLv1Gothic';
+            font-size: 20px;
+        }
+
+        .ittype01 .img3 {
+            float: right;
+            width: 370px;
+            height: 466px;
+            background-color: #fff;
+            background-image: url(/site/webClass/img/t3.jpg);
+            background-size: 100%;
+            margin-top: 150px;
+        }
+
+        .ittype01 .img3 .text {
+            width: 60px;
+            height: 30px;
+            font-family: 'NEXONLv1Gothic';
+            font-size: 20px;
         }
     </style>
 </head>
@@ -118,7 +221,7 @@
             <div class="container">
             </div>
         </article>
-        <section id="contents1">
+        <section id="contents">
             <div class="container">
 
         </section>
@@ -127,13 +230,42 @@
 
         </section>
         <section id="contents3">
-            <div class="container">
+            <div class="h1"></div>
+            <div class="h2">
+                <article class="img_text_type ittype01 container">
+                    <div class="text">
+                        <h3 class="text_title">FIND oppottunities</h3>
+                    </div>
+                    <div class="img1">
+                        <img src="site/webClass/img/t1.jpg">
+                        <h4 class="text">Fintech</h4>
+                    </div>
 
+                    <div class="img2">
+                        <img src="site/webClass/img/t2.jpg">
+                        <h4 class="text">Digital marketig</h4>
+                    </div>
+                    <div class="img3">
+                        <img src="site/webClass/img/t3.jpg">
+                        <h4 class="text">Platform</h4>
+                    </div>
+
+                </article>
+            </div>
+            <div class="h3"></div>
         </section>
+
         <footer id="footer">
             <div class="container"></div>
         </footer>
     </div>
+
+
+
+    <script>
+
+
+    </script>
 </body>
 
 </html>
