@@ -394,9 +394,9 @@
     position: absolute;
     left: 20px;
     bottom: 20px;
-    background: #a4e3e7;
- }
-
+    background-color: rgba(0, 252, 218, 0.5);
+    margin-right: 100px;
+ }     
  .img_type01 .img-wrap h4 {
      font-size: 30px;
      color: #fff;

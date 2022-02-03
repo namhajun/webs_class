@@ -650,33 +650,250 @@ document.getElementById("result").innerHTML =
     <h3>relative</h3>
     <p>상대 위치(relative position) 지정 방식은 해당 HTML 요소의 기본 위치를 기준으로 위치를 설정하는 방식입니다.
 
- 
+
 
         HTML 요소의 기본 위치란 해당 요소가 정적 위치(static position) 지정 방식일 때 결정되는 위치를 의미합니다.</p>
 
     <h3>fixed</h3>
-    <p>고정 위치(fixed position) 지정 방식은 뷰포트(viewport)를 기준으로 위치를 설정하는 방식입니다. 
+    <p>고정 위치(fixed position) 지정 방식은 뷰포트(viewport)를 기준으로 위치를 설정하는 방식입니다.
 
         즉, 웹 페이지가 스크롤 되어도 고정 위치로 지정된 요소는 항상 같은 곳에 위치하게 됩니다.</p>
 
-        <h3>absolute</h3>
-        <p>절대 위치(absolute position) 지정 방식은 고정 위치가 뷰포트를 기준으로 위치를 결정하는 것과 비슷하게 동작합니다.
+    <h3>absolute</h3>
+    <p>절대 위치(absolute position) 지정 방식은 고정 위치가 뷰포트를 기준으로 위치를 결정하는 것과 비슷하게 동작합니다.
 
-            단지 뷰포트(viewport)를 기준으로 하는 것이 아닌 위치가 설정된 조상(ancestor) 요소를 기준으로 위치를 설정하게 됩니다.
-            
-             
-            
-            하지만 위치가 설정된 조상(ancestor) 요소를 가지지 않는다면, HTML 문서의 body 요소를 기준으로 위치를 설정하게 됩니다.</p>
+        단지 뷰포트(viewport)를 기준으로 하는 것이 아닌 위치가 설정된 조상(ancestor) 요소를 기준으로 위치를 설정하게 됩니다.
 
 
 
+        하지만 위치가 설정된 조상(ancestor) 요소를 가지지 않는다면, HTML 문서의 body 요소를 기준으로 위치를 설정하게 됩니다.</p>
 
 
 
+    <h3>마진(Margin)</h3>
+    <p>margin 속성은 테두리(border)와 이웃하는 요소 사이의 간격인 마진 영역의 크기를 설정합니다.
+
+        이러한 마진 영역은 패딩 영역과는 달리 background-color 속성으로 설정하는 배경색의 영향을 받지 않습니다.
+
+        CSS를 사용하면 마진 영역의 크기를 방향별로 따로 설정할 수 있습니다.
+
+    </p>
 
 
 
+    <h3>마진(margin) 속성</h3>
+    <p>CSS에서는 HTML 요소의 마진 영역을 설정하기 위해 다음과 같은 속성을 제공합니다.</p>
 
+    <ul>
+        <li>1. margin-top</li>
+
+        <li> 2. margin-right</li>
+
+        <li> 3. margin-bottom</li>
+
+        <li> 4. margin-left</li>
+    </ul>
+
+
+    마진 축약 표현(margin shorthand)
+    <p>모든 margin 속성을 이용한 스타일을 한 줄에 설정할 수 있습니다.</p>
+
+    <div class="code">
+        <pre><code>
+&lt;style&gt;
+
+    div.four { margin: 20px 50px 30px 50px; }
+
+    div.three { margin: 20px 50px 30px; }
+
+&lt;/style&gt;</pre></code>
+    </div>
+
+    <p>(1)4개의 margin 속성값을 가질 때는 top, right, bottom, left 순으로 설정합니다.
+
+        ex) margin: 10px 20px 30px 40px; <br>
+
+        (위의 예제는 아래 4줄의 코드와 같은 의미를 가지고 있습니다.)<br>
+
+        margin-top: 10px;<br>
+
+        margin-right: 20px;<br>
+
+        margin-bottom: 30px;<br>
+
+        margin-left: 40px;<br></p>
+
+
+    <p>
+        (2) 3개의 margin 속성값을 가질 때는 top, right와 left, bottom 순으로 설정합니다. <br>
+
+        ex) margin: 10px 20px 30px;<br>
+
+        (위의 예제는 아래 4줄의 코드와 같은 의미를 가지고 있습니다.)<br>
+
+        margin-top: 10px;<br>
+
+        margin-right: 20px;<br>
+
+        margin-bottom: 30px;<br>
+
+        margin-left: 20px;<br>
+
+
+    </p>
+    <p>(3)2개의 margin 속성값을 가질 때는 top과 bottom, right와 left 순으로 설정합니다. <br>
+
+        ex) margin: 10px 20px;<br>
+
+        (위의 예제는 아래 4줄의 코드와 같은 의미를 가지고 있습니다.)<br>
+
+        margin-top: 10px;<br>
+
+        margin-right: 20px;
+        <br>
+        margin-bottom: 10px;<br>
+
+        margin-left: 20px;</p>
+
+    <p>(4)1개의 margin 속성값을 가질 때는 모든 마진값을 같게 설정합니다. <br>
+
+        ex) margin: 10px;<br>
+
+        (위의 예제는 아래 4줄의 코드와 같은 의미를 가지고 있습니다.)<br>
+
+        margin-top: 10px;<br>
+
+        margin-right: 10px;<br>
+
+        margin-bottom: 10px;
+        <br>
+        margin-left: 10px;</p>
+    <h4>CSS margin속성</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>속성</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>margin</td>
+                <td>모든 margin&nbsp;속성을 이용한 스타일을 한 줄에 설정할 수 있음.</td>
+            </tr>
+            <tr>
+                <td>margin-top</td>
+                <td>윗쪽의 마진(margin) 값을 설정함.</td>
+            </tr>
+            <tr>
+                <td>margin-right</td>
+                <td>오른쪽의 마진(margin) 값을 설정함.</td>
+            </tr>
+            <tr>
+                <td>margin-bottom</td>
+                <td>아래쪽의 마진(margin) 값을 설정함.</td>
+            </tr>
+            <tr>
+                <td>margin-left</td>
+                <td>왼쪽의 마진(margin) 값을 설정함.</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h3>Float</h3>
+    <p>float 속성은 해당 HTML 요소가 주변의 다른 요소들과 자연스럽게 어울리도록 만들어 줍니다.
+
+        이 속성은 본래 위와 같은 목적으로 만들어졌지만, 현재는 웹 페이지의 레이아웃(layout)을 작성할 때 자주 사용됩니다.</p>
+
+        <h3>clear 속성</h3>
+        <p>clear 속성은 float 속성이 적용된 이후 나타나는 요소들의 동작을 조절해 줍니다.
+
+            컨테이너 요소에 float 속성이 적용되면 그 이후에 등장하는 모든 요소들은 정확한 위치를 설정하기가 매우 힘들어집니다.</p>
+ 
+            <div class="code">
+                <pre><code>
+        &lt;style&gt;
+.left { background-color: #FF8C00; width: 150px; height: 50px; float: left; }
+.right { background-color: #9932CC; width: 150px; height: 50px; float: right; }
+        &lt;/style&gt;</pre></code>
+            </div>
+<p> 
+
+    따라서 float 속성을 적용하고자 하는 요소가 모두 등장한 이후에는 clear 속성을 사용하여, 이후에 등장하는 요소들이 더는 flaot 속성에 영향을 받지 않도록 설정해줘야 합니다.</p>
+
+    <div class="code">
+        <pre><code>
+&lt;style&gt;
+.left { background-color: #FF8C00; width: 150px; height: 50px; float: left; }
+.right { background-color: #9932CC; width: 150px; height: 50px; float: right; }
+p { clear: both; }
+&lt;/style&gt;</pre></code>
+    </div>
+
+<h3>overflow </h3>
+<p>loat 속성이 적용된 HTML 요소가 자신을 감싸고 있는 컨테이너 요소보다 크면, 해당 요소의 일부가 밖으로 흘러넘치게 됩니다.
+
+    이때 overflow 속성값을 auto로 설정하면, 컨테이너 요소의 크기가 자동으로 내부의 요소를 감쌀 수 있을 만큼 커지게 됩니다.</p>
+
+
+    <div class="code">
+        <pre><code>
+&lt;style&gt;
+.div { border: 3px solid #73AD21; padding: 5px;}
+img { float: left; }
+.good { overflow: auto; }
+&lt;/style&gt;</pre></code>
+    </div>
+
+
+<h3>float 속성을 이용한 레이아웃</h3>
+<p>현재 웹 페이지의 레이아웃은 대부분 float 속성을 이용하여 작성되고 있습니다.
+    다음 예제는 float 속성을 이용해 작성된 레이아웃을 보여줍니다.</p>
+    <div class="code">
+        <pre><code>
+&lt;style&gt;
+div.page { border: 3px solid #CD5C5C; overflow: auto; }
+h2 { text-align: center; }
+header{ border: 3px solid #FFD700; }
+nav { border: 3px ​​​​​​​solid #FF1493; width: 150px; float: left; }
+section { border: 3px ​​​​​​​solid #00BFFF; margin-left: 156px; }
+footer{ border: 3px ​​​​​​​solid #00FA9A; }
+&lt;/style&gt;</pre></code>
+    </div>
+
+    <h4>CSS float 속성</h4>
+
+    <table >
+        <thead>
+            <tr>
+                <th >속성</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>float</td>
+                <td>HTML 요소가 주변의 다른 요소들과 자연스럽게 어울리도록 설정함.</td>
+            </tr>
+            <tr>
+                <td>clear</td>
+                <td>float 속성이 적용된 후 나타나는 요소들이&nbsp;더 이상 float 속성에 영향을 받지 않도록 설정함.</td>
+            </tr>
+            <tr>
+                <td>overflow</td>
+                <td>내용(content)의 크기가 해당 요소를 감싸고 있는 컨테이너 요소보다 클 때 어떻게 처리할지를 설정함.</td>
+            </tr>
+            <tr>
+                <td>overflow-x</td>
+                <td>내용(content)의 크기가 해당 요소의 수평 방향 박스(box)를 넘어갈 때 어떻게 처리할지를 설정함.</td>
+            </tr>
+            <tr>
+                <td>overflow-y</td>
+                <td>내용(content)의 크기가 해당 요소의 수직 방향 박스(box)를 넘어갈 때 어떻게 처리할지를 설정함.</td>
+            </tr>
+        </tbody>
+    </table>
 
 
 
