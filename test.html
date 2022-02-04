@@ -47,225 +47,269 @@
             width: 100%;
         }
 
-        #header {
-            width: 100%;
-            height: 109px;
-            background-color: #C2F6C1;
-        }
-
-        #header .container {
+        .container {
             width: 1200px;
-            height: 109px;
-            background-color: #6ECC6C;
             margin: 0 auto;
         }
+
+        #header {
+            width: 100%;
+            height: 108px;
+
+        }
+
+        #header .logo {
+            font-size: 30px;
+            margin-top: 38px;
+            display: inline-block;
+            font-family: 'NEXONLv1Gothic';
+            margin-left: 81px;
+            color: #000;
+        }
+
+        #header .member {
+            text-align: right;
+        }
+
+        #header .member li {
+            padding: 7px 20px;
+            display: inline;
+            font-size: 18px;
+            margin-top: 40px;
+            font-family: 'NEXONLv1Gothic';
+            margin-right: 19px;
+            color: #000
+        }
+
 
 
         #banner {
             width: 100%;
-            height: 893px;
-            background-color: #F89292;
+            height: 342px;
+
 
         }
 
-        #banner .container {
-            width: 1200px;
-            height: 893px;
-            background-color: #AD7B7B;
-            margin: 0 auto;
+        #banner .text {
+            width: 693px;
+            height: 100px;
+            float: left;
+            margin-left: 410px;
+            margin-top: 230px;
         }
 
+
+        #banner .text .title {
+            font-family: 'NotoSans';
+            font-size: 45px;
+            color: #000;
+            display: inline;
+
+        }
 
         #contents {
-            width: 100%;
-            height: 640px;
-            background-color: #B99E9E;
-
+            width: 100%
         }
 
-        #contents .container {
-            width: 1200px;
-            height: 640px;
-            background-color: #9EA9B9;
-            margin: 0 auto;
-        }
-
-        #contents2 {
-            width: 100%;
-            height: 3250px;
-            background-color: #9D7777;
-
-        }
-
-        #contents2 .container {
-            width: 1200px;
-            height: 3250px;
-            background-color: #6A3434;
-            margin: 0 auto;
-        }
-
-        #contents2 {
-            width: 100%;
-            height: 3250px;
-            background-color: #9D7777;
-
-        }
-
-        #contents2 .container {
-            width: 1200px;
-            height: 3250px;
-            background-color: #6A3434;
-            margin: 0 auto;
-        }
-
-        #contents3 {
-            width: 100%;
+        #contents .cont1 {
+            overflow: hidden;
+            padding: 150px 0;
+            height: 826px;
+            min-width: 1200px;
             display: flex;
+            justify-content: space-between;
+
         }
 
+        #contents .cont1 .Line-1 {
+            width: 547px;
+            height: 1px;
+            background-color: #000;
+            margin-top: 130px;
+        
+        }
+
+        #contents .cont1 .Line-2 {
+            width: 547px;
+            height: 1px;
+            background-color: #000;
+            margin-top: 180px;
+        }
+        #contents .cont2 .Line-3 {
+            width: 547px;
+            height: 1px;
+            background-color: #000;
+            margin-top: 90px;
+        }
+        #contents .cont2 .Line-4 {
+            width: 547px;
+            height: 1px;
+            background-color: #000;
+            margin-top: 140px;
+        }
+
+        #contents .cont1 .left .text_desc {
+            margin-top: 50px;
+            float: left;
+            font-family: 'NotoSans';
+            font-size: 28px;
+            color: #000;
+            position: absolute;
+        }
+
+        #contents .cont1 .right .text_desc {
+            margin-top: 50px;
+            float: right;
+            font-family: 'NotoSans';
+            font-size: 28px;
+            color: #000;
+            margin-right: 260px;
+            position: absolute;
+        }
+
+        #contents .cont1 .left .img {
+            width: 548px;
+            height: 548px;
+            float: left;
+            margin-top: 107px;
+            background: url(/img/img1.png);
+
+        }
+
+        #contents .cont1 .right .img {
+            width: 548px;
+            height: 548px;
+            float: right;
+            margin-top: 107px;
+            background: url(/img/img2.png);
+
+        }
+
+
+
+        #contents .cont2 {
+            overflow: hidden;
+            padding: 150px 0;
+            min-width: 1200px;
+            height: 793px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        #contents .cont2 .left .text_desc {
+            margin-top: 50px;
+            float: left;
+            font-family: 'NotoSans';
+            font-size: 28px;
+            color: #000;
+            position: absolute;
+        }
+
+        #contents .cont2 .right .text_desc {
+            margin-top: 50px;
+            float: right;
+            font-family: 'NotoSans';
+            font-size: 28px;
+            color: #000;
+            margin-right: 260px;
+            position: absolute;
+        }
+
+        #contents .cont2 .left .img {
+            width: 548px;
+            height: 548px;
+            float: left;
+            margin-top: 110px;
+            background: url(/img/img3.png);
+
+        }
+
+        #contents .cont2 .right .img {
+            width: 548px;
+            height: 548px;
+            float: left;
+            margin-top: 110px;
+            background: url(/img/img4.png);
+
+        }
+
+        #contents .cont3 {
+            width: 100%;
+            height: 528px;
+
+        }
 
         #footer {
-            width: 1920px;
-            height: 399px;
-            background-color: #bd2121;
-        }
-
-        #contents3 .h1 {
-            width: 360px;
-            height: 1076px;
-            background-color: #fcfcfc;
-
-        }
-
-        #contents3 .h2 {
-            width: 1200px;
-            height: 1076px;
-            background-color: #fcfcfc;
-        }
-
-        #contents3 .h3 {
-            width: 360px;
-            height: 1076px;
-            background-color: #ffffff;
-        }
-
-        .ittype01 .text .text_title {
-            width: 459px;
-            height: 58px;
-            font-family: 'NEXONLv1Gothic';
-            font-size: 50px;
-            margin-top: 116px;
-
-        }
-
-        .ittype01 .img1 {
-            float: left;
-            width: 370px;
-            height: 466px;
-            background-color: #fff;
-            background-size: 100%;
-            margin-top: 150px;
-            margin-right: 50px;
-        }
-
-        .ittype01 .img1 .text {
-            width: 60px;
-            height: 30px;
-            font-family: 'NEXONLv1Gothic';
-            font-size: 20px;
-        }
-
-        .ittype01 .img2 {
-            float: left;
-            width: 370px;
-            height: 466px;
-            background: url(site/webClass/img/t2.jpg) no-repeat center;
-            margin-top: 150px;
-            background-size: 100%;
-
-        }
-
-        .ittype01 .img2 .text {
-            width: 60px;
-            height: 30px;
-            font-family: 'NEXONLv1Gothic';
-            font-size: 20px;
-        }
-
-        .ittype01 .img3 {
-            float: right;
-            width: 370px;
-            height: 466px;
-            background-color: #fff;
-            background-image: url(/site/webClass/img/t3.jpg);
-            background-size: 100%;
-            margin-top: 150px;
-        }
-
-        .ittype01 .img3 .text {
-            width: 60px;
-            height: 30px;
-            font-family: 'NEXONLv1Gothic';
-            font-size: 20px;
+            width: 100%;
+            height: 371px;
+            background-color: #000;
         }
     </style>
 </head>
 
+
 <body>
-    <div id="wrap">
+
+    <div class="warp">
         <header id="header">
-            <div class="container">
+            <h1 class="logo">IMFORM</h1>
+            <div class="member">
+                <ul>
+                    <li>SERVICE</li>
+                    <li>WORK</li>
+                    <li>ABOUT</li>
+                    <li>CONTACT</li>
+                </ul>
             </div>
         </header>
-        <article id="banner">
-            <div class="container">
+        <section id="banner">
+            <div class="text">
+                <h2 class="title">We research new opportunities<br>
+                    that inspire success</h2>
             </div>
-        </article>
+
+            </article>
+        </section>
         <section id="contents">
-            <div class="container">
-
-        </section>
-        <section id="contents2">
-            <div class="container">
-
-        </section>
-        <section id="contents3">
-            <div class="h1"></div>
-            <div class="h2">
-                <article class="img_text_type ittype01 container">
-                    <div class="text">
-                        <h3 class="text_title">FIND oppottunities</h3>
-                    </div>
-                    <div class="img1">
-                        <img src="site/webClass/img/t1.jpg">
-                        <h4 class="text">Fintech</h4>
-                    </div>
-
-                    <div class="img2">
-                        <img src="site/webClass/img/t2.jpg">
-                        <h4 class="text">Digital marketig</h4>
-                    </div>
-                    <div class="img3">
-                        <img src="site/webClass/img/t3.jpg">
-                        <h4 class="text">Platform</h4>
-                    </div>
-
-                </article>
+            <div class="cont1 container">
+                <div class="left">
+                    <div class="Line-1"></div>
+                    <h3 class="text_desc">스마트한 카라이프<br>
+                        한국타이어</h3>
+                    <div class="img"></div>
+                </div>
+                <div class="right">
+                    <div class="Line-2"></div>
+                    <h3 class="text_desc">한섬 프리미엄 스타일<br>
+                        모바일 룩북</h3>
+                    <div class="img"></div>
+                </div>
             </div>
-            <div class="h3"></div>
+            <div class="cont2 container">
+                <div class="left">
+                    <div class="Line-3"></div>
+                    <h3 class="text_desc">나는 대만족 입니다<br>
+                        대만관광천 홈페이지 리뉴얼</h3>
+                    <div class="img"></div>
+                </div>
+                <div class="right">
+                    <div class="Line-4"></div>
+                    <h3 class="text_desc">세련된 감각의 까가미아 <br>
+                        라이프스타일 매거진</h3>
+                    <div class="img"></div>
+                </div>
+            </div>
+            <div class="cont3 container"></div>
+            </article>
         </section>
-
         <footer id="footer">
-            <div class="container"></div>
         </footer>
     </div>
 
 
 
-    <script>
 
-
-    </script>
 </body>
 
 </html>
