@@ -37,13 +37,14 @@
                 <li><a href="practice.html">데이터 연습하기</a></li>
             </ul>
             <ul>
-                <li><a href="sample.html">필수 예제</a></li>
-                <li><a href="plugin.html">플러그인</a></li>
-                <li><a href="effect/mouseEffect.html">마우스 이펙트</a></li>
-                <li><a href="effect/parallaxEffect.html">패랠랙스 이펙트</a></li>
-                <li><a href="effect/slideEffect.html">슬라이드 이펙트</a></li>
-                <li><a href="effect/gameEffect.html">게임 이펙트</a></li>
-            </ul>>
+            <li><a href="sample_menu.html">메뉴 이펙트</a></li>
+            <li><a href="sample_search.html">검색 이펙트</a></li>
+            <li><a href="sample_mouse.html">마우스 이펙트</a></li>
+            <li><a href="sample_parallax.html">패랠랙스 이펙트</a></li>
+            <li><a href="sample_slide.html">슬라이드 이펙트</a></li>
+            <li><a href="sample_game.html">게임 이펙트</a></li>
+            <li><a href="plugin.html">플러그인</a></li>
+        </ul>
         </nav>
     </header>
 
@@ -1010,10 +1011,10 @@ const result5 = arrNum.slice(-2, 5);
     const arrNum1 = [100, 200, 300, 400, 500];
     const result1 = arrNum1.map(el => el);
 
-    const arrNum2 = [1000, 200, 300, 400, 500];
+    const arrNum2 = [100, 200, 300, 400, 500];
     const result2 = arrNum2.map(el => el + "J");
 
-    const arrNum3 = [1000, 200, 300, 400, 500];
+    const arrNum3 = [100, 200, 300, 400, 500];
     const result3 = arrNum3.map(el => el + 100);
 
     const arrNum4 = [{
@@ -1381,7 +1382,7 @@ const result5 = arrNum.slice(-2, 5);
 
             document.querySelector(".sample09_N5").innerHTML = 5;
             document.querySelector(".sample09_Q5").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample09_M5").innerHTML = "slice(1,1, 'javascript')";
+            document.querySelector(".sample09_M5").innerHTML = "slice(1,0, 'javascript')";
             document.querySelector(".sample09_P5").innerHTML = result5;
             document.querySelector(".sample09_R5").innerHTML = arrNum5;
 
@@ -1516,34 +1517,34 @@ const result5 = arrNum.slice(-2, 5);
         }
         // 함수 4 가지 유형
         //01. 선언적 함수
-        {
-            function func() {
-                document.write("함수가 실행되었습니다.");
-            }
-            func();
-        }
-        //02. 익명 함수
-        {
-            const func = function () {
-                document.write("함수가 실행되었습니다.");
-            }
-            func();
-        }
-        //03. 매개변수 함수
-        {
-            function func(str) {
-                document.write(str);
-            }
-            func("함수가 실행되었습니다.");
-        }
-        //04. 리턴값 함수
-        {
-            function func() {
-                const str = "함수가 실행되었습니다.";
-                return str;
-            }
-            document.write(func());
-        }
+        // {
+        //     function func() {
+        //         document.write("함수가 실행되었습니다.");
+        //     }
+        //     func();
+        // }
+        // //02. 익명 함수
+        // {
+        //     const func = function () {
+        //         document.write("함수가 실행되었습니다.");
+        //     }
+        //     func();
+        // }
+        // //03. 매개변수 함수
+        // {
+        //     function func(str) {
+        //         document.write(str);
+        //     }
+        //     func("함수가 실행되었습니다.");
+        // }
+        // //04. 리턴값 함수
+        // {
+        //     function func() {
+        //         const str = "함수가 실행되었습니다.";
+        //         return str;
+        //     }
+        //     document.write(func());
+        // }
 
 
         // 15. 배열 메서드: findIndex() :배욜 첫 요소검색 :반환 요소
@@ -1593,7 +1594,7 @@ const result5 = arrNum.slice(-2, 5);
             document.querySelector(".sample13_R1").innerHTML = result1;
 
 
-            const arrNum2 = [1000, 200, 300, 400, 500];
+            const arrNum2 = [100, 200, 300, 400, 500];
             const result2 = arrNum2.map(el => el + "J");
 
             document.querySelector(".sample13_N2").innerHTML = 2;
@@ -1601,7 +1602,7 @@ const result5 = arrNum.slice(-2, 5);
             document.querySelector(".sample13_M2").innerHTML = "map(el =>el + 'j')";
             document.querySelector(".sample13_R2").innerHTML = result2;
 
-            const arrNum3 = [1000, 200, 300, 400, 500];
+            const arrNum3 = [100, 200, 300, 400, 500];
             const result3 = arrNum3.map(el => el + 100);
 
             document.querySelector(".sample13_N3").innerHTML = 3;
@@ -1632,14 +1633,47 @@ const result5 = arrNum.slice(-2, 5);
             arrBox = [100, 200, 300, 400, 500, 600, 700]
 
             //300, 400
+            const result1 = arrNum.slice(2, 3);
+
+            document.querySelector(".sample14_N1").innerHTML = 1;
+            document.querySelector(".sample14_Q1").innerHTML = "[100, 200, 300, 400, 500, 600, 700]";
+            document.querySelector(".sample14_M1").innerHTML = "slice(2, 4)";
+            document.querySelector(".sample14_R1").innerHTML = result1;
+
+            const arrNum3 = [100, 200, 300, 400, 500, 600, 700];
+            const result3 = arrNum3.filter(el => el == 300,400)
+
+            document.querySelector(".sample14_N2").innerHTML = 2;
+            document.querySelector(".sample14_Q2").innerHTML = "[100,200,300,400,500, 600, 700]";
+            document.querySelector(".sample14_M2").innerHTML = "filter(el =>el == 700)";
+            document.querySelector(".sample14_R2").innerHTML = result3;
+
+           
 
             //100,300,400,700
 
+
             //700
+            const arrNum3 = [100, 200, 300, 400, 500, 600, 700];
+            const result3 = arrNum3.filter(el => el == 700)
+
+            document.querySelector(".sample14_N3").innerHTML = 3;
+            document.querySelector(".sample14_Q3").innerHTML = "[100,200,300,400,500, 600, 700]";
+            document.querySelector(".sample14_M3").innerHTML = "filter(el =>el == 700)";
+            document.querySelector(".sample14_R3").innerHTML = result3;
+
 
             arrBox2 = ["j", "b", "c", "d", "e"]
-
+            
             //j
+            const arrNum4 = ["j", "b", "c", "d", "e"];
+            const result1 = arrNum1.filter(el => el == j)
+
+            document.querySelector(".sample15_N4").innerHTML = 1;
+            document.querySelector(".sample15_Q4").innerHTML = "['j', 'b', 'c', 'd', 'e']";
+            document.querySelector(".sample15_M4").innerHTML = "filter(el =>el == 'j')";
+            document.querySelector(".sample15_R4").innerHTML = result1;
+
 
             //jc
 
