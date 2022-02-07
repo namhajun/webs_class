@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
 </head>
 
@@ -41,7 +39,40 @@
 <a href="https://namhajun.github.io/webs_class/javascript/javascript06.html#sample10">indexOF()</a>
 
 
+<div class="iframe">
+    <iframe src="https://namhajun.github.io/webs_class/javascript/effect/searchEffect01.html"></iframe>
+</div>
+<pre class="typescript"><code>
+    const searchBox = document.querySelector("#search box")   
+    const cssLite = document.querySelectorAll(".list ul li")
+    const cssCount = document.querySelectorAll(".count em")
 
+    searchBox.addEventListener("keyup", () => {
+        const searchWord = searchBox.value;
+        ///console.log(searchWord);
+
+        cssList.forEach((element, index) => {
+            element.classList.add("show")
+            cssCount.innerHTML = index + 1;
+            console.log(index)
+        });
+
+        cssList.forEach(el => {
+            const cssNam = el.dataset.name; //css 속성값
+            //console.log(cssNam);
+
+            if (cssName.indexOf(searchWord)) {
+                el.classList.add("show")
+            } else {
+                el.classList.remove("show")
+            }
+
+        })
+    });
+
+</code></pre>
+
+<a href="https://namhajun.github.io/webs_class/javascript/javascript06.html#sample10">indexOF()</a>
 
 
 </body>
