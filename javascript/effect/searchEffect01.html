@@ -125,9 +125,10 @@
             background-color: #A5C3D5;
             cursor: grabbing
         }
+
         .board .list li.hide {
-                display: none;
-            }
+            display: none;
+        }
 
         @media (max-width: 800px) {
             .board {
@@ -157,8 +158,8 @@
             .board .list li {
                 font-size: 14px;
             }
-            
-            
+
+
         }
     </style>
 </head>
@@ -182,29 +183,29 @@
 
             <div class="list">
                 <ul>
-                    <li DATA-NAME="all"><strong>all</strong>: 속성을 재설정하는 데 사용할 수 있는 약식 속성입니다.</li>
-                    <li DATA-NAME="animation"><strong>animation </strong>: animation 속성은 장편 애니메이션 속성을 설정하기 위한 약식 속성입니다.
+                    <li data-name="all"><strong>all</strong> : all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다.</li>
+                    <li data-name="animation"><strong>animation</strong> : animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다.
                     </li>
-                    <li DATA-NAME="animation-delay"><strong>animation-delay </strong>:animation-delay 속성은 애니메이션이 시작되는
-                        시간을 정의합니다. </li>
-                    <li DATA-NAME="animation-direction"><strong>animation-direction </strong>:animation-direction 속성은
-                        애니메이션이 시작되는 방향을 설정합니다. </li>
-                    <li DATA-NAME="animation-duration "><strong>animation-duration </strong>:animation-duration 속성은
-                        애니메이션 주기에 걸리는 시간을 지정하는 데 사용됩니다 </li>
-                    <li DATA-NAME="animation-fill-modea"><strong>animation-fill-modea</strong>:animation-fill-mode 속성은
-                        애니메이션이 실행 중인 시간 외에 적용되는 값을 정의합니다.
-                    </li>
-                    <li><strong>animation-iteration-count </strong>:animation-iteration-count 속성은 애니메이션이 중지되기 전에 애니메이션
-                        주기가 재생되는 횟수를 지정하는 데 사용됩니다. </li>
-                    <li><strong>animation-name </strong>:animation-name 속성은 @keyframes 규칙에 의해 정의된 하나 이상의 애니메이션 이름을 지정하는
-                        데 사용되며 선택한 요소에 적용됩니다. </li>
-                    <li><strong>animation-play-state </strong>:animation-play-state 속성은 CSS 애니메이션이 실행 중인지 일시 중지되었는지
-                        지정합니다. </li>
-
-                    <li><strong>background-filter </strong>:background-filter 속성을 사용하면 CSS를 사용하여 요소 뒤의 콘텐츠에 필터 효과를 적용할 수
-                        있습니다. </li>
-                    <li><strong>backface-visibility </strong>:backface-visibility 속성은 뷰어를 향할 때 변형된 요소의 "뒷면"이 보이는지 여부를
-                        결정합니다. </li>
+                    <li data-name="animation-delay"><strong>animation-delay</strong> : animation-delay 속성은 애니메이션이 시작되는
+                        시간을 설정합니다.</li>
+                    <li data-name="animation-direction"><strong>animation-direction</strong> : animation-direction 속성은
+                        애니메이션이 움직이는 방향을 설정합니다.</li>
+                    <li data-name="animation-duration"><strong>animation-duration</strong> : animation-duration 속성은
+                        애니메이션이 움직이는 시간을 설정합니다.</li>
+                    <li data-name="animation-fill-mod"><strong>animation-fill-mode</strong> : animation-fill-mode 속성은
+                        애니메이션이 끝난 후의 상태를 설정합니다.</li>
+                    <li data-name="animation-iteration-count"><strong>animation-iteration-count</strong> :
+                        animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다.</li>
+                    <li data-name="animation-name"><strong>animation-name</strong> : animation-name 속성은 애니메이션 키프레임 이름을
+                        설정합니다.</li>
+                    <li data-name="animation-play-state"><strong>animation-play-state</strong> : animation-play-state
+                        속성은 애니메이션의 진행상태를 설정합니다.</li>
+                    <li data-name="backdrop-filter"><strong>backdrop-filter</strong> : backdrop-filter 속성은 요소 뒤에 필터효과를
+                        설정합니다.</li>
+                    <li data-name="backface-visibilit"><strong>backface-visibility</strong> : backface-visibility 속성은 요소
+                        뒷면 출력 여부 설정합니다.</li>
+                    <li data-name="caption-side"><strong>caption-side</strong> : caption-side 속성은 테이블 caption의 위치를
+                        설정합니다.</li>
 
                     <li><strong></strong></li>
                     <li><strong></strong></li>
@@ -221,29 +222,25 @@
         const searchBox = document.querySelector("#search-box")
         const cssList = document.querySelectorAll(".list ul li")
 
-        searchBox.addEventListener("keyup", ()=>{
-            const searchWord = searchBox.value;//사용자가 입력한 데이터 저장소
+        searchBox.addEventListener("keyup", () => {
+            const searchWord = searchBox.value; //사용자가 입력한 데이터 저장소
 
 
-           //console.log(searchWord);
-           cssList.forEach(el => {
-           console.log(el.dataset.name)
+            //console.log(searchWord);
+            cssList.forEach(el => {
+                console.log(el.dataset.name)
 
-           const cssName = el.dataset.name; //css 속성 값
-           
+                const cssName = el.dataset.name; //css 속성 값
 
-           if(cssName.indexOf(searchWord)){
-               el.classList.add("hide")
-           }else{
-            el.classList.remove("hide")
-           }
 
-        })
+                if (cssName.indexOf(searchWord)) {
+                    el.classList.add("hide")
+                } else {
+                    el.classList.remove("hide")
+                }
+
+            })
         });
-
-      
-
-        
     </script>
 </body>
 
