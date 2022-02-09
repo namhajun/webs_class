@@ -86,7 +86,7 @@
  }
 
  /* 스타일 초기화 */
- em {
+ em , address{
      font-style: normal;
  }
 

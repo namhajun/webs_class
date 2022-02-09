@@ -314,6 +314,49 @@ h2 { color: navy; }
 
 
 
+<div class="iframe">
+    <iframe src="https://namhajun.github.io/webs_class/javascript/effect/searchEffect04.html"></iframe>
+</div>
+<pre class="typescript"><code>
+const searchBox = document.querySelector("#search-box");  
+const cssCount = document.querySelector(".count");
+const cssDesc = document.querySelector(".desc");
+const cssList = document.querySelector(".list");
+
+//CSS 속성 값/전체 갯수 출력하기
+cssProperty.map((element, index) => {
+    cssCount.innerText = "전체 목록 갯수 : "+ (index+1) +"개";  
+    cssList.innerHTML += "<span>"+ element.name +"</span>";
+});
+//사용자가 검색한 값
+searchBox.addEventListener("keyup", () => {
+    const searchWord = searchBox.value;
+    //console.log(searchWord)
+    findProp(searchWord);
+});
+
+document.querySelectorAll(".list span").forEach(span =>{
+    span.addEventListener("click", () => {
+        //클릭한 데이터 값을 가져오기
+        const listProp = span.innerText;
+        findProp(listProp);
+    })
+})
+function findProp(searchProp){
+    const targetData = cssProperty.find((data) => data.name === searchProp)
+
+    //찾는 데이터가 없을때
+    
+    if(targetData == null){
+        cssDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해 주세요!";
+        return;
+    }
+
+        cssDesc.innerHTML = targetData.desc;
+}
+</code></pre>
+
+<a href="https://namhajun.github.io/webs_class/javascript/javascript06.html#sample10">find()</a>
 
 
 
