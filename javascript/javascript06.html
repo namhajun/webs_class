@@ -1035,7 +1035,18 @@ const result5 = arrNum.slice(-2, 5);
         <!-- //script -->
     </main>
     <!-- script -->
+    
     <script>
+      //#id 이동하기
+      document.querySelectorAll("a[href^='#']").forEach(el => {
+            el.addEventListener("click", (event) => {
+                event.preventDefault();
+                document.querySelector(el.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                })
+            })
+        })
+
         {
             const arrNum = [100, 200, 300, 400, 500];
             const arrNumLength = arrNum.length;

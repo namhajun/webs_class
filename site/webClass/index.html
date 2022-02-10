@@ -15,8 +15,8 @@
 
     <!-- 메타 정보 -->
     <meta property="og:title" content="웹표준 사이트 제작">
-    <meta property="og:url" content=https://namhajun.github.io/webs_class/webstandad/index.html">
-    <meta property="og:image" content="https://namhajun.github.io/webs_class/site/webClass/img/icon.png">
+    <meta property="og:url" content=https://namhajun.github.io/webs_class/webstandad/index.html"> <meta
+        property="og:image" content="https://namhajun.github.io/webs_class/site/webClass/img/icon.png">
     <meta property="og:description" content="웹 표준을 준수한 사이트 튜토리얼입니다.">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="웹표준 사이트 제작">
@@ -36,6 +36,9 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -71,193 +74,302 @@
         </header>
         <!-- //header -->
 
-        <section id="banner">
-            <h2 class="ir_so">배너 영역</h2>
-            <div class="img_type">
-                <!-- <img src="img/bg01.jpg" alt="메인 배너"> -->
-            </div>
-        </section>
-        <!-- //banner -->
-
-        <main id="contents">
-            <h2 class="ir_so">컨텐츠 영역</h2>
-            <div class="imgText_type01 container">
-                <div class="text">
-                    <h3 class="text_title">이미지&텍스트</h3>
-                    <p class="text_desc">
-                        사이트 제작에 있어 이미지와 <br>
-                        텍스트를 혼합해서 사용하는 경우가 많다. <br>
-                        기본 레이아웃은 동일하기 때문에<br>
-                        이미지나 배치에 따라서<br>
-                        느낌은 얼마든지 다르게 표현할 수 있다<br>
-                        Gmarket Sans 50px, Medium <br>
-                        NEXON Lv1 Gothic 18px (153%) Regular
-                    </p>
-                    <div class="text_more">
-                        <a href="#">
-                            <span>더 많은 유형 살펴보기</span>
-                            <svg width="84" height="8" viewBox="0 0 84 8" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M83.3536 4.35355C83.5488 4.15829 83.5488 3.84171 83.3536 3.64645L80.1716 0.464466C79.9763 0.269204 79.6597 0.269204 79.4645 0.464466C79.2692 0.659728 79.2692 0.976311 79.4645 1.17157L82.2929 4L79.4645 6.82843C79.2692 7.02369 79.2692 7.34027 79.4645 7.53553C79.6597 7.7308 79.9763 7.7308 80.1716 7.53553L83.3536 4.35355ZM0 4.5H83V3.5H0V4.5Z"
-                                    fill="#AF3029" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="img1"></div>
-                <div class="img2"></div>
-
-
-            </div>
-            <section class="imgText_type02">
-                <div class="left"></div>
-                <div class="right">
-                    <div class="Text">
-                        <samp class="sub">너를 위한 이야기</samp>
-                        <h3 class="title">당신을 위한 여행을 떠나 보세요</h3>
-                        <p class="desc">다양한 시간을 보내면서<br>
-                            너무 힘들고 지친 일상을 반복하면서 <br> 문뜩 어딘가로 떠나고 싶은
-                            생각이 가끔들지 않으신가요? <br>일상에서 당신을 위한
-                            작은 선물을 스스로 마련 할 수 있도록 <br>도와드리겠습니다.</p>
-                        <a href="#" class="view">자세히 보기</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- img_type01 -->
-            <section class="img_type01 container">
-                <h3>다양한 세상들<em>이미지 유형01</em></h3>
-                <div class="img-wrap">
-                    <div class="left">
-                        <div class="left-cont">
-                        <h4>싱그러운 꽃밭</h4>
-                        <p>자연속에 피어나는 꽃들로 가득한 곳에서 즐겨 보실래요? 피어나면서 나오는 향기로운 냄새를 맡아보는것도 좋은 경험이에요</p>
-                        <a href="#">자세히 보기</a>
+        <!-- <section id="banner"> -->
+            <!-- <h3 class="ir_so">배너 영역</h3>
+            <div class="img_type slider">
+                <div class="slider-img">
+                    <div class="desc">
+                        <span>DEVELOPER</span>
+                        <h4>NEW FRONTEND</h4>
+                        <p>당신이 만들어가 새로운 이야기
+                            당신도 할 수 있습니다</p>
+                        <div class="btn">
+                            <a href="#" class="white">자세히 보기</a>
+                            <a href="#" class="black">사이트 보기</a>
+                        </div>
+                        <div class="slider-arrow">
+                            <a href="#" class="left"><span class="ir_pm">이전이미지</span></a>
+                            <a href="#" class="right"><span class="ir_pm">이전이미지</span></a>
+                        </div>
+                        <div class="slider-dot">
+                            <a href="#" class="dot active"><span class="ir_pm">1</span></a>
+                            <a href="#" class="dot "><span class="ir_pm">2</span></a>
+                            <a href="#" class="dot "><span class="ir_pm">3</span></a>
+                            <a href="#" class="dot "><span class="ir_pm">4</span></a>
+                            <a href="#" class="play"><span class="ir_pm">5</span></a>
+                            <a href="#" class="stop"><span class="ir_pm">6</span></a>
                         </div>
                     </div>
-                    <div class="right">
-                        <div class="right-cont">
-                        <h4>넓은 풍경</h4>
-                        <p>마음마저 넓어진듯한  아름다운 풍경을 감상해 보실 건가요? 답답한 일상생활에 스트래스를멀리 날려 보낼수 있습니다</p>
-                            <a href="#">자세히 보기</a>
+                </div>
+        </section> -->
+            <!-- Slider main container -->
+            <section id="banner">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide s1">
+                        <div class="desc">
+                            <span>DEVELOPER</span>
+                            <h4>NEW FRONTEND</h4>
+                            <p>당신이 만들어가 새로운 이야기
+                                당신도 할 수 있습니다</p>
+                            <div class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">사이트 보기</a>
                             </div>
+                            <div class="slider-arrow">
+                                <a href="#" class="left"><span class="ir_pm">이전이미지</span></a>
+                                <a href="#" class="right"><span class="ir_pm">이전이미지</span></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="swiper-slide s2">
+                        <div class="desc">
+                            <span>DEVELOPER</span>
+                            <h4>NEW FRONTEND</h4>
+                            <p>당신이 만들어가 새로운 이야기
+                                당신도 할 수 있습니다</p>
+                            <div class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">사이트 보기</a>
+                            </div>
+                            <div class="slider-arrow">
+                                <a href="#" class="left"><span class="ir_pm">이전이미지</span></a>
+                                <a href="#" class="right"><span class="ir_pm">이전이미지</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide s3">
+                        <div class="desc">
+                            <span>DEVELOPER</span>
+                            <h4>NEW FRONTEND</h4>
+                            <p>당신이 만들어가 새로운 이야기
+                                당신도 할 수 있습니다</p>
+                            <div class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">사이트 보기</a>
+                            </div>
+                            <div class="slider-arrow">
+                                <a href="#" class="left"><span class="ir_pm">이전이미지</span></a>
+                                <a href="#" class="right"><span class="ir_pm">이전이미지</span></a>
+                            </div>
+            
+                        </div>
                     </div>
                 </div>
-            </section>
-            <!-- img_type01 -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
             <!-- banner -->
-            <section class="banner-type01">
-                <div class="container">
-                    <h3>여기저기 날아가 보세요</h3>
-                    <p>넓고 푸른 하늘에서 만약 당신이 이곳저곳을 날아가는 한마리의 새가 된다면 <br>
-                        가장먼저 어디로 날아가고 싶나요?  <br>
-    따뜻한 남쪽의 바람을 맞이하거나 아름다운 북극의 오로라를 감상하는 것도     좋은 방법중에 하나고 아니면 여러 사람들을 만나고 그들과 함께보내는 것도       <br>                                             
-                                  좋은 방법입니다</p>
-                    <a hrerf="#">베너유형</a>
+
+            <main id="contents">
+                <h2 class="ir_so">컨텐츠 영역</h2>
+                <div class="imgText_type01 container">
+                    <div class="text">
+                        <h3 class="text_title">이미지&텍스트</h3>
+                        <p class="text_desc">
+                            사이트 제작에 있어 이미지와 <br>
+                            텍스트를 혼합해서 사용하는 경우가 많다. <br>
+                            기본 레이아웃은 동일하기 때문에<br>
+                            이미지나 배치에 따라서<br>
+                            느낌은 얼마든지 다르게 표현할 수 있다<br>
+                            Gmarket Sans 50px, Medium <br>
+                            NEXON Lv1 Gothic 18px (153%) Regular
+                        </p>
+                        <div class="text_more">
+                            <a href="#">
+                                <span>더 많은 유형 살펴보기</span>
+                                <svg width="84" height="8" viewBox="0 0 84 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M83.3536 4.35355C83.5488 4.15829 83.5488 3.84171 83.3536 3.64645L80.1716 0.464466C79.9763 0.269204 79.6597 0.269204 79.4645 0.464466C79.2692 0.659728 79.2692 0.976311 79.4645 1.17157L82.2929 4L79.4645 6.82843C79.2692 7.02369 79.2692 7.34027 79.4645 7.53553C79.6597 7.7308 79.9763 7.7308 80.1716 7.53553L83.3536 4.35355ZM0 4.5H83V3.5H0V4.5Z"
+                                        fill="#AF3029" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img1"></div>
+                    <div class="img2"></div>
+
+
                 </div>
+                <section class="imgText_type02">
+                    <div class="left"></div>
+                    <div class="right">
+                        <div class="Text">
+                            <samp class="sub">너를 위한 이야기</samp>
+                            <h3 class="title">당신을 위한 여행을 떠나 보세요</h3>
+                            <p class="desc">다양한 시간을 보내면서<br>
+                                너무 힘들고 지친 일상을 반복하면서 <br> 문뜩 어딘가로 떠나고 싶은
+                                생각이 가끔들지 않으신가요? <br>일상에서 당신을 위한
+                                작은 선물을 스스로 마련 할 수 있도록 <br>도와드리겠습니다.</p>
+                            <a href="#" class="view">자세히 보기</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- img_type01 -->
+                <section class="img_type01 container">
+                    <h3>다양한 세상들<em>이미지 유형01</em></h3>
+                    <div class="img-wrap">
+                        <div class="left">
+                            <div class="left-cont">
+                                <h4>싱그러운 꽃밭</h4>
+                                <p>자연속에 피어나는 꽃들로 가득한 곳에서 즐겨 보실래요? 피어나면서 나오는 향기로운 냄새를 맡아보는것도 좋은 경험이에요</p>
+                                <a href="#">자세히 보기</a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="right-cont">
+                                <h4>넓은 풍경</h4>
+                                <p>마음마저 넓어진듯한 아름다운 풍경을 감상해 보실 건가요? 답답한 일상생활에 스트래스를멀리 날려 보낼수 있습니다</p>
+                                <a href="#">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- img_type01 -->
+                <!-- banner -->
+                <section class="banner-type01">
+                    <div class="container">
+                        <h3>여기저기 날아가 보세요</h3>
+                        <p>넓고 푸른 하늘에서 만약 당신이 이곳저곳을 날아가는 한마리의 새가 된다면 <br>
+                            가장먼저 어디로 날아가고 싶나요? <br>
+                            따뜻한 남쪽의 바람을 맞이하거나 아름다운 북극의 오로라를 감상하는 것도 좋은 방법중에 하나고 아니면 여러 사람들을 만나고 그들과 함께보내는 것도 <br>
+                            좋은 방법입니다</p>
+                        <a hrerf="#">베너유형</a>
+                    </div>
                 </section>
                 <!-- /banner -->
-            <!-- img_type02 -->
-            <section class="img_type02 ">
-                <div class="container">
-                <h3>여기는 어때요? <em>이미지 유형02</em></h3>
-                <div class="img-wrap">
-                <ul>
-                    <li>
-                        <span>
-                        <em>하얀세상의 겨울</em>
-                        <a href="#">자세히 보기</a>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <em>풍요의 가을</em>
-                            <a href="#">자세히 보기</a>
-                            </span>
-                    </li>
-                    <li>
-                        <span>
-                            <em>여름을 맞이한 바다</em>
-                            <a href="#">자세히 보기</a>
-                            </span>
-                    </li>
-                </ul>
-            </div>
-            </div>
-            </section>
-        </main>
+                <!-- img_type02 -->
+                <section class="img_type02 ">
+                    <div class="container">
+                        <h3>여기는 어때요? <em>이미지 유형02</em></h3>
+                        <div class="img-wrap">
+                            <ul>
+                                <li>
+                                    <span>
+                                        <em>하얀세상의 겨울</em>
+                                        <a href="#">자세히 보기</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <em>풍요의 가을</em>
+                                        <a href="#">자세히 보기</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <em>여름을 맞이한 바다</em>
+                                        <a href="#">자세히 보기</a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
             <!-- /main -->
-           <footer id="footer_type01">
-            <div class="container"></div>
-            <h2 class="ir_so">푸터 바로가기 메뉴</h2>
-            <div class="footer-menu">
-                <div>
-                <h3>레이아웃 영역</h3>
-                <ul>
-                    <li><a href="#">레이아웃 유형01</a></li>
-                    <li><a href="#">레이아웃 유형02</a></li>
-                    <li><a href="#">레이아웃 유형03</a></li>
-                    <li><a href="#">레이아웃 유형04</a></li>
-                    <li><a href="#">레이아웃 유형05</a></li>
-                </ul>
-</div>
-<div>
-    <h3>메뉴 영역</h3>
-    <ul>
-        <li><a href="#">메뉴 유형</a></li>
-    </ul>
-</div>
-<div>
-    <h3>메인 영역</h3>
-    <ul>
-        <li><a href="#">이미지 유형01</a></li>
-        <li><a href="#">동영상 유형02</a></li>
-        <li><a href="#">슬라이드 유형03</a></li>
-    </ul>
-</div>
-<div>
-    <h3>컨텐츠 영역</h3>
-    <ul>
-        <li><a href="#">텍스트 유형01</a></li>
-        <li><a href="#">이미지 유형02</a></li>
-        <li><a href="#">이미지/텍스트03</a></li>
-        <li><a href="#">카드 유형04</a></li>
-        <li><a href="#">베너 유형05</a></li>
-    </ul>
-</div>
-<div>
-    <h3>푸터 영역</h3>
-    <ul>
-        <li><a href="#">컨텍트 유형01</a></li>
-        <li><a href="#">푸터 유형02</a></li>
-    </ul>
-</div>
-<div>
-    <h3>사이트</h3>
-    <ul>
-        <li><a href="#">웹표준 사이트</a></li>
-        <li><a href="#">반응형 사이트</a></li>
-        <li><a href="#">패럴랙스 사이트</a></li>
-        <li><a href="#">포트폴리오 사이트</a></li>
-    </ul>
-</div>
-            </div>
-            <address class="footer-rights">
-              &copy;  2022 Namhajun. All rights reserved.
-            </address>
-            <div class="footer-sns">
-                <ul>
-                    <li><a href="#" class="ir_pm">페이스북</a></li>
-                    <li><a href="#" class="ir_pm">인스탁그램</a></li>
-                    <li><a href="#" class="ir_pm">카카오톡</a></li>
-                    <li><a href="#" class="ir_pm">블로그</a></li>
-                </ul>
-            </div>
-           </footer>
-       
-        <!-- //contents -->
-    </div>
+            <footer id="footer_type01">
+                <div class="container"></div>
+                <h2 class="ir_so">푸터 바로가기 메뉴</h2>
+                <div class="footer-menu">
+                    <div>
+                        <h3>레이아웃 영역</h3>
+                        <ul>
+                            <li><a href="#">레이아웃 유형01</a></li>
+                            <li><a href="#">레이아웃 유형02</a></li>
+                            <li><a href="#">레이아웃 유형03</a></li>
+                            <li><a href="#">레이아웃 유형04</a></li>
+                            <li><a href="#">레이아웃 유형05</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>메뉴 영역</h3>
+                        <ul>
+                            <li><a href="#">메뉴 유형</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>메인 영역</h3>
+                        <ul>
+                            <li><a href="#">이미지 유형01</a></li>
+                            <li><a href="#">동영상 유형02</a></li>
+                            <li><a href="#">슬라이드 유형03</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>컨텐츠 영역</h3>
+                        <ul>
+                            <li><a href="#">텍스트 유형01</a></li>
+                            <li><a href="#">이미지 유형02</a></li>
+                            <li><a href="#">이미지/텍스트03</a></li>
+                            <li><a href="#">카드 유형04</a></li>
+                            <li><a href="#">베너 유형05</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>푸터 영역</h3>
+                        <ul>
+                            <li><a href="#">컨텍트 유형01</a></li>
+                            <li><a href="#">푸터 유형02</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>사이트</h3>
+                        <ul>
+                            <li><a href="#">웹표준 사이트</a></li>
+                            <li><a href="#">반응형 사이트</a></li>
+                            <li><a href="#">패럴랙스 사이트</a></li>
+                            <li><a href="#">포트폴리오 사이트</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <address class="footer-rights">
+                    &copy; 2022 Namhajun. All rights reserved.
+                </address>
+                <div class="footer-sns">
+                    <ul>
+                        <li><a href="#" class="ir_pm">페이스북</a></li>
+                        <li><a href="#" class="ir_pm">인스탁그램</a></li>
+                        <li><a href="#" class="ir_pm">카카오톡</a></li>
+                        <li><a href="#" class="ir_pm">블로그</a></li>
+                    </ul>
+                </div>
+            </footer>
 
+            <!-- //contents -->
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+            effect:"slide",
+            // autoplay: {
+            //     delay: 3000,
+
+            // },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable : true
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollba
+        });
+    </script>
 </body>
+
 </html>

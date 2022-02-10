@@ -177,15 +177,24 @@
         }
 
         .board .search span:hover {
-            border: 1px solid #223547;
+            background: #223547;
             color: #fff;
             cursor: pointer;
         }
         .board .list li {
-            display: none;
+            padding-right: 100px;
+            position: relative;
         }
-        .board .list li.show {
-            display: block;
+     
+        .board .list li span {
+            position: absolute;
+            right: 10px ; top: 50%;
+            font-size: 14px;
+            transform : translateY(-50%);
+        }
+        .board .list li span::before{
+            content: 'view : ';
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -207,10 +216,10 @@
             <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
             <!-- 검색 영역 -->
             <div class="search">
-                <span>조회수 10개 이상</span>
-                <span>조회수 20개 이상</span>
-                <span>조회수 30개 이상</span>
-                <span>조회수 40개 이상</span>
+                <span data-view="10">조회수 10개 이상</span>
+                <span  data-view="20">조회수 20개 이상</span>
+                <span  data-view="30">조회수 30개 이상</span>
+                <span  data-view="40">조회수 40개 이상</span>
             
             </div>
             <!-- 전체 목록 갯수 -->
@@ -218,7 +227,9 @@
              <!-- css 속성 리스트 -->
             <div class="desc">아래의 속성을 검색하면 설명이 나옵니다</div>
             <!-- css 속성 리스트 -->
-            <div class="list"></div>
+            <div class="list">
+                <ul></ul>
+            </div>
         </div>
     </div>
     
@@ -238,41 +249,45 @@
             {view: "46", name:"caption-side", desc: "caption-side 속성은 테이블 caption의 위치를 설정합니다."},
             
         ];
+  
 
         
         const searchBox = document.querySelectorAll(".search span");    //알파벳 버튼들
         const cssList = document.querySelector(".list ul");       //속성 리스트
         const cssCount = document.querySelector(".count em");           //속성 갯수
-
-        //버튼을 클릭했을때
-           searchBox.forEach(el => {
-           el.addEventListener("click", () => {
-                oneClickButton()
-            });
-        });
-
-        //변수,(데이터 저장+변경+추가+전역/지역),
-        // 배열(순차적으로 여러개 데이터저장), 
-        // 객체, 
-        // 함수(실행문 집합체, 재활용)
-        function oneClickButton(){
-            alert("경고");
-        }
-
-        //css 리스트 출력하기
-        function upDataList(){
-            let list = "";
-
-            for(let data of cssProperty){
-                // list += "<li>"+cssProperty[i].view+"</li>"
-                list += '<li>${data.desc}<span>${datav.iew}</span></li>';
-            }
-
-           cssList.innerHTML = list;
- 
-        }
-        upDataList();
         
+        let listHtml = '';
+        //CSS 목록 보여주기
+        function updateList(){
+            for(const data of cssProperty){
+                listHtml += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`;
+            }
+            cssList.innerHTML = listHtml;
+        }
+        updateList();
+        //버튼 클릭해서 데이터 가져오기
+        searchBox.forEach(span => {
+            span.addEventListener("click", (event) => {
+                const button = event.target;            //타겟 설정 : 몇 번째 버튼인지 알려고
+                const targetView = button.dataset.view; //타겟 값이 저장
+                const filterList = cssProperty.filter(data => data.view >= targetView);
+                listHtml = '';
+                for(const data of filterList) {
+                    listHtml += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`;
+                }
+                cssList.innerHTML = listHtml;
+            })
+        })
+
+
+
+
+
+
+
+
+
+
        // //for문
         // for(let i = 0; i < cssProperty.length; i++){
         //     console.log(cssProperty[i].view);

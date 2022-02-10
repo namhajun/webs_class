@@ -365,6 +365,50 @@ function findProp(searchProp){
 
 
 
+
+
+
+
+
+
+
+
+//버튼을 클릭했을때
+           searchBox.forEach(el => {
+           el.addEventListener("click", (event) => {
+                oneClickButton(event)
+            });
+        });
+
+        //변수,(데이터 저장+변경+추가+전역/지역),
+        // 배열(순차적으로 여러개 데이터저장), 
+        // 객체, 
+        // 함수(실행문 집합체, 재활용)
+        function oneClickButton(event){
+          //클릭한 대상의 view값을 값을 가져와야 경고창으로 보여주세요
+              const button = event.taget;  //사용자가 클릭한 버튼 타겟 설정
+              const targetView = button.dataset.view;
+             const filerList= cssProperty.filter((data)=> data.view >= targetView);
+              upDataList(filerList);
+
+        }
+
+        //css 리스트 출력하기
+        function upDataList(filerList){
+            let list = "";
+
+            for(let data of filerList){
+                // list += "<li>"+cssProperty[i].view+"</li>"
+                list += '<li>${data.name} :${data.desc}<span>${datav.iew}</span></li>';
+            }
+    
+
+           cssList.innerHTML = list;
+ 
+        }
+        upDataList();
+
+
 </body>
 
 </html>
