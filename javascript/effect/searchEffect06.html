@@ -167,30 +167,34 @@
         }
 
         /*  */
-        .board .desc {
-            background: #A5C3D5;
-            font-size: 18px;
-            margin: 5px 0;
-            border-radius: 4px;
-            padding: 15px 10px;
-        }
-        .board .list {
-            background: #A5C3D5;
-            padding: 15px 10px;
-            border-radius: 4px;
-        }
-        .board .list span {
+        .board .search span {
             border: 1px solid #223547;
-            border-radius: 20px;
-            padding: 5px 20px;
-            margin: 3px;
+            border-radius: 30px;
+            padding: 5px 30px;
             display: inline-block;
-            transition: all 0.3s;
-            cursor: pointer;
+            transition: all 0.2s;
+            margin: 3px;
         }
-        .board .list span:hover {
+
+        .board .search span:hover {
             background: #223547;
             color: #fff;
+            cursor: pointer;
+        }
+        .board .list li {
+            padding-right: 100px;
+            position: relative;
+        }
+     
+        .board .list li span {
+            position: absolute;
+            right: 10px ; top: 50%;
+            font-size: 14px;
+            transform : translateY(-50%);
+        }
+        .board .list li span::before{
+            content: 'view : ';
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -208,19 +212,116 @@
             </ul>
         </div>
         <div class="board">
-            <span class="sub"><a href="../javascript06.html#sample10">find( )</a>를 이용하여 속성 검색하면 </span>
+            <span class="sub"><a href="../javascript06.html#sample5">sort( )</a>를 이용하여  검색하기 </span>
             <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
             <!-- 검색 영역 -->
             <div class="search">
-                <label for="search-box">검색하기</label>
-                <input type="text" id="search-box" placeholder="CSS 속성을 입력해주세요!!">
-             
+                <span class="btn1">반대로</span>
+                <span class="btn2">오름차순</span>
+                <span class="btn3">내림차순</span>
+                <span class="btn4">알파뱃순</span>
+                <span class="btn5">오름차순</span>
+            
             </div>
             <!-- 전체 목록 갯수 -->
             <div class="count">   전체 속성 갯수 : <em>0</em>개</div>
              <!-- css 속성 리스트 -->
             <div class="desc">아래의 속성을 검색하면 설명이 나옵니다</div>
             <!-- css 속성 리스트 -->
-            <div class="list"></div>
+            <div class="list">
+                <ul></ul>
+            </div>
         </div>
     </div>
+    
+    <script>
+   const cssProperty = [
+            {num: 1, name:"all", desc: "all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다."},
+            {num: 2, name:"animation-delay", desc: "nimation-delay 속성은 애니메이션이 시작되는시간을 설정합니다."},
+            {num: 3, name:"animation-direction", desc: "animation-direction 속성은애니메이션이 움직이는 방향을 설정합니다."},
+            {num: 4, name:"animation-fill-mode", desc: "animation-fill-mode 속성은애니메이션이 끝난 후의 상태를 설정합니다."},
+            {num: 5, name:"animation-iteration-count", desc: " animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다."},
+            {num: 6, name:"animation-name", desc: "animation-name 속성은 애니메이션 키프레임 이름을 설정합니다."},
+            {num: 7, name:"backdrop-filter", desc: " backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."},
+            {num: 8, name:"backface-visibility", desc: "backface-visibility 속성은 요소 뒷면 출력 여부 설정합니다"},
+            {num: 9, name:"caption-side", desc: "caption-side 속성은 테이블 caption의 위치를 설정합니다."},
+            {num:10, name:"empty-cell", desc: "empty-cells 사용자 에이전트가 보이는 콘텐츠가 없는 셀의 테두리와 배경을 렌더링하는 방법을 지정합니다."},
+            {num:11, name:"caption-side", desc: "caption-side 속성은 테이블 caption의 위치를 설정합니다."},
+            {num: 12, name:"caption-side", desc: "caption-side 속성은 테이블 caption의 위치를 설정합니다."},
+            
+        ];
+
+        const searchbox = document.querySelectorAll(".search span");  //버튼
+        const cssList = document.querySelector(".list ul")                          //속성리스트
+        const cssCount = document.querySelector(".count")               //속성 갯수
+  
+       
+       ///데이터 출력
+       const updateList= function(){
+           let listCSS = '';
+       
+     
+            cssProperty.forEach((data,index) => {
+               listHtml += `<li>${data.num}.${data.name}:${data.desc}</li>`;
+               cssCount.innerHTML=`전체 목록 갯수 : <em>${index+1}</em>개`;
+            });
+
+            cssList.innerHTML = listHTML;
+        }
+          updateList();    
+    });
+
+          function revers(){
+            cssProperty.reverse()
+          }
+
+
+    //오름차순   정렬
+function sortAsecending(){
+    cssProperty.sort((a,b) => {
+    return a.num - b.num;
+});
+updateList();
+}
+//내림차순
+function sortDescending(){
+cssProperty.sort((a,b) => {
+    return
+});
+updateList();
+};
+// 알파뱃 정렬(a~z)
+function sortApabat(){
+    cssProperty.sort((a,b) => {
+        let x = a.name;
+        let y = b.name;
+   return x.localeCompare(y)
+});
+updateList();
+}
+
+// 알파뱃 정렬(z~a)
+function sortApabatZ(){
+    cssProperty.sort((a,b) => {
+        let x = a.name;
+        let y = b.name;
+   return y.localeCompare(x)
+});
+updateList();
+}
+    
+//내림차순 버튼 클릭시
+        document.querySelector(".btn1").addEventListener("click", () =>
+        {
+            sortDescending();
+        })
+
+//오름차순 버튼 클릭시
+document.querySelector(".btn1").addEventListener("click", () =>
+        {
+            sortAsecending();
+        })
+    </script>
+
+    </body>
+    </html>
