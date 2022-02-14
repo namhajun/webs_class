@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+
+    <title>웹사이트 연습</title>
+    
+</head>
+<style>
+ * {
+    font-family: 'Poppins';
+}
+.container {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+#wrap { margin: 0 auto;
+}
+#header {
+    width: 1440px;
+    height: 100px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+#header .logo {
+    display: inline-block;
+    display: flex;
+    margin-top: 20px;
+}
+#header .logo .pik {
+    background: url(/img/test.svg);
+    width: 35px;
+    height: 35px;
+}
+#header .logo a {
+    margin-left: 10px;
+    font-size: 30px;
+    line-height: 1;
+    color: black;
+}
+#header .menu {
+    margin-top: 20px;
+    display: inline-block;
+    display: flex;
+    margin-right: 200px;
+    
+}
+#header .menu a {
+    font-size: 17px;
+    margin: 0 25px;
+    font-weight: 600;
+   color: black;
+}
+
+#header .my {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-top: 20px;
+}
+#header .my div:nth-child(1) {
+    background: url(/img/test.svg);
+    width: 24px;
+    height: 24px;
+    margin-right: 25px;
+    background-position: -50px 0;
+}
+#header .my div:nth-child(2) {
+    background: url(/img/test.svg);
+    width: 24px;
+    height: 24px;
+    margin-right: 25px;
+    background-position: -100px 0;
+}
+#header .my div:nth-child(3) {
+    background: url(/img/test.svg);
+    width: 24px;
+    height: 24px;
+    background-position: -150px 0;
+}
+
+#banner {
+    width: 100%;
+    height: 853px;
+    position: relative;
+    margin: 0 auto;
+
+}
+#banner .banner_imgtxet {
+    background: url(/img/Image.jpg);
+    background-repeat: no-repeat;
+    background-position:right 20% top 50%;
+    width: 100%;
+    height: 853px;
+}
+#banner .banner_imgtxet .container .desc {
+
+}
+#banner .banner_imgtxet .container .desc h4 {
+    font-family: 'Poppins';
+    font-size: 80px;
+    line-height: 1;
+    font-weight: 600;
+}
+#banner .banner_imgtxet .container .desc p {
+    margin-top: 55px;
+    font-size: 18px;
+}
+#banner .banner_imgtxet .container .desc strong {
+    position: absolute;
+    left: 40%;
+    bottom: 10%;
+    
+}
+
+.banner_imgtxet .btn {
+    margin-top: 70px;
+}
+.banner_imgtxet .btn .btn1 {
+    width: 202px;
+    height: 70px;
+    background: #c4a586;
+    color: #fff;
+    padding: 20px 35px;
+    margin-right: 26px;
+}
+.banner_imgtxet .btn .btn2 {
+    width: 202px;
+    height: 70px;
+    background: #fff;
+    color: #c4a586;
+    padding: 20px 50px;
+    border: 1px solid #c4a586;
+}
+</style>
+<body>
+    <div id="wrap">
+        <!-- 메뉴바 -->
+        <header id="header">
+            <div class="logo">
+                <div class="pik ir_pm">로고</div>
+                <h3><a href="#">MISTRIUM</a></h3>
+            </div>
+            <div class="menu">
+                <div><a href="#">home</a></div>
+                <div><a href="#">about us</a></div>
+                <div><a href="#">products</a></div>
+                <div><a href="#">faqs</a></div>
+                <div><a href="#">contact us</a></div>
+            </div>
+            <div class="my">
+                <div><a href="#" class="btn1 ir_pm">1</a></div>
+                <div><a href="#" class="btn2 ir_pm">2</a></div>
+                <div><a href="#" class="btn3 ir_pm">3</a></div>
+            </div>
+        </header>
+        <!-- //메뉴바 -->
+
+        <!-- 배너부분 -->
+        <section id="banner">
+            <div class="banner_imgtxet">
+                <div class="container">
+                <div class="desc">
+                    <h4>Modern Furniture For<br>Modern Living Style</h4>
+
+                    <p> In unfeeling existence objection immediate repulsive<br>
+                        on he in. Imprudence comparison uncommonly me<br>
+                        he difficulty diminution resolution. Likewise proposal<br>
+                        differed scarcely dwelling as on raillery.<br>
+                        <br>
+                        September few dependent extremity own continued<br>
+                        and ten prevailed attending. Early to weeks we could.<br>
+                        Do commanded an shameless we disposing do.<br>
+                        Indulgence ten remarkably nor are impression out.<br>
+                        Power is lived means oh every in we quiet.</p>
+                    <div class="btn">
+                        <a href="#" class="btn1">Request a Quote</a>
+                        <a href="#" class="btn2">Watch Video</a>
+                    </div>
+                    <strong>SOME OF OUR TRUSTED CLIENTS</strong>
+
+
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- //배너부분 -->
+    </div>
+</body>
+
+</html>
