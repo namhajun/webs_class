@@ -268,9 +268,9 @@
         //버튼 클릭해서 데이터 가져오기
         searchBox.forEach(span => {
             span.addEventListener("click", (event) => {
-                const button = event.target;            //타겟 설정 : 몇 번째 버튼인지 알려고
+                const button = event.target;            //타겟 설정 : 몇 번째 버튼인지 알려고할때
                 const targetView = button.dataset.view; //타겟 값이 저장
-                const filterList = cssProperty.filter(data => data.view >= targetView);
+                const filterList = cssProperty.filter(data => data.view >= targetView); //
                 listHtml = '';
                 for(const data of filterList) {
                     listHtml += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`;
