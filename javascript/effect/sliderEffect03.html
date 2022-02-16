@@ -58,13 +58,10 @@
             content: '이미지2';
         }
 
-        .slider:nth-child(3)::before {
-            content: '이미지3';
+        .slider:nth-child(3)::before {   content: '이미지3';
         }
 
-        .slider:nth-child(4)::before {
-            content: '이미지4';
-        }
+        .slider:nth-child(4)::before { content: '이미지4';}
 
         .slider:nth-child(5)::before {
             content: '이미지5';
@@ -258,8 +255,7 @@ modal();
         const slider = document.querySelectorAll(".slider"); //5개 이미지 저장
 
         let currentIndex = 0;
-        let sliderConunt = slider,
-            length;
+        let sliderConunt = slider. length;
         let sliderWidth = sliderImg.offsetWidth; //이미지 갯수
         let sliderClone = sliderInner.firstElementChild.cloneNode(true); //첫 번째 이미지 (현재 보이는 이미지)
         sliderInner.appendChild(sliderClone);
@@ -267,7 +263,7 @@ modal();
 
 
         function sliderEffect() {
-            currentIndex++
+            currentIndex++;                                                                                 //
             sliderinner.style.transition = "all 0.3s";
             sliderInner.style.transform = "translateX (-" + sliderwidth * currentIndex + "px)"
 

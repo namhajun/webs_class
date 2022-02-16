@@ -259,12 +259,12 @@ h2 { color: teal; text-decoration: underline; }
 
         </code></pre>
     </div>
-<p>HTML과 CSS에서는 하나의 웹 페이지에 속하는 여러 요소에 같은 아이디 이름을 사용해도 별 문제없이 동작합니다.
+    <p>HTML과 CSS에서는 하나의 웹 페이지에 속하는 여러 요소에 같은 아이디 이름을 사용해도 별 문제없이 동작합니다.
 
-    하지만 이렇게 중복된 아이디를 가지고 자바스크립트 작업을 하게 되면 오류가 발생합니다.
-    
-    따라서 되도록이면 하나의 웹 페이지에 속하는 요소에는 다른 아이디 이름을 사용하거나 클래스를 사용하는 것이 좋습니다.
-    
+        하지만 이렇게 중복된 아이디를 가지고 자바스크립트 작업을 하게 되면 오류가 발생합니다.
+
+        따라서 되도록이면 하나의 웹 페이지에 속하는 요소에는 다른 아이디 이름을 사용하거나 클래스를 사용하는 것이 좋습니다.
+
     </p>
 
 
@@ -288,14 +288,14 @@ h2 { color: teal; text-decoration: underline; }
     </div>
 
 
- <h3>그룹 선택자</h3>
+    <h3>그룹 선택자</h3>
     <p>그룹 선택자는 위에서 언급한 여러 선택자를 같이 사용하고자 할 때 사용합니다.
 
         그룹 선택자는 여러 선택자를 쉼표(,)로 구분하여 연결합니다.
-        
+
         이러한 그룹 선택자는 코드를 중복해서 작성하지 않도록 하여 코드를 간결하게 만들어 줍니다.
-        
-        </p>
+
+    </p>
     <div class="code">
         <pre><code>
 &lt;style&gt;
@@ -307,17 +307,17 @@ h2 { color: navy; }
 &lt;/style&gt;
 
 </code></pre>
-</div>
+    </div>
 
 
 
 
 
 
-<div class="iframe">
-    <iframe src="https://namhajun.github.io/webs_class/javascript/effect/searchEffect04.html"></iframe>
-</div>
-<pre class="typescript"><code>
+    <div class="iframe">
+        <iframe src="https://namhajun.github.io/webs_class/javascript/effect/searchEffect04.html"></iframe>
+    </div>
+    <pre class="typescript"><code>
 const searchBox = document.querySelector("#search-box");  
 const cssCount = document.querySelector(".count");
 const cssDesc = document.querySelector(".desc");
@@ -356,7 +356,7 @@ function findProp(searchProp){
 }
 </code></pre>
 
-<a href="https://namhajun.github.io/webs_class/javascript/javascript06.html#sample10">find()</a>
+    <a href="https://namhajun.github.io/webs_class/javascript/javascript06.html#sample10">find()</a>
 
 
 
@@ -373,40 +373,208 @@ function findProp(searchProp){
 
 
 
-//버튼을 클릭했을때
-           searchBox.forEach(el => {
-           el.addEventListener("click", (event) => {
-                oneClickButton(event)
-            });
-        });
+    //버튼을 클릭했을때
+    searchBox.forEach(el => {
+    el.addEventListener("click", (event) => {
+    oneClickButton(event)
+    });
+    });
 
-        //변수,(데이터 저장+변경+추가+전역/지역),
-        // 배열(순차적으로 여러개 데이터저장), 
-        // 객체, 
-        // 함수(실행문 집합체, 재활용)
-        function oneClickButton(event){
-          //클릭한 대상의 view값을 값을 가져와야 경고창으로 보여주세요
-              const button = event.taget;  //사용자가 클릭한 버튼 타겟 설정
-              const targetView = button.dataset.view;
-             const filerList= cssProperty.filter((data)=> data.view >= targetView);
-              upDataList(filerList);
+    //변수,(데이터 저장+변경+추가+전역/지역),
+    // 배열(순차적으로 여러개 데이터저장),
+    // 객체,
+    // 함수(실행문 집합체, 재활용)
+    function oneClickButton(event){
+    //클릭한 대상의 view값을 값을 가져와야 경고창으로 보여주세요
+    const button = event.taget; //사용자가 클릭한 버튼 타겟 설정
+    const targetView = button.dataset.view;
+    const filerList= cssProperty.filter((data)=> data.view >= targetView);
+    upDataList(filerList);
 
-        }
+    }
 
-        //css 리스트 출력하기
-        function upDataList(filerList){
-            let list = "";
+    //css 리스트 출력하기
+    function upDataList(filerList){
+    let list = "";
 
-            for(let data of filerList){
-                // list += "<li>"+cssProperty[i].view+"</li>"
-                list += '<li>${data.name} :${data.desc}<span>${datav.iew}</span></li>';
-            }
-    
+    for(let data of filerList){
+    // list += "<li>"+cssProperty[i].view+"</li>"
+    list += '<li>${data.name} :${data.desc}<span>${datav.iew}</span></li>';
+    }
 
-           cssList.innerHTML = list;
- 
-        }
-        upDataList();
+
+    cssList.innerHTML = list;
+
+    }
+    upDataList();
+
+
+
+
+    <h3>transition </h3>
+    <p>1. 해당 요소에 추가할 CSS 스타일 전환(transition) 효과를 설정합니다.<br>
+
+        2. 추가할 전환 효과가 지속될 시간을 설정합니다.</p>
+
+    <h3>transition-timing-function 속성</h3>
+    <p>transition-timing-function 속성은 전환(transition) 효과의 시간당 속도를 설정합니다.
+
+
+
+        transition-timing-function 속성의 속성값으로는 다음과 같은 값을 설정할 수 있습니다.</p>
+
+    <ul>
+        <li>1. linear : 전환(transition) 효과가 처음부터 끝까지 일정한 속도로 진행됩니다.</li>
+
+        <li> 2. ease : 기본값으로, 전환(transition) 효과가 천천히 시작되어, 그다음에는 빨라지고, 마지막에는 다시 느려집니다.</li>
+
+        <li> 3. ease-in : 전환(transition) 효과가 천천히 시작됩니다.</li>
+
+        <li> 4. ease-out : 전환(transition) 효과가 천천히 끝납니다.</li>
+
+        <li>5. ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝납니다.</li>
+
+        <li> 6. cubic-bezier(n,n,n,n) : 전환(transition) 효과가 사용자가 정의한 cubic-bezier 함수에 따라 진행됩니다.</li>
+
+
+    </ul>
+
+    <div class="code">
+        <pre><code>
+&lt;style&gt;
+
+    div {
+
+        width: 100px;
+
+        -webkit-transition: width 1s;
+
+        transition: width 1s;
+
+    }
+
+    #div_01 {
+
+        -webkit-transition-timing-function: linear;
+
+        transition-timing-function: linear;
+
+    }
+
+    #div_05 {
+
+        -webkit-transition-timing-function: ease-in-out;
+
+        transition-timing-function: ease-in-out;
+
+    }
+
+    div:hover { width: 300px; }
+
+&lt;/style&gt;
+            </code></pre>
+    </div>
+
+
+<h3>transition-delay</h3>
+<p>transition-delay 속성은 전환(transition) 효과가 나타나기 전까지의 지연 시간을 설정합니다.
+
+    전환(transition) 효과는 이 메소드로 설정된 시간이 흐른 뒤에야 비로소 시작됩니다.</p>
+
+
+    <div class="code">
+        <pre><code>
+&lt;style&gt;
+#resize {
+
+    height: 100px;
+
+    width: 150px;
+
+    -webkit-transition: width 1s, height 2s;
+
+    transition: width 1s, height 2s;
+
+    -webkit-transition-delay: 1s;
+
+    transition-delay: 1s;
+
+}
+
+#resize:hover { width: 300px; height: 300px; }
+&lt;/style&gt;
+            </code></pre>
+    </div>
+
+<h3>전환(transition) 효과와 변형(transform) 효과의 동시 적용</h3>
+<p>전환(transition) 효과와 변형(transform) 효과를 같이 적용할 수도 있습니다.</p>
+
+<div class="code">
+    <pre><code>
+&lt;style&gt;
+#windmill {
+
+    height: 100px;
+
+    width: 100px;
+
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+
+    transition: width 2s, height 2s, transform 2s;
+
+}
+
+#windmill:hover {
+
+    width: 300px;
+
+    height: 300px;
+
+    -webkit-transform: rotateY(180deg);
+
+    transform: rotateY(180deg);
+
+}
+&lt;/style&gt;
+        </code></pre>
+</div>
+<h4>CSS3 transition 속성</h4>
+
+<table>
+	<thead>
+		<tr>
+			<th>속성</th>
+			<th>설명</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>transition</td>
+			<td>모든 transition 속성을 이용한 스타일을 한 줄에 설정할 수 있음.</td>
+		</tr>
+		<tr>
+			<td>transition-property</td>
+			<td>요소에 추가할 전환(transition)&nbsp;효과를 설정함.</td>
+		</tr>
+		<tr>
+			<td>transition-duration</td>
+			<td>전환(transition)&nbsp;효과가 지속될 시간을 설정함.</td>
+		</tr>
+		<tr>
+			<td>transition-timing-function</td>
+			<td>전환(transition) 효과의 시간당 속도를 설정함.</td>
+		</tr>
+		<tr>
+			<td>transition-delay</td>
+			<td>전환(transition) 효과가 나타나기 전까지의&nbsp;지연 시간을 설정함.</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+
 
 
 </body>
