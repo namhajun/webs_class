@@ -1,202 +1,828 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test8</title>
+
+    <style>
+        * {
+            font-family: "Poppins";
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            color: #000;
+        }
+
+        #wrap {
+            width: 100%;
+            height: 3000px;
+        }
+
+        #header {
+            width: 100%;
+            padding: 52px 0px ;
+        }
+
+        .headerContainer {
+            height: 42px;
+            width: 1250px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+
+        #header .title {
+            width: 156px;
+            height: 35px;
+            background: url(./assets/img/Logo.png);
+
+        }
 
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;1,300&display=swap"
-    rel="stylesheet">
+        #header .menu {
+            display: flex;
+            font-size: 17px;
+            justify-content: space-between;
+            width: 484px;
+        }
 
-    <title>웹사이트 연습</title>
-    
+        #header .member {
+            display: flex;
+        }
+        
+        #header .member .search {
+            background: url(./assets/img/Frame\ 1000001379.svg);
+            height: 24px;
+            width: 24px;    
+            background-position: 0 0;
+            margin-right: 25px;
+        }
+        
+        #header .member .basket {
+            background: url(./assets/img/Frame\ 1000001379.svg);
+            height: 24px;
+            width: 24px;
+            background-position: -24px 0;
+            margin-right: 25px;
+        }
+        
+        #header .member .people {
+            background: url(./assets/img/Frame\ 1000001379.svg);
+            height: 24px;
+            width: 24px;
+            background-position: -48px 0;
+        }
+
+        #banner {
+            background: url(./assets/img/bannerImg.jpg) no-repeat;
+            background-position: right;
+            width: 100%;
+            height: 680px;
+        }
+
+        #banner .content {            
+            width: 1250px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        #banner .text1 {
+            font-size: 80px;
+            font-weight: bold;
+            line-height: 0.96;
+            margin-left: -5px;
+        }
+
+        #banner .text2 {
+            width: 432px;
+            margin-top: 55px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        #banner .btn {
+            display: flex;
+            margin-top: 35px;
+        }
+
+        #banner .btn .brown {
+            padding: 21px 35px;
+            background-color: #c4a586;
+            color: #fff;
+            margin-right: 26px;
+        }
+
+        #banner .btn .white {
+            padding: 21px 55px;
+            background-color: #fff;
+            border: 1px solid #c4a586;
+            color: #c4a586;
+        }
+         .contents2 .text2 {
+            margin: 135px;
+            text-align: center;
+            font-weight: 600;
+
+        }
+
+         .contents2 {
+            height: 400px;
+        }
+
+         .contents2 .article2 {
+            text-align: center;
+        }
+
+         .contents2 .article2 li {
+            display: inline-block;
+            font-size: 24px;
+            text-align: center;
+            padding: 30px 30px;
+            color: #C4A586;
+        }
+
+         .contents3 {
+            display: flex;
+            justify-content: center;
+        }
+
+         .contents3 .article1 {
+            width: 100%;
+            height: 500px;
+            background-color: #72696a;
+            background-image: url(./assets/img/Group1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+         .contents3 .article2 {
+            width: 100%;
+            height: 500px;
+            background-color: #777;
+            background-image: url(./assets/img/Group2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+         .contents3 .article1 .text1 {
+            font-weight: 600;
+            font-size: 40px;
+            margin-left: 90px;
+            margin-top: 150px;
+        }
+
+         .contents3 .article1 .text1_1 {
+            font-weight: 600;
+            font-size: 20px;
+            margin-left: 90px;
+            margin-top: 100px;
+        }
+
+         .contents3 .article2 .text2 {
+            font-weight: 600;
+            font-size: 40px;
+            margin-left: 90px;
+            margin-top: 150px;
+        }
+
+         .contents3 .article2 .text2_1 {
+            font-weight: 600;
+            font-size: 20px;
+            margin-left: 90px;
+            margin-top: 100px;
+        }
+
+         .contents4 {
+            margin: 190px;
+            margin-top: 173px;
+            height: 1200px;
+        }
+
+         .contents4 .article1 {
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+        }
+
+         .contents4 .article1 span {
+            font-weight: 700;
+            font-size: 50px;
+        }
+
+         .contents4 .article1 .menu ul {
+            margin-right: 70px;
+        }
+
+         .contents4 .article1 .menu li {
+            font-weight: 500;
+            color: #a9a7a6;
+            display: inline-block;
+            font-size: 25px;
+            padding: 30px 50px;
+        }
+
+         .contents4 .article1 .member li {
+            font-weight: 500;
+            color: #3d3d3f;
+            font-size: 17px;
+            display: inline-block;
+            padding: 30px 30px;
+        }
+
+         .contents4 .article2 {
+            text-align: center;
+            margin: 0 auto;
+            height: 300px;
+        }
+
+         .contents4 .article2 li {
+            display: inline-block;
+            font-size: 18px;
+            padding: 100px 50px;
+            color: #a9a7a6;
+        }
+         .contents4 .article3 .product1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+         .contents4 .article3 .product1 .prod1 {
+            width: 450px;
+            height: 360px;
+            background-color: #fff4e8;
+            position: relative;
+        }
+         .contents4 .article3 .product1 img{
+            width: 100%;
+            margin-right: 70px;
+            position: absolute;
+            height: 400px;
+            margin-top: -15px;
+        }
+
+         .contents4 .article3 .product1 .prod1 .Add {
+            border-radius: 40px;
+            width: 137px;
+            height: 40px;
+            background: #d9ab82;
+            text-align: center;
+            margin-left: 10%;
+            position: absolute;
+            top: -20px;
+            left: 120px;
+            background-image: url(./assets/img/bg-svg.svg);
+            background-position: 103px -93px;
+        }
+         .contents4 .article3 .product1 .prod1 .Add .text1 {
+            color: #fff;
+            position: absolute;
+            font-size: 14px;
+            top: 10px;
+            right: 40px;
+        }
+         .contents4 .article3 .product1 .prod2 {
+            width: 450px;
+            height: 360px;
+            background-color: #fff4e8;
+            position: relative;
+        }
+         .contents4 .article3 .product1 .prod2 .Add2 {
+            border-radius: 40px;
+            width: 137px;
+            height: 40px;
+            background: #d9ab82;
+            text-align: center;
+            margin-left: 10%;
+            position: absolute;
+            top: -20px;
+            left: 120px;
+            background-image: url(./assets/img/bg-svg.svg);
+            background-position: 103px -93px;
+        }
+         .contents4 .article3 .product1 .prod2 .Add2 .text2 {
+            color: #fff;
+            position: absolute;
+            font-size: 14px;
+            top: 10px;
+            right: 40px;
+        }
+         .contents4 .article3 .product1 .prod3 {
+            width: 450px;
+            height: 360px;
+            background-color: #fff4e8;
+            position: relative;
+        }
+         .contents4 .article3 .product1 .prod3 .Add {
+            border-radius: 40px;
+            width: 137px;
+            height: 40px;
+            background: #d9ab82;
+            text-align: center;
+            margin-left: 10%;
+            position: absolute;
+            top: -20px;
+            left: 120px;
+            background-image: url(./assets/img/bg-svg.svg);
+            background-position: 103px -93px;
+        }
+         .contents4 .article3 .product1 .prod3 .Add .text1 {
+            color: #fff;
+            position: absolute;
+            font-size: 14px;
+            top: 10px;
+            right: 40px;
+        }
+
+         .contents4 .article3 .product2 .prod1{
+            width: 450px;
+            height: 400px;
+            background-color: #fff4e8;
+            position: relative;
+        }
+         .contents4 .article3 .product2 .prod1 .Add {
+            border-radius: 40px;
+            width: 137px;
+            height: 40px;
+            background: #d9ab82;
+            text-align: center;
+            margin-left: 10%;
+            position: absolute;
+            top: -20px;
+            left: 120px;
+            background-image: url(./assets/img/bg-svg.svg);
+            background-position: 103px -93px;
+        }
+         .contents4 .article3 .product2 .prod1 .Add .text1 {
+            color: #fff;
+            position: absolute;
+            font-size: 14px;
+            top: 10px;
+            right: 40px;
+        }
+         .contents4 .article3 .product2 .prod2{
+            width: 450px;
+            height: 400px;
+            background-color: #fff4e8;
+            position: relative;
+        }
+         .contents4 .article3 .product2 .prod2 .Add {
+            border-radius: 40px;
+            width: 137px;
+            height: 40px;
+            background: #d9ab82;
+            text-align: center;
+            margin-left: 10%;
+            position: absolute;
+            top: -20px;
+            left: 120px;
+            background-image: url(./assets/img/bg-svg.svg);
+            background-position: 103px -93px;
+        }
+         .contents4 .article3 .product2 .prod2 .Add .text1 {
+            color: #fff;
+            position: absolute;
+            font-size: 14px;
+            top: 10px;
+            right: 40px;
+        }
+         .contents4 .article3 .product2 .prod3{
+            width: 450px;
+            height: 400px;
+            background-color: #fff4e8;
+            position: relative;
+        }
+         .contents4 .article3 .product2 .prod3 .Add {
+            border-radius: 40px;
+            width: 137px;
+            height: 40px;
+            background: #d9ab82;
+            text-align: center;
+            margin-left: 10%;
+            position: absolute;
+            top: -20px;
+            left: 120px;
+            background-image: url(./assets/img/bg-svg.svg);
+            background-position: 103px -93px;
+        }
+         .contents4 .article3 .product2 .prod3 .Add .text1 {
+            color: #fff;
+            position: absolute;
+            font-size: 14px;
+            top: 10px;
+            right: 40px;
+        }
+
+         .contents4 .article3 .product1 .prod1 .text {
+            padding-top: 40px;
+            padding-left: 50px;
+        }
+
+         .contents4 .article3 .product1 .prod1 .text .name1 {
+            display: block;
+            font-size: 30px;
+            padding-bottom: 30px;
+            font-weight: 800;
+        }
+
+         .contents4 .article3 .product1 .prod1 .text .price1 {
+            font-size: 20px;
+            margin-right: 40px;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+         .contents4 .article3 .product1 .prod1 .text .price2 {
+            color: #a9a7a6;
+            font-size: 15px;
+            text-decoration: line-through;
+            font-weight: 700;
+        }
+
+         .contents4 .article3 .product1 .prod2 .text {
+            padding-top: 40px;
+            padding-left: 50px;
+        }
+
+         .contents4 .article3 .product1 .prod2 .text .name1 {
+            display: block;
+            font-size: 30px;
+            padding-bottom: 30px;
+            font-weight: 800;
+        }
+
+         .contents4 .article3 .product1 .prod2 .text .price1 {
+            font-size: 20px;
+            margin-right: 40px;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+         .contents4 .article3 .product1 .prod2 .text .price2 {
+            color: #a9a7a6;
+            font-size: 15px;
+            text-decoration: line-through;
+            font-weight: 700;
+        }
+
+         .contents4 .article3 .product1 .prod3 {
+            width: 450px;
+            height: 360px;
+            background-color: #fff4e8;
+        }
+
+         .contents4 .article3 .product1 .prod3 .text {
+            padding-top: 40px;
+            padding-left: 50px;
+        }
+
+         .contents4 .article3 .product1 .prod3 .text .name1 {
+            display: block;
+            font-size: 30px;
+            padding-bottom: 30px;
+            font-weight: 800;
+        }
+
+         .contents4 .article3 .product1 .prod3 .text .price1 {
+            font-size: 20px;
+            margin-right: 40px;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+         .contents4 .article3 .product1 .prod3 .text .price2 {
+            color: #a9a7a6;
+            font-size: 15px;
+            text-decoration: line-through;
+            font-weight: 700;
+        }
+
+         .contents4 .article3 .product2 {
+            margin-top: 190px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+         .contents4 .article3 .product2 .prod1 {
+            width: 450px;
+            height: 360px;
+            background-color: #fff4e8;
+        }
+
+         .contents4 .article3 .product2 .prod1 .text {
+            padding-top: 40px;
+            padding-left: 50px;
+        }
+
+         .contents4 .article3 .product2 .prod1 .text .name1 {
+            display: block;
+            font-size: 30px;
+            padding-bottom: 30px;
+            font-weight: 800;
+        }
+
+         .contents4 .article3 .product2 .prod1 .text .price1 {
+            font-size: 20px;
+            margin-right: 40px;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+         .contents4 .article3 .product2 .prod1 .text .price2 {
+            color: #a9a7a6;
+            font-size: 15px;
+            text-decoration: line-through;
+            font-weight: 700;
+        }
+         .contents4 .article3 .product2 .prod1 img {
+            width: 350px;
+            margin-left: 50px;
+        }
+
+         .contents4 .article3 .product2 .prod2 {
+            width: 450px;
+            height: 360px;
+            background-color: #fff4e8;
+        }
+
+         .contents4 .article3 .product2 .prod2 .text {
+            padding-top: 40px;
+            padding-left: 50px;
+        }
+
+         .contents4 .article3 .product2 .prod2 .text .name1 {
+            display: block;
+            font-size: 30px;
+            padding-bottom: 30px;
+            font-weight: 800;
+        }
+
+         .contents4 .article3 .product2 .prod2 .text .price1 {
+            font-size: 20px;
+            margin-right: 40px;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+         .contents4 .article3 .product2 .prod2 .text .price2 {
+            color: #a9a7a6;
+            font-size: 15px;
+            text-decoration: line-through;
+            font-weight: 700;
+        }
+
+         .contents4 .article3 .product2 .prod3 {
+            width: 450px;
+            height: 360px;
+            background-color: #fff4e8;
+        }
+
+         .contents4 .article3 .product2 .prod3 .text {
+            padding-top: 40px;
+            padding-left: 50px;
+        }
+
+         .contents4 .article3 .product2 .prod3 .text .name1 {
+            display: block;
+            font-size: 30px;
+            padding-bottom: 30px;
+            font-weight: 800;
+        }
+
+         .contents4 .article3 .product2 .prod3 .text .price1 {
+            font-size: 20px;
+            margin-right: 40px;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+         .contents4 .article3 .product2 .prod3 .text .price2 {
+            color: #a9a7a6;
+            font-size: 15px;
+            text-decoration: line-through;
+            font-weight: 700;
+        }
+         .contents4 .article3 .product2 .prod3 img {
+            width: 300px;
+            margin-left: 80px;
+        }
+
+         .contents5 {
+            display: flex;
+            justify-content: center;
+        }
+
+         .contents5 .article1 {
+            display: inline-block;
+            width: 830px;
+            height: 650px;
+            background-color: #7ebaff;
+        }
+
+         .contents5 .article2 {
+            margin-left: 60px;
+            width: 830px;
+            display: inline-block;
+            height: 650px;
+            background-color: rgb(65, 125, 255);
+        }
+        #footer {
+            height: 500px;
+            width: 100%;
+            background-color: rgb(88, 33, 33);
+        }
+    </style>
 </head>
-<style>
- * {
-    font-family: 'Poppins';
-}
-.container {
-    width: 1440px;
-    margin: 0 auto;
-}
 
-#wrap { margin: 0 auto;
-}
-#header {
-    width: 1440px;
-    height: 100px;
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
-    padding: 20px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-}
-#header .logo {
-    display: inline-block;
-    display: flex;
-    margin-top: 20px;
-}
-#header .logo .pik {
-    background: url(/img/test.svg);
-    width: 35px;
-    height: 35px;
-}
-#header .logo a {
-    margin-left: 10px;
-    font-size: 30px;
-    line-height: 1;
-    color: black;
-}
-#header .menu {
-    margin-top: 20px;
-    display: inline-block;
-    display: flex;
-    margin-right: 200px;
-    
-}
-#header .menu a {
-    font-size: 17px;
-    margin: 0 25px;
-    font-weight: 600;
-   color: black;
-}
-
-#header .my {
-    display: flex;
-    position: relative;
-    align-items: center;
-    margin-top: 20px;
-}
-#header .my div:nth-child(1) {
-    background: url(/img/test.svg);
-    width: 24px;
-    height: 24px;
-    margin-right: 25px;
-    background-position: -50px 0;
-}
-#header .my div:nth-child(2) {
-    background: url(/img/test.svg);
-    width: 24px;
-    height: 24px;
-    margin-right: 25px;
-    background-position: -100px 0;
-}
-#header .my div:nth-child(3) {
-    background: url(/img/test.svg);
-    width: 24px;
-    height: 24px;
-    background-position: -150px 0;
-}
-
-#banner {
-    width: 100%;
-    height: 853px;
-    position: relative;
-    margin: 0 auto;
-
-}
-#banner .banner_imgtxet {
-    background: url(/img/Image.jpg);
-    background-repeat: no-repeat;
-    background-position:right 20% top 50%;
-    width: 100%;
-    height: 853px;
-}
-#banner .banner_imgtxet .container .desc {
-
-}
-#banner .banner_imgtxet .container .desc h4 {
-    font-family: 'Poppins';
-    font-size: 80px;
-    line-height: 1;
-    font-weight: 600;
-}
-#banner .banner_imgtxet .container .desc p {
-    margin-top: 55px;
-    font-size: 18px;
-}
-#banner .banner_imgtxet .container .desc strong {
-    position: absolute;
-    left: 40%;
-    bottom: 10%;
-    
-}
-
-.banner_imgtxet .btn {
-    margin-top: 70px;
-}
-.banner_imgtxet .btn .btn1 {
-    width: 202px;
-    height: 70px;
-    background: #c4a586;
-    color: #fff;
-    padding: 20px 35px;
-    margin-right: 26px;
-}
-.banner_imgtxet .btn .btn2 {
-    width: 202px;
-    height: 70px;
-    background: #fff;
-    color: #c4a586;
-    padding: 20px 50px;
-    border: 1px solid #c4a586;
-}
-</style>
 <body>
-    <div id="wrap">
-        <!-- 메뉴바 -->
+    <div class="wrap">
         <header id="header">
-            <div class="logo">
-                <div class="pik ir_pm">로고</div>
-                <h3><a href="#">MISTRIUM</a></h3>
-            </div>
-            <div class="menu">
-                <div><a href="#">home</a></div>
-                <div><a href="#">about us</a></div>
-                <div><a href="#">products</a></div>
-                <div><a href="#">faqs</a></div>
-                <div><a href="#">contact us</a></div>
-            </div>
-            <div class="my">
-                <div><a href="#" class="btn1 ir_pm">1</a></div>
-                <div><a href="#" class="btn2 ir_pm">2</a></div>
-                <div><a href="#" class="btn3 ir_pm">3</a></div>
-            </div>
-        </header>
-        <!-- //메뉴바 -->
-
-        <!-- 배너부분 -->
-        <section id="banner">
-            <div class="banner_imgtxet">
-                <div class="container">
-                <div class="desc">
-                    <h4>Modern Furniture For<br>Modern Living Style</h4>
-
-                    <p> In unfeeling existence objection immediate repulsive<br>
-                        on he in. Imprudence comparison uncommonly me<br>
-                        he difficulty diminution resolution. Likewise proposal<br>
-                        differed scarcely dwelling as on raillery.<br>
-                        <br>
-                        September few dependent extremity own continued<br>
-                        and ten prevailed attending. Early to weeks we could.<br>
-                        Do commanded an shameless we disposing do.<br>
-                        Indulgence ten remarkably nor are impression out.<br>
-                        Power is lived means oh every in we quiet.</p>
-                    <div class="btn">
-                        <a href="#" class="btn1">Request a Quote</a>
-                        <a href="#" class="btn2">Watch Video</a>
-                    </div>
-                    <strong>SOME OF OUR TRUSTED CLIENTS</strong>
-
-
+            <div class="headerContainer">
+                <a href="#" class="title"></a>
+                <div class="menu">
+                    <a href="#">home</a>
+                    <a href="#">about us</a>
+                    <a href="#">products</a>
+                    <a href="#">faqs</a>
+                    <a href="#">contact us</a>
+                </div>
+                <div class="member">
+                    <a href="#" class="search"></a>
+                    <a href="#" class="basket"></a>
+                    <a href="#" class="people"></a>
                 </div>
             </div>
+        </header>
+        <section id="banner">
+            <div class="content">
+                <div class="text1">Modern Furniture For<br>
+                    Modern Living Style</div>
+                <div class="text2"> In unfeeling existence objection immediate repulsive on he in. Imprudence comparison
+                    uncommonly me he difficulty diminution resolution. Likewise proposal differed scarcely dwelling as
+                    on raillery. <br><br>
+
+                    September few dependent extremity own continued and ten prevailed attending. Early to weeks we
+                    could. Do commanded an shameless we disposing do. Indulgence ten remarkably nor are impression out.
+                    Power is lived means oh every in we quiet.</div>
+                <div class="btn">
+                    <a href="#" class="brown">Request a Quote</a>
+                    <a href="#" class="white">Watch Video</a>
+                </div>
             </div>
         </section>
-        <!-- //배너부분 -->
+        <section class="contents2">
+            <div class="text2">SOME OF OUR TRUSTED CLIENTS</div>
+            <div class="article2">
+                <ul>
+                    <li>Strip</li>
+                    <li>Google</li>
+                    <li>Deloitte</li>
+                    <li>accenture</li>
+                    <li>IBM</li>
+                    <li>samsung</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contents3">
+            <div class="article1">
+                <div class="text1">
+                    Residential<br>
+                    Furniture
+                </div>
+                <div class="text1_1">
+                    Browse Collection
+                </div>
+            </div>
+            <div class="article2">
+                <div class="text2">
+                    Hospitality<br>
+                    Furniture
+                </div>
+                <div class="text2_1">
+                    Browse Collection
+                </div>
+            </div>
+        </section>
+
+        <section class="contents4">
+            <div class="article1">
+                <span>PRODUCTS</span>
+                <div class="menu">
+                    <ul>
+                        <li>Best Selling</li>
+                        <li>Most Popular</li>
+                    </ul>
+                </div>
+                <div class="member">
+                    <ul>
+                        <li>See All</li>
+                        <li><img src="./assets/img/Arrow.svg" alt="화살표"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="article2">
+                <ul>
+                    <li>All</li>
+                    <li>Bed</li>
+                    <li>Sofa</li>
+                    <li>Chair</li>
+                    <li>Light</li>
+                </ul>
+            </div>
+            <div class="article3">
+                <div class="product1">
+                    <div class="prod1">
+                        <div class="Add">
+                            <span class="text1">Add To Cart</span>
+                        </div>
+                        <div class="text">
+                            <span class="name1">Ramen Stool</span>
+                            <span class="price1">$65.00</span>
+                            <span class="price2">$95.00</span>
+                        </div>
+                        <div>
+                            <img src="./assets/img/Product_Image_01-removebg-preview.png" alt="">
+                        </div>
+                    </div>
+                    <div class="prod2">
+                        <div class="Add2">
+                            <span class="text2">Add To Cart</span>
+                        </div>
+                        <div class="text">
+                            <span class="name1">Flexform</span>
+                            <span class="price1">$35.00</span>
+                            <span class="price2">$55.00</span>
+                        </div>
+                        <div>
+                            <img src="./assets/img/Product_Image_02-removebg-preview.png" alt="">
+                        </div>
+                    </div>
+                    <div class="prod3">
+                        <div class="Add">
+                            <span class="text1">Add To Cart</span>
+                        </div>
+                        <div class="text">
+                            <span class="name1">Porada</span>
+                            <span class="price1">$87.00</span>
+                            <span class="price2">$97.00</span>
+                        </div>
+                        <div>
+                            <img src="./assets/img/Product_Image_03-removebg-preview.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="product2">
+                    <div class="prod1">
+                        <div class="Add">
+                            <span class="text1">Add To Cart</span>
+                        </div>
+                        <div class="text">
+                            <span class="name1">Taknion</span>
+                            <span class="price1">$45.00</span>
+                            <span class="price2">$55.00</span>
+                        </div>
+                        <div>
+                            <img src="./assets/img/Product_Image_04-removebg-preview.png" alt="">
+                        </div>
+                    </div>
+                    <div class="prod2">
+                        <div class="Add">
+                            <span class="text1">Add To Cart</span>
+                        </div>
+                        <div class="text">
+                            <span class="name1">Amora</span>
+                            <span class="price1">$65.00</span>
+                            <span class="price2">$95.00</span>
+                        </div>
+                        <div>
+                            <img src="./assets/img/Product_Image_05-removebg-preview.png" alt="">
+                        </div>
+                    </div>
+                    <div class="prod3">
+                        <div class="Add">
+                            <span class="text1">Add To Cart</span>
+                        </div>
+                        <div class="text">
+                            <span class="name1">Liquid Contract</span>
+                            <span class="price1">$35.00</span>
+                            <span class="price2">$45.00</span>
+                        </div>
+                        <div>
+                            <img src="./assets/img/Product_Image_06-removebg-preview.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contents5">
+            <div class="article1">1</div>
+            <div class="article2">2</div>
+        </section>
+        <footer id="footer"></footer>
     </div>
 </body>
 
