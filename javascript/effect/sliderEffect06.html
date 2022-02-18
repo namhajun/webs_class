@@ -48,6 +48,8 @@
         .slider:nth-child(2):before {content: '이미지2';}
         .slider:nth-child(3):before {content: '이미지3';}
         .slider:nth-child(4):before {content: '이미지4';}
+        .slider:nth-child(5):before {content: '이미지5';}
+        .slider:nth-child(6):before {content: '이미지1';}
 
 
 
@@ -90,7 +92,7 @@
        }
     </style>
 </head>
-<body class="img6">
+<body>
     <!-- main -->
     <main>
         <section id="sliderType06">
@@ -99,7 +101,7 @@
                     <div class="slider__inner">
                         <div class="slider"><img src="/javascript/effect/img/slider01.jpg" alt="이미지1"></div>
                         <div class="slider"><img src="/javascript/effect/img/slider02.jpg" alt="이미지2"></div>
-                        <div class="slider"><img src="/javascript/effect/img/slider03.jpg" alt="이미지3"></div>
+                        <div class="slider"><img src="/javascript/effect/img/slider03.jpg"alt="이미지3"></div>
                         <div class="slider"><img src="/javascript/effect/img/slider04.jpg" alt="이미지4"></div>
                         <div class="slider"><img src="/javascript/effect/img/slider05.jpg" alt="이미지5"></div>
                     </div>
@@ -116,17 +118,17 @@
     <div class="info">
     <div class="title">
         <h1><a href="sliderEffect.html">Javascript Slider Effect03</a></h1>
-        <p>이미지 슬라이드 -잡버튼 추가</p>
+        <p>이미지 슬라이드 -닫 버튼 추가</p>
     </div>
 
     <div class="number">
         <ul>
-            <li><a href="sliderEffect01.html">1</a>sliderEffect04.html</li>
+            <li><a href="sliderEffect01.html">1</a></li>
             <li><a href="sliderEffect02.html">2</a></li>
             <li ><a href="sliderEffect03.html">3</a></li>
             <li><a href="sliderEffect04.html">4</a></li>
-            <li class="active"><a href="sliderEffect05.html">5</a></li>
-            <li><a href="sliderEffect06.html">6</a></li>
+            <li ><a href="sliderEffect05.html">5</a></li>
+            <li class="active"><a href="sliderEffect06.html">6</a></li>
             <li><a href="sliderEffect07.html">7</a></li>
             <li><a href="sliderEffect08.html">8</a></li>
         </ul>
@@ -253,63 +255,33 @@ setInterval(sliderEffect, 1000);</code></pre></div>
     <script src="js/highlight.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
-        highlight();
-        modal ();
-        tabMenu ();
-
-        //slider03
-        const sliderWrap = document.querySelector(".slider__wrap")
-        const sliderImg = document.querySelector(".slider__img") //이미지 한칸만 움직이는 영역
-        const sliderInner = document.querySelector(".slider__inner") //이미지 움직이는 영역
-        const slider = document.querySelectorAll(".slider") //각각의 이미지 
-        const sliderBtn = document.querySelector(".slider__btn")
-        const sliderBtn = document.querySelector(".slider__dot")
-      
-        let currentIndex =0;
-        let sliderCount=slider.length
+       highlight();
+        modal();
+        tabMenu();
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = document.querySelector(".slider__img");
+        const sliderInner = document.querySelector('.slider__inner');
+        const slider = document.querySelectorAll(".slider");
+        const sliderBtn = document.querySelector('.slider__btn');
+        const sliderBtnPrev = sliderBtn.querySelector('.prev');
+        const sliderBtnNext = sliderBtn.querySelector('.next');
+        
+        let currIndex = 0;
         let sliderWidth = sliderImg.offsetWidth;
-        let dotIdex= "";
 
-        function init(){
-            //이미지갯수만큼
-     slider.forEacht(()=>dotLndex += "<a href='#' class='dot'></a>");
-     sliderdot.innerHtml = dotIndex;
-            //첫 번째 닷 버튼한테 활성화 표시(active)
-     sliderDot. firstElementChild.classList.add("active");
+        function gotoSlider(num) {
+            sliderInner.style.transition = "all 0.3s";
+            sliderInner.style.transform = "translateX(-"+(sliderWidth*num)+"px)";
+            
         }
-    init();
-
-        function gotoSlider(num){
-            sliderInner.style.transition = "all 600ms";
-            sliderInner.style.transform = "translateX("+ - sliderWidth * num +"px)";
-            currentIndex= num;
-        }
-
-        dotActive = document.querySelectorAll(".slider_dot .dot");
-        dotActive.forEach(el => {
-            el.classList.remove("active");
+        sliderBtnPrev.addEventListener("click", () => {
+            currIndex = (currIndex+slider.length-1) % slider.length
+            gotoSlider(currIndex)
         })
-        dotActive[num].classList.add("active")
-      
-
-        btn.addEventListner("click", ( )=>{
-            let prevIndex = (currentIndex + (sliderCount - 1))% sliderCount;
-            let nextIndex = (currentIndex + 1) % sliderCount;
-
-            if(btn.classList.contains("prev")){
-                gotoSlider(prevIndex);
-            } else {
-                gotoSlider(nextIndex);
-            };
-        });
-    });
-
-    document.querySelectorAll(".slider-dot .dot").forEach((dpt,index)=>{
-        dot.addEventListner("click", () => {
-            gotoSlider(Index);
-        });
-    });
-   
+        sliderBtnNext.addEventListener("click", () => {
+            currIndex = (currIndex+1) % slider.length
+            gotoSlider(currIndex)
+        })
     </script>
 </body>
 </html>

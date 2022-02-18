@@ -14,33 +14,17 @@ li {
 }
 img {
     width: 100%;
-    vertical-align: top; /* 이미지 여백 제거 */
+    vertical-align: top;
 }
 body {
     width: 100%;
     height: 100vh;
+    background-image: url(/javascript/effect/img/slider06.jpg);
     background-size: cover;
     background-position: center center;
     overflow: hidden;
     color: #fff;
-
 }
-.body .img1{
-    background-image: url(/javascript/effect/img/slider06.jpg);
-}
-.body .img2{
-    background-image: url(/javascript/effect/img/slider06.jpg);
-}
-.body .img3{
-    background-image: url(/javascript/effect/img/slider06.jpg);
-}
-.body .img4{
-    background-image: url(/javascript/effect/img/slider06.jpg);
-}
-.body .img5{
-    background-image: url(/javascript/effect/img/slider06.jpg);
-}
-
 body::before {
     content: '';
     position: absolute;
@@ -48,10 +32,9 @@ body::before {
     top: 0;
     width: 100%; 
     height: 100vh;
-    background: rgba(8,31,36,0.58);
+    background: rgba(0, 0, 0, 0.4);
     z-index: -1;
 }
-
 /* info */
 .title {
     position: absolute;
@@ -118,7 +101,7 @@ body::before {
     top: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0,0,0,.4);
+    background: rgba(0,0,0,0.4);
     z-index: 1000;
     transform: scale(0);
 }
@@ -160,7 +143,6 @@ body::before {
     0%   {transform: scale(1)}
     100% {transform: scale(0)}
 }
-
 .modal-close {
     margin-top: 10px;
 }
@@ -169,23 +151,28 @@ body::before {
     position: relative;
 }
 .code-view {
+    padding-top: 65px;
     width: 60vw;
-    height: 60vh;
+    min-height: 30vh;
+    max-height: 70vh;
     background: #fff;
     border: 1px solid #f2f2f2;
     border-radius: 5px;
     overflow: scroll;
-    overflow-x: hidden;
+
+}
+.code-view::-webkit-scrollbar { 
+    width: 1px; 
 }
 .view-header {
     position: absolute;
-    left: 0; top: 0;
+    left: 0;top: 0;
     width: 100%;
     height: 32px;
     background: #fff;
     padding: 7px 0 7px 10px;
     border-bottom: 1px solid #eee;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0 ;
 }
 .view-header > span {
     width: 10px; 
@@ -202,11 +189,11 @@ body::before {
 .view-header > span:nth-child(3) {
     background-color: #4EBB7B;
 }
-.view-title {
+.view-title {            
     position: absolute;
-    left: 0; 
-    top: 32px;
+    left: 0;top: 32px;
     width: 100%;
+    height: 32px;
     background: #fff;
     border-bottom: 1px solid #eee;
     padding: 9px 0 7px;
@@ -227,9 +214,8 @@ body::before {
     background: #dcdce4;
 }
 .view-cont {
-    background-color: #282936;
+    background-color: #e8e8e8;
     height: 100%;
-    padding-top: 65px;
 }
 .view-cont > div {
     display: none;
