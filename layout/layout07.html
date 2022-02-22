@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+
+            background-color: aquamarine;
+
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(105, 238, 52);
+        }
+
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(4, 114, 50);
+        }
+
+        #contents {
+            width: 100%;
+            height: 700px;
+        }
+
+      
+
+        #contents .contact .h1 {
+            width: 20%;
+            height: 700px;
+            background-color: rgb(55, 134, 108);
+            float: left;
+        }
+
+        #contents .contact .h2 {
+            width: 60%;
+            height: 700px;
+            background-color: rgb(0, 172, 0);
+            float: left;
+        }
+
+        #contents .contact .h3 {
+            width: 20%;
+            height: 700px;
+            background-color: rgb(37, 179, 131);
+            float: right;
+        }
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(24, 136, 98);
+        }
+
+        @media (max-width: 1220px) {
+            #wrap {
+                width: 96%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #wrap {
+                width: 100%;
+            }
+
+            #contents {
+                flex-wrap: wrap;
+            }
+
+            #contents .contact .h1 {
+                width: 30%;
+                height: 500px;
+            }
+
+            #contents .contact .h2 {
+                height: 500px;
+                width: 70%;
+            }
+
+            #contents .contact .h3 {
+                width: 100%;
+                height: 100px;
+            }
+        }
+            @media (max-width: 400px) {
+                #wrap {
+                    width: 100%;
+                };
+
+                #contents .contact .h1 {
+                    width: 100%;
+                    height: 100px;
+
+                }
+                
+                #contents .contact .h2 {
+                    width: 100%;
+                    height: 100px;
+                }
+
+                #contents .contact .h3 {
+                    width: 100%;
+                    height: 100px;
+                }
+            };
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <section id="contents">
+            <div class="contact">
+                <div class="h1"></div>
+                <div class="h2"></div>
+                <div class="h3"></div>
+            </div>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>

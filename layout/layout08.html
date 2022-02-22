@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+        body {
+            background-color: rgb(182, 140, 221);
+        }
+        #wrap{
+            width: 1200px;
+            margin: 0 auto;
+          
+        }
+        #header{
+            height: 100px;
+            width: 100%;
+            background-color: rgb(23, 80, 172);
+        }
+        #nav{
+            height: 100px;
+            width: 100%;
+            background-color: rgb(0, 247, 255);
+        }
+        #contents{
+        }
+        #contents .contact{
+            display: flex;
+            
+        }
+        #contents .contact .aside{
+            width: 400px;
+            height: 600px;
+           background-color: aquamarine;
+        } 
+        #contents .contact .right{
+            width: 800px;
+            height: 600px;
+           
+        }
+        #contents .contact .right .h1{
+            width:800px;
+            height: 200px;
+            background-color: bisque;
+        }
+        #contents .contact .right .h2{
+            width: 800px;
+            height: 200px;
+            background-color: rgb(163, 110, 46);
+        }
+        #contents .contact .right .h3{
+            width: 800px;
+            height: 200px;
+            background-color: rgb(235, 190, 137);
+        }
+      
+        #footer{
+            height: 100px;
+            width: 100%;
+            background-color: rgb(5, 80, 110);
+        }
+        @media (max-width: 1220px) {
+        #wrap {
+            width: 96%;
+        }
+        }
+        @media (max-width: 768px) {
+            #wrap{
+                width: 100%;
+            }
+            #contents .contact .right .h1{
+            width:800px;
+            height: 300px;
+        }
+        #contents .contact .right .h2{
+            width: 800px;
+            height: 300px
+        }
+        #contents .contact .right .h3{
+            width: 1200px;
+            height: 200px;
+            background-color: rgb(235, 190, 137);
+        }
+      
+
+        }
+            @media (max-width: 400px) {
+                #wrap{
+                width: 100%;
+            }
+                #contents .contact .right .h1{
+            width:1200px;
+            height: 200px;
+            background-color: bisque;
+        }
+        #contents .contact .right .h2{
+            width: 1200px;
+            height: 200px;
+            background-color: rgb(163, 110, 46);
+        }
+        #contents .contact .right .h3{
+            width: 1200px;
+            height: 200px;
+            background-color: rgb(235, 190, 137);
+        }
+      
+            };
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <section id="contents">
+            <div class="contact">
+                <aside class="aside"></aside>
+                <article  class="right">
+                    <div class="h1"></div>
+                    <div class="h2"></div>
+                    <div class="h3"></div>
+                </article>
+            </div>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
