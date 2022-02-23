@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            background-color: #E1F5FE;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        #header {
+            height: 100px;
+            width: 100%;
+            background-color: #B3E5FC;
+        }
+
+        #nav {
+            height: 100px;
+            width: 100%;
+            background-color: #81D4FA;
+        }
+
+        #main {
+            display: flex;
+        }
+
+
+        #aside {
+            flex: 0 0 30%;
+            height: 600px;
+            background-color: #4FC3F7;
+        }
+
+       
+        #aticle1 {
+            flex: 30% 0 70%;
+            height: 200px;
+            background-color: #29B6F6;
+           
+
+        }
+
+        #aticle2 {
+            flex:  30% 0 70%;
+            height: 200px;
+            background-color: #03A9F4;
+           
+        }
+
+        #aticle3 {
+            flex:  30% 0 70%;
+            height: 200px;
+            background-color: #039BE5;
+           
+        }
+
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #0288D1;
+        }
+
+        @media (max-width: 1220px) {
+         #wrap {
+             width: 96%;
+         }
+         
+        #aside {
+            flex: 30%;
+            height: 780px;
+        }
+         #contnts {
+           display: flex;
+           flex-wrap: wrap;
+        }
+         #aticle1 {
+            flex:100%;
+            height: 260px;
+        }
+      
+        #aticle2 {
+           width: 50%;
+            height:520px;
+        }
+
+        #aticle3 {
+            width: 50%;
+            height: 520px;
+        }
+        }
+         @media (max-width: 780px) {
+         #wrap {
+             width: 100%;
+         }
+        
+        }
+
+        @media (max-width: 480px) {
+            #main {
+                flex-wrap: wrap;
+            }
+            #contents {
+                width: 100%;
+            }
+            #aside {
+                width: 100%;
+                height: 200px;
+            }
+            #article1 {
+                height: 430px;
+            }
+            #article2 {
+                height: 150px;
+            }
+        
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <main id="main">
+            <section id="contents">
+                <aside id="aside"></aside>
+                <article id="article1"></article>
+                <article id="article2"></article>
+                <article id="article3"></article>
+            </section>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>

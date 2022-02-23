@@ -27,25 +27,25 @@
             overflow: hidden;
         }
 
-        .mouse__warp p {
+        .mouse__wrap p {
             font-weight: 300;
             line-height: 2;
             font-size: 2.5vw;
         }
 
-        .mouse__warp p :last-child {
+        .mouse__wrap p :last-child {
             font-size: 3vw;
             font-weight: 400;
         }
 
-        .mouse__warp p span {
+        .mouse__wrap p span {
             border-bottom: 0.15vw dashed #fff;
         }
 
         .cursor {
             position: absolute;
-            left: 0;
-            top: 0;
+            left: -100px;
+            top: -100px;
             width: 50px;
             height: 50px;
             border: 3px solid #fff;
@@ -103,7 +103,7 @@
             <div class="cursor"></div>
 
             <div class="mouse__wrap">
-                <p>Believe that your<span class="style1"> dreams</span> will come true no matter how harsh the reality
+                <p>Believe that your<span class="style1"> dreams</span> will come true no matter how wrash the reality
                     is. And think
                     about what you need to do to make your dream come true. If it's difficult, be<span class="style2">
                         brave.</span>
@@ -213,67 +213,94 @@
 
         //마우스 움직이기
         window.addEventListener("mousemove", (e) => {
-            document.querySelector(".cursor").style.left = e.clientX - 25 + "px";
-            document.querySelector(".cursor").styletop = e.clientY - 25 + "px";
+            // document.querySelector(".cursor").style.left = e.clientX - 25 + "px";
+            // document.querySelector(".cursor").styletop = e.clientY - 25 + "px";
+
+            let x =e.clientX - 25 + "px";
+            let y =e.clientY - 25 + "px";
+            document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
         })
-        document.querySelector(".style1").addEventListener("mouseover", () =>{
-            document.querySelector(".cursor").classList.add("style1");
+        // document.querySelector(".style1").addEventListener("mouseover", () =>{
+        //     document.querySelector(".cursor").classList.add("style1");
            
-        })
-        document.querySelector(".style1").addEventListener("mouseout", () =>{
-            document.querySelector(".cursor").classList.remove("style1");
-        })
-        document.querySelector(".style2").addEventListener("mouseover", () =>{
-            document.querySelector(".cursor").classList.add("style2");
+        // })
+        // document.querySelector(".style1").addEventListener("mouseout", () =>{
+        //     document.querySelector(".cursor").classList.remove("style1");
+        // })
+        // document.querySelector(".style2").addEventListener("mouseover", () =>{
+        //     document.querySelector(".cursor").classList.add("style2");
            
-        })
-        document.querySelector(".style2").addEventListener("mouseout", () =>{
-            document.querySelector(".cursor").classList.remove("style2");
-        })
-        document.querySelector(".style3").addEventListener("mouseover", () =>{
-            document.querySelector(".cursor").classList.add("style3");
+        // })
+        // document.querySelector(".style2").addEventListener("mouseout", () =>{
+        //     document.querySelector(".cursor").classList.remove("style2");
+        // })
+        // document.querySelector(".style3").addEventListener("mouseover", () =>{
+        //     document.querySelector(".cursor").classList.add("style3");
            
-        })
-        document.querySelector(".style3").addEventListener("mouseout", () =>{
-            document.querySelector(".cursor").classList.remove("style3");
-        })
-        document.querySelector(".style4").addEventListener("mouseover", () =>{
-            document.querySelector(".cursor").classList.add("style4");
+        // })
+        // document.querySelector(".style3").addEventListener("mouseout", () =>{
+        //     document.querySelector(".cursor").classList.remove("style3");
+        // })
+        // document.querySelector(".style4").addEventListener("mouseover", () =>{
+        //     document.querySelector(".cursor").classList.add("style4");
            
-        })
-        document.querySelector(".style4").addEventListener("mouseout", () =>{
-            document.querySelector(".cursor").classList.remove("style4");
-        })
-        document.querySelector(".style5").addEventListener("mouseover", () =>{
-            document.querySelector(".cursor").classList.add("style5");
+        // })
+        // document.querySelector(".style4").addEventListener("mouseout", () =>{
+        //     document.querySelector(".cursor").classList.remove("style4");
+        // })
+        // document.querySelector(".style5").addEventListener("mouseover", () =>{
+        //     document.querySelector(".cursor").classList.add("style5");
            
-        })
-        document.querySelector(".style5").addEventListener("mouseout", () =>{
-            document.querySelector(".cursor").classList.remove("style5");
-        })
-        document.querySelector(".style6").addEventListener("mouseover", () =>{
-            document.querySelector(".cursor").classList.add("style6");
+        // })
+        // document.querySelector(".style5").addEventListener("mouseout", () =>{
+        //     document.querySelector(".cursor").classList.remove("style5");
+        // })
+        // document.querySelector(".style6").addEventListener("mouseover", () =>{
+        //     document.querySelector(".cursor").classList.add("style6");
            
-        })
-        document.querySelector(".style6").addEventListener("mouseout", () =>{
-            document.querySelector(".cursor").classList.remove("style6");
-        })
-        document.querySelector(".style7").addEventListener("mouseover", () =>{
-            document.querySelector(".cursor").classList.add("style7");
+        // })
+        // document.querySelector(".style6").addEventListener("mouseout", () =>{
+        //     document.querySelector(".cursor").classList.remove("style6");
+        // })
+        // document.querySelector(".style7").addEventListener("mouseover", () =>{
+        //     document.querySelector(".cursor").classList.add("style7");
            
-        })
-        document.querySelector(".style8").addEventListener("mouseout", () =>{
-            document.querySelector(".cursor").classList.remove("style8");
+        // })
+        // document.querySelector(".style8").addEventListener("mouseout", () =>{
+        //     document.querySelector(".cursor").classList.remove("style8");
+        // })
+
+        // for(let i=1; i<8; i++){
+        //     document.querySelector(".style"+i).addEventListener("mouseover", () =>{
+        //     document.querySelector(".cursor").classList.add("style"+i);
+        // })
+        // document.querySelector(".style"+i).addEventListener("mouseout", () =>{
+        //     document.querySelector(".cursor").classList.remove("style"+i);
+        // })
+        // }
+
+        //forEach
+            // document.querySelectorAll(".mouse__wrap span").forEach((span, index) => {
+            //     span.addEventListener("mouseover", ()=>{
+            //         document.querySelector(".cursor").classList.add("style"+(index+1));
+            //     })
+            //         span.addEventListener("mouse", () =>{
+            //             document.querySelector(".cursor").classList.remove("style"+(index+1));
+            //     })
+            // })
+            
+            //getAttribute
+            //span 마우스 오버 했을때 속성 값을 alert()
+            document.querySelectorAll(".mouse__wrap span").forEach(span => {
+            let attr = span.getAttribute("class");
+            span.addEventListener("mouseover", () => {
+                document.querySelector(".cursor").classList.add(attr);
+            });
+            span.addEventListener("mouseout", () => {
+                document.querySelector(".cursor").classList.remove(attr);
+            })
         })
 
-        for(let i=0; i<9; i++){
-            document.querySelector(".style[i]").addEventListener("mouseover", () =>{
-            document.querySelector(".cursor").classList.add("style[i]");
-        })
-        document.querySelector(".style[i]").addEventListener("mouseout", () =>{
-            document.querySelector(".cursor").classList.remove("style[i]");
-        })
-        }
     </script>
 </body>
 

@@ -36,6 +36,10 @@ body::before {
     z-index: -1;
 }
 /* info */
+.info {
+    position: relative;
+    z-index: 20;
+}
 .title {
     position: absolute;
     left: 20px;
