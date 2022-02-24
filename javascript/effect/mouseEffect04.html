@@ -14,7 +14,7 @@
             background: rgba(5, 36, 70, 0.87)
         }
 
-        #mouseType03 {}
+        #mouseType04 {}
 
         .mouse__wrap {
             display: flex;
@@ -38,9 +38,9 @@
             border: 3px solid #fff;
             transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        .mouse__img figure:hover {
+        /* .mouse__img figure:hover {
             transform: scale(1.025);
-        }
+        } */
         .mouse__img figure img {
             position: absolute;
             left: -5%;
@@ -63,12 +63,23 @@
         }
         .cursor {
             position: absolute;
+            left: -30px;
+            top: -30px;
             width: 20px;
             height: 20px;
             background: #fff;
             z-index: 1000;
             user-select: none;
             pointer-events: none;
+        }
+
+        .cursor ul {
+            position: absolute;
+           left: 40px;
+            top: 0;
+        }
+        .cusor ul li {
+            white-space: nowrap;
         }
         /* .mouse__wrap p {
             font-weight: 300;
@@ -98,8 +109,13 @@
 <body>
     <!-- main -->
     <main>
-        <section id="mouseType03">
-            <div class="cursor"></div>
+        <section id="mouseType04">
+            <div class="cursor">
+                <!-- <ul>
+                    <li>pageX : <span class="pageX">0</span>px</li>
+                    <li>pageY : <span class="pageY">0</span>px</li>
+                </ul> -->
+            </div>
 
             <div class="mouse__wrap">
                 <div class="mouse__img">
@@ -179,10 +195,10 @@
 
         <div class="attr">
             <ul>
-                <li>pageX : <span class="pageX">0</span>px</li>
-                <li>pageY : <span class="pageY">0</span>px</li>
-                <li>standadX : <span class="standadX">0</span>px</li>
-                <li>standadY : <span class="standadY">0</span>px</li>
+                <li>mouseX : <span class="mousepageX">0</span>px</li>
+                <li>mouseY : <span class="mousepageY">0</span>px</li>
+                <li>centerX : <span class="centerpageX">0</span>px</li>
+                <li>centerY : <span class="centerpageY">0</span>px</li>
             </ul>
         </div>
     </div>
@@ -196,11 +212,11 @@
         // modal();
         // tabMenu();
 
-        const circle3 = document.querySelector(".cursor").getBoundingClientRect(); 
+        const circle = document.querySelector(".cursor").getBoundingClientRect(); 
       
         document.querySelector(".mouse__img").addEventListener("mousemove", (e) => {
             //커서
-            gsap.to(".cursor", {duration: .2 , left: e.pageX -circle.width/2, top: e.pageY -circle.height/2 })
+            gsap.to(".cursor", {duration: .2, left: e.pageX - circle.width/2, top: e.pageY - circle.height/2})
 
             //마우스 좌표 값
             let mousePageX = e.pageX;
@@ -211,12 +227,25 @@
             //window.innerWidth; 1920 //브라우저 크기
             //window.outerWidth; 1920//브라우저 크기
             //window.screenWidth; 1920//화면 크기
-            //window.screenheight; 1080
-       
-            let windowWidth = window.innerWidth;
+            //window.screenheight; 1080 //화면 크기
 
-            console.log(windowWidth);
-         
+            //마우스 좌표 값을 가운데 초기화
+            //전체길이?2 - 마우스 X좌표값 == 0
+            let centerPageX = window.innerWidth/2 - mousePageX;
+            let centerPageY = window.innerHeight/2 - mousePageY;
+
+            //이미지 움직이기
+            // const imgMove = document.querySelector(".mouse__img figure ing");
+            // imgMove.style.transform = "translate("+ centerPageX/20+"px, "+centerPageY/20 +"px)"
+            gsap.to(".mouse__img figure img", {duration: 0.3, x: centerPageX/20, y: centerPageY/20 })
+
+            // 출력
+            //  document.querySelector(",pageX").textcontent = mousePageX
+            //  document.querySelector(",pageY").textcontent = mousePageY
+            document.querySelector(".mousepageX").textcontent = mousePageX
+            document.querySelector(".mousepageY").textcontent = mousePageY
+            document.querySelector(".centerpageX").textcontent = centerPageX
+            document.querySelector(".centerpageY").textcontent = centerPageY
         })
     </script>
 </body>

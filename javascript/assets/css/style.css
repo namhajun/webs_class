@@ -646,7 +646,15 @@ td {
     vertical-align: 2px;
     border-radius: 5px;
 }
-
+button{
+    border: 1px solid #cdcdcd;
+    padding: 3px  10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button:active {
+    background: rgb(187, 187, 189);
+}
 /* 간격 설정 */
 .mt0 {
     margin-top: 0px !important;
