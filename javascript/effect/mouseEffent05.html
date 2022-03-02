@@ -209,16 +209,14 @@
 
             //이미지 움직이기
             const imgMove = document.querySelector(".mouse__img");
-            imgMove.style.transform="rotateX("+softY+"deg) rotateY("+-softX+"deg)";
-
-            gsap.to(".cusor", {duration: 0.3, left: circleWidth, top: circleHeight});
+            imgMove.style.transform="rotateX("+softPageY+"deg) rotateY("+-softPageX+"deg)";
 
             //원크기
             let circleWidth  = mousePageX - circle.width/2
             let circleHeight  = mousePageY - circle.height/2
 
             //커서
-            gsap.to(".cursor", {duration: .3, left: circleWidth, top: circleHeight})
+            gsap.to(".mouse__img", {duration: .3, perspective:600, rotationX: softPageY,otationY: softPageX })
 
             //출력
             document.querySelector(".mousePageX").textContent = mousePageX
