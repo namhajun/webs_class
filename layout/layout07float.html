@@ -62,7 +62,44 @@
             height: 100px;
             background-color: #43A047;
         }
-
+        @media (max-width: 1300px) {
+     
+     #wrap{
+       width: 96%;}
+     }
+   @media (max-width: 768px){
+       #wrap{
+           width: 100%;
+       }
+       @media (max-width: 768px){
+           #wrap {
+               width: 100%;
+               grid-template-areas:
+                   "header header"
+                   "nav nav"
+                   "aside section"
+                   "article article"
+                   "footer footer"
+               ;
+               grid-template-columns: 30% 70%;
+               grid-template-rows: 100px 100px 630px 150px 100px;
+           }
+       }
+       @media (max-width: 480px){
+           #wrap {
+               grid-template-areas:
+                   "header"
+                   "nav"
+                   "aside"
+                   "section"
+                   "article"
+                   "footer"
+               ;
+               grid-template-columns: 100%;
+               grid-template-rows: 100px 100px 200px 430px 150px 100px;
+           }
+       }
+   }
    
     </style>
 

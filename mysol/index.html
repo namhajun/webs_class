@@ -119,45 +119,83 @@
                         윈도우 : mysql -uroot -proot 
                     </div>
                     <pre class="lanquage-js">
-                        2022-03-02  오후 02:37    <DIR>          .
-                            2022-03-02  오후 02:37    <DIR>          ..
-                            2019-03-03  오전 12:59            12,800 echo.exe
-                            2019-03-03  오전 12:59         3,940,864 innochecksum.exe
-                            2019-03-03  오전 12:59            69,632 lz4_decompress.exe
-                            2019-03-03  오전 12:59         3,869,696 myisamchk.exe
-                            2019-03-03  오전 12:59         3,740,672 myisamlog.exe
-                            2019-03-03  오전 12:59         3,799,040 myisampack.exe
-                            2019-03-03  오전 12:59         3,779,072 myisam_ftdump.exe
-                            2019-03-03  오전 12:59         4,156,416 mysql.exe
-                            2019-03-03  오전 12:59         4,061,696 mysqladmin.exe
-                            2019-03-03  오전 12:59         4,264,960 mysqlbinlog.exe
-                            2019-03-03  오전 12:59         4,078,080 mysqlcheck.exe
-                            2019-03-03  오전 12:59        24,927,744 mysqld.exe
-                            2019-03-03  오전 12:59         4,120,576 mysqldump.exe
-                            2019-03-03  오전 12:59             7,675 mysqldumpslow.pl
-                            2019-03-03  오전 12:59            27,797 mysqld_multi.pl
-                            2019-03-03  오전 12:59         4,052,992 mysqlimport.exe
-                            2019-03-03  오전 12:59         4,540,416 mysqlpump.exe
-                            2019-03-03  오전 12:59         4,052,480 mysqlshow.exe
-                            2019-03-03  오전 12:59         4,069,888 mysqlslap.exe
-                            2019-03-03  오전 12:59         4,343,296 mysqltest.exe
-                            2019-03-03  오전 12:59        18,137,600 mysqltest_embedded.exe
-                            2019-03-03  오전 12:59         5,642,240 mysqlxtest.exe
-                            2019-03-03  오전 12:59         4,507,136 mysql_client_test.exe
-                            2019-03-03  오전 12:59        18,348,544 mysql_client_test_embedded.exe
-                            2019-03-03  오전 12:59             7,209 mysql_config.pl
-                            2019-03-03  오전 12:59         3,863,552 mysql_config_editor.exe
-                            2019-03-03  오전 12:59        17,976,832 mysql_embedded.exe
-                            2019-03-03  오전 12:59         3,555,840 mysql_plugin.exe
-                            2019-03-03  오전 12:59         4,050,432 mysql_secure_installation.exe
-                            2019-03-03  오전 12:59         3,601,408 mysql_ssl_rsa_setup.exe
-                            2019-03-03  오전 12:59         3,495,936 mysql_tzinfo_to_sql.exe
-                            2019-03-03  오전 12:59         4,687,872 mysql_upgrade.exe
-                            2019-03-03  오전 12:59         3,544,576 my_print_defaults.exe
-                            2019-03-03  오전 12:59         3,689,472 perror.exe
-                            2019-03-03  오전 12:59         3,505,152 replace.exe
-                            2019-03-03  오전 12:59         3,542,528 resolveip.exe
-                            2019-03-03  오전 12:59            45,056 zlib_decompress.exe
+                       
+                    </pre>
+                </div>
+                <!-- box -->
+                <!-- box -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">데이터 베이스</h2>
+                    <h2 id="intro4-1" class="page-header">데이터 베이스 만들기</h2>
+                    <div class="bs-callout bs-callout-info">
+                        create database 데이터베이스;
+                    </div>
+                    <pre class="lanquage-js">create database test01;
+                     CREATE TABLE myMember(
+                         myMemberID int(10) unsigned auto_incrememt coment "회원의 고유 번호"
+                        youEmail varchar(40) NOT comment "회원 아이디",</pre>
+                        youName varchar(12) NOT comment "회원 이름",</pre>
+                        youPass varchar(20) NOT comment "회원 비밀번호",</pre>
+                        youbirth varchar(12) NOT comment "회원 생일",</pre>
+                        youYime int(11) NOT comment "회원 가입 시간",</pre>
+                        PRIMARY KEY (myMemberID)
+                     ) charset=utf8 comment "회원 정보 테이블"
+                    <h2 id="intro4-2" class="page-header">데이터 베이스 보기</h2>
+                    <div class="bs-callout bs-callout-info">
+                    showdatabases;
+                        </div>
+                    <h2 id="intro4-3" class="page-header">데이터 베이스 사용</h2>
+                    <div class="bs-callout bs-callout-info">
+
+                        </div>
+                    <h2 id="intro4-4" class="page-header">데이터 베이스 삭제</h2>
+                    <div class="bs-callout bs-collouut-info">
+                        </div>
+                        맥 : cd /Application/mamp/Libary/bin
+                    </div>
+                    <pre class="lanquage-js">create database test01;
+                       
+                       </pre>
+                    <div class="bs-callout bs-collouut-info">
+                        
+                    </div>
+                    <pre class="lanquage-js">
+                       
+                    </pre>
+                </div>
+                <!-- box -->
+                   <!-- box -->
+                   <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">테이블 수정</h2>
+                    <h2 id="intro4-1" class="page-header">필드 추가하기</h2>
+                    <div class="bs-callout bs-callout-info">
+                        ALTER TABLE 테이블명 ADD 추가할 필드명 AFTER 필드명 위치;
+                    </div>
+                    <pre class="lanquage-js"><code>
+                        ALTER TABLE myMEmber ADD youGender enum('m','w','x') default 'x' "남성은 m 영성은 query OK,"
+                    </code></pre>
+                     
+                    <h2 id="intro4-2" class="page-header">데이터 베이스 보기</h2>
+                    <div class="bs-callout bs-callout-info">
+                    showdatabases;
+                        </div>
+                    <h2 id="intro4-3" class="page-header">데이터 베이스 사용</h2>
+                    <div class="bs-callout bs-callout-info">
+
+                        </div>
+                    <h2 id="intro4-4" class="page-header">데이터 베이스 삭제</h2>
+                    <div class="bs-callout bs-collouut-info">
+                        </div>
+                        맥 : cd /Application/mamp/Libary/bin
+                    </div>
+                    <pre class="lanquage-js">create database test01;
+                       
+                       </pre>
+                    <div class="bs-callout bs-collouut-info">
+                        
+                    </div>
+                    <pre class="lanquage-js">
+                       
                     </pre>
                 </div>
                 <!-- box -->
@@ -166,6 +204,26 @@
             <div class="bs-sidebar hidden-print" role="complementary">
             <ul class="nav bs-sidenav">
                 <li><a href="#intro1">MySQL</a></li>
+                <li><a href="#intro2">MySQL 설치</a></li>
+                <li><a href="#intro3">MySQL 실행</a></li>
+                <li><a href="#intro4">데이터 베이스</a></li>
+                <ul class="nac bs-sidenav">
+                <li><a href="#intro1">데이터 베이스 만들기</a></li>
+                <li><a href="#intro1">데이터 베이스 보기</a></li>
+                <li><a href="#intro1">데이터 베이스 사용</a></li>
+                <li><a href="#intro1">데이터 베이스 삭제</a></li>
+            </ul>
+            <ul class="nac bs-sidenav">
+                <li><a href="#intro1">테이블</a></li>
+                <li><a href="#intro1">테이블</a></li>
+                <li><a href="#intro1">테이블</a></li>
+                <li><a href="#intro1">테이블</a></li>
+            </ul>
+            <ul class="nac bs-sidenav">
+                <li><a href="#intro1">테이블 수정 </a></li>
+                <li><a href="#intro1">필드 </a></li>
+                <li><a href="#intro1">테이블</a></li>
+                <li><a href="#intro1">테이블</a></li>
             </ul>
         </div>
         </div>
