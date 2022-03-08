@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,7 @@
     <link rel="shortcut icon" href="../assets/face/javascript.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/face/javascript.png">
     <link rel="icon" href="../assets/face/javascript.png">
-    
+
     <!-- style -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
@@ -49,7 +50,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <main id="main">
         <div class="list">
             <ul>
@@ -90,7 +91,7 @@
             <div id="sample1" class="sample">
                 <h3>01. 선언적 함수</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     function func(){
         document.write("함수가 실행되었습니다.1 ");
     }
@@ -108,7 +109,7 @@
             <div id="sample2" class="sample">
                 <h3>02. 익명 함수</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     const func = function(){
         document.write("함수가 실행되었습니다.2 ");
     }
@@ -126,7 +127,7 @@
             <div id="sample3" class="sample">
                 <h3>03. 매개변수 함수</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     function func(str){
         document.write(str);
     }
@@ -139,12 +140,12 @@
                 </div>
             </div>
             <!-- //sample3 -->
-        
+
             <!-- sample4 -->
             <div id="sample4" class="sample">
                 <h3>04. 리턴값 함수</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     function func(){
         const str = "함수가 실행되었습니다.4 ";
         return str;
@@ -163,7 +164,7 @@
             <div id="sample5" class="sample">
                 <h3>05. 화살표 함수 : 선언적 함수</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     func = () => {
         document.write("함수가 실행되었습니다.5");
     }
@@ -181,7 +182,7 @@
             <div id="sample6" class="sample">
                 <h3>06. 화살표 함수 : 익명 함수</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     const func = () => {
         document.write("함수가 실행되었습니다.6");
     };
@@ -199,7 +200,7 @@
             <div id="sample7" class="sample">
                 <h3>07. 화살표 함수 : 매개변수 함수</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     func = (str) => {
         document.write(str);
     }
@@ -212,12 +213,12 @@
                 </div>
             </div>
             <!-- //sample7 -->
-            
+
             <!-- sample8 -->
             <div id="sample8" class="sample">
                 <h3>08. 화살표 함수 : 리턴값 함수</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     func = () => {
         const str = "함수가 실행되었습니다.8"
         return str;
@@ -236,7 +237,7 @@
             <div id="sample9" class="sample">
                 <h3>09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     const func = (str) => {
         return str;
     };
@@ -254,7 +255,7 @@
             <div id="sample10" class="sample">
                 <h3>10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     const func = str => { // a매개변수가 한개면 괄호 생략가능
         return str;
     }
@@ -272,7 +273,7 @@
             <div id="sample11" class="sample">
                 <h3>11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     const func = str => str;
     document.write(func("함수가 실행되었습니다.11"));
 }</code></pre>
@@ -288,7 +289,7 @@
             <div id="sample12" class="sample">
                 <h3>12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     func = str => str;
     document.write(func("함수가 실행되었습니다.12"));
 }</code></pre>
@@ -304,7 +305,7 @@
             <div id="sample13" class="sample">
                 <h3>13. 내부 함수</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     function func(){
         function funA(){
             document.write("함수가 실행되었습니다.");
@@ -329,7 +330,7 @@
             <div id="sample14" class="sample">
                 <h3>14. 즉시 실행 함수</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     (function (){
         document.write("즉시실행함수가 실행되었습니다.");
     }());
@@ -350,7 +351,7 @@
             <div id="sample15" class="sample">
                 <h3>15. 파라미터 함수</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     function func(str = "함수가 실행되었습니다."){
         document.write(str);
     }
@@ -368,7 +369,7 @@
             <div id="sample16" class="sample">
                 <h3>16. 아규먼트 함수</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     function func(a, b){
         document.write(arguments[0]);
         document.write(arguments[1]);
@@ -400,7 +401,7 @@
 
             //01. 선언적 함수, 함수가 실행 될 때에는 선언이 되어야 한다.
             {
-                function func(){
+                function func() {
                     document.querySelector(".result1").innerHTML = "함수가 실행되었습니다.1 ";
                 }
                 func();
@@ -408,7 +409,7 @@
 
             //02. 익명 함수, 함수가 변수 안에 들어가서 이름이 안보임
             {
-                const func = function(){
+                const func = function () {
                     document.querySelector(".result2").innerHTML = "함수가 실행되었습니다.2 ";
                 }
                 func();
@@ -416,7 +417,7 @@
 
             //03. 매개변수 함수, 함수를 선언할 때 전달이 되는 변수
             {
-                function func(str){
+                function func(str) {
                     document.querySelector(".result3").innerHTML = str;
                 }
                 func("함수가 실행되었습니다.3");
@@ -424,7 +425,7 @@
 
             //04. 리턴값 함수, 함수의 결괏값을 리턴해주는 함수
             {
-                function func(){
+                function func() {
                     const str = "함수가 실행되었습니다.4 ";
                     return str;
                 }
@@ -451,7 +452,7 @@
                 };
                 func();
             }
-            
+
             //07. 화살표 함수 : 매개변수 함수
             {
                 func = (str) => {
@@ -486,17 +487,17 @@
             {
                 const number = [];
 
-                func = (str) =>{
+                func = (str) => {
                     return str;
                 }
-                
-                for(let i = 0; i<10; i++){
-                    console.log(func("화살표함수+for반복문"+i));
-                    number[i] = i+1;
+
+                for (let i = 0; i < 10; i++) {
+                    console.log(func("화살표함수+for반복문" + i));
+                    number[i] = i + 1;
                 }
 
-                
-                number.forEach(function(el){
+
+                number.forEach(function (el) {
                     console.log(el);
                 })
 
@@ -523,12 +524,13 @@
 
             //13. 내부 함수
             {
-                function func(){
-                    function funA(){
+                function func() {
+                    function funA() {
                         document.querySelector(".result13").innerHTML = "내부 함수 funA 실행<br>"
                     }
                     funA();
-                    function funB(){
+
+                    function funB() {
                         document.querySelector(".result13").innerHTML += "내부 함수 funB 실행"
                     }
                     funB();
@@ -537,39 +539,66 @@
             }
 
             //14. 즉시 실행 함수
+            // {
+            //     // function func(){
+            //     //     document.write("함수가 실행되었습니다.");
+            //     // }
+            //     // func();
+
+            //     (function (){
+            //         document.querySelector(".result14").innerHTML = "즉시 실행 함수 실행<br>"
+            //     }());
+
+            //     (() => {
+            //         document.querySelector(".result14").innerHTML += "즉시 실행 화살표 함수 실행"
+            //     })();
+            // }
+
+            //15. 파라미터 함수
+            // {
+            //     function func(str = "함수가 실행되었습니다."){
+            //         document.querySelector(".result15").innerHTML = str;
+            //     }
+            //     func();
+            // }
+
+            //16. 아규먼트 함수, 매개변수가 배열안에 있는 것처럼 사용함.
+            // {
+            //     function func(a, b){
+            //         document.querySelector(".result16").innerHTML = arguments[0];
+            //         document.querySelector(".result16").innerHTML += arguments[1];
+            //     }
+            //     func("0. 함수가 실행되었습니다.<br>", "1. 함수가 실행되었습니다.");
+            // }
+
+            //17. 
+
+            //재귀함수 : 자기 스스로를 호출
             {
-                // function func(){
-                //     document.write("함수가 실행되었습니다.");
+                // function func() {
+                //     document.write("함수가 실행되었습니다");
+                //     func();
                 // }
                 // func();
 
-                (function (){
-                    document.querySelector(".result14").innerHTML = "즉시 실행 함수 실행<br>"
-                }());
-
-                (() => {
-                    document.querySelector(".result14").innerHTML += "즉시 실행 화살표 함수 실행"
-                })();
-            }
-          
-            //15. 파라미터 함수
-            {
-                function func(str = "함수가 실행되었습니다."){
-                    document.querySelector(".result15").innerHTML = str;
+                function func(num){
+                    if(num <= 1){
+                        document.write("함수가 실행되었습니다");
+                    } else {
+                        document.write("함수가 실행되었습니다");
+                        func(num-1);
+                    
+                    }
                 }
-                func();
+                func(5);
             }
-
-            //16. 아규먼트 함수, 매개변수가 배열안에 있는 것처럼 사용함.
+            //재귀함수: 반복문
             {
-                function func(a, b){
-                    document.querySelector(".result16").innerHTML = arguments[0];
-                    document.querySelector(".result16").innerHTML += arguments[1];
-                }
-                func("0. 함수가 실행되었습니다.<br>", "1. 함수가 실행되었습니다.");
+                
             }
 
-            //17. 
+
+            //콜백함수 : 나
         </script>
     </main>
     <!-- script -->
@@ -578,4 +607,5 @@
 <!-- script -->
 <script src="assets/js/prism.js"></script>
 <script src="assets/js/script.js"></script>
+
 </html>
