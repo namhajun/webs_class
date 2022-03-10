@@ -264,17 +264,88 @@ Query OK, 0 rows affected (0.01 sec)</code></pre>
                     
                     <h3 id="intro6-2" class="page-header">필드 수정하기</h3>
                     <div class="bs-callout bs-callout-info">
-
+                        ALTER TABLE 테이블명 MODIFY 수정할 필드명
                     </div>
-                    <pre class="language-js"><code></code></pre>
+                    <pre class="language-js">
+                        <code>
+                            ALTER TABLE myMember2 MODIFY youName int(20);
+                    +------------+------------------+------+-----+---------+----------------+
+                    | Field      | Type             | Null | Key | Default | Extra          |
+                    +------------+------------------+------+-----+---------+----------------+
+                    | myMemberID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+                    +------------+------------------+------+-----+---------+----------------+
+                        </code></pre>
 
                     <h3 id="intro6-3" class="page-header">필드 삭제하기</h3>
                     <div class="bs-callout bs-callout-info">
+                        ALTER TABLE 테이블명 DROP 삭제할 필드명
+
 
                     </div>
-                    <pre class="language-js"><code></code></pre>
+                    <pre class="language-js">
+                        ALTER TABLE myMember2 DROP youName int(20);
+                        <code>
+                        +------------+------------------+------+-----+---------+----------------+
+                        | Field      | Type             | Null | Key | Default | Extra          |
+                        +------------+------------------+------+-----+---------+----------------+
+                        | myMemberID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+                        | youName    | int(20)          | YES  |     | NULL    |                |
+                        +------------+------------------+------+-----+---------+----------------+
+                        </code></pre>
 
-
+                </div>
+                <!-- //box -->
+                  <!-- box -->
+                  <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">테이블 수정</h2>
+                    <h3 id="intro7-1" class="page-header">데이터 입력하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                     INSERT INTO 테이블 이름 (필드명) VALUES(데이터)
+                    </div>
+                    <pre class="language-js">
+                        <code>
+                            INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES('showme3034@naver.com','webs','1234','00-04-05','25','0416');
+                            mysql> SELECT * FROM myMember;
++------------+----------------------+-------------+---------+----------+--------+---------+
+| myMemberID | youEmail             | youName     | youPass | youBirth | youAge | regTime |
++------------+----------------------+-------------+---------+----------+--------+---------+
+|          1 | web@naver.com        | webs        | 1234    | 00-04-05 | 33     |     327 |
+|          2 | jungsik321@naver.com | gentlemanjs | 1234    | 930209   | 31     |     327 |
+|          3 | showme3034@naver.com | webs        | 1234    | 00-04-05 | 25     |     416 |
+|          4 | illie@naver.com      | webs        | 1234    | 00-04-05 | 100    |     327 |
+|          5 | dnwls7738@naver.com  | dnwls7738   | 1234    | 960324   | 27     |     328 |
+|          6 | baby@naver.com       | baby        | 1234    | 00-04-05 | 33     |    6623 |
+|          7 | sbxjs6999@naver.com  | gwni        | 1234    | 00-04-05 | 26     |     327 |
+|          8 | web@naver.com        | webs        | 1234    | 00-04-05 | 33     |     327 |
+|          9 | placidcy@gmail.com   | placidcy    | 1234    | 00-03-12 | 33     |     327 |
+|         10 | web@naver.com        | webs        | 1234    | 00-01-02 | 22     |     327 |
++------------+----------------------+-------------+---------+----------+--------+---------+
+                        </code></pre>
+                    <h3 id="intro7-2" class="page-header">데이터 불러오기</h3>
+                    <div class="bs-callout bs-callout-info">
+                     
+                    </div>
+                    <pre class="language-js">
+                        <code>
+                          
+                        </code></pre>
+                    <h3 id="intro7-3" class="page-header">데이터 수정하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                     
+                    </div>
+                    <pre class="language-js">
+                        <code>
+                          
+                        </code></pre>
+                    <h3 id="intro7-4" class="page-header">데이터 삭제하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                     
+                    </div>
+                    <pre class="language-js">
+                        <code>
+                          
+                        </code></pre>
+                    
                 </div>
                 <!-- //box -->
                 
@@ -336,4 +407,21 @@ Query OK, 0 rows affected (0.01 sec)</code></pre>
     <script src="../assets/js/prism.js"></script>
 </body>
 
+
+CREATE TABLE myMember2 (
+    myMemberID int(10) unsigned auto_increment comment "회원의 고유번호",
+    youEmail varchar(40) NOT NULL comment "회원 아이디",
+    youName varchar(12) NOT NULL comment "회원 이름",
+    youPass varchar(20) NOT NULL comment "회원 비밀번호",
+    youBirth varchar(12) NOT NULL comment "회원 생일",
+    regTime int(11) NOT NULL comment "회원 가입 시간",
+    PRIMARY KEY (myMemberID)
+) charset=utf8 comment "회원 정보 테이블";
+
+ALTER TABLE myMember2 ADD youAddress varchar(40) NOT NULL comment "현재 주소" AFTER yourGender;
+ALTER TABLE myMember2 ADD youGender enum('m','w','x') default 'x' comment "남성은 m, 여성은 w" AFTER youBirth;
+ALTER TABLE myMember2 ADD youAddress varchar(40) NOT NULL comment "현재 주소"
+ AFTER yourGender; ALTER TABLE myMember2 DROP 
+ ALTER TABLE myMember2 ADD  youName varchar(12) NOT NULL comment "회원 이름";
+ ALTER TABLE myMember2 MODIFY youName int(20);
 </html>
