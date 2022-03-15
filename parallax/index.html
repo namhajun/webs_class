@@ -97,6 +97,39 @@
             position: absolute;
             left: 0; top: 0;
         }
+    
+        .section2_img1_site .move a {
+            position: absolute;
+            bottom: 300px; left: 50%;
+            width: 100px; height: 100px;
+            background: rgba(0,0,0,0.9);
+            transform: translateX(-50%);
+            display: inline-block;
+            border-radius: 50%;
+            line-height: 100px;
+            color: #fff;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .section2_img1_site .move a:hover {
+            background: rgba(124, 49, 49, 0.7);
+        }
+
+        .section2_img2 {
+            width: 70vw;
+            top: 80%;
+            z-index: 1100;
+        }
+        .section2_img3 {
+            width: 70vw;
+            top: 80%;
+            z-index: 1100;
+        }
+        .section2_img4 {
+            width: 70vw;
+            top: 80%;
+            z-index: 1100;
+        }
 
     </style>
 </head>
@@ -172,15 +205,51 @@
                 ><img src="img/esfd.jpg" alt="사이트01"><a href="#">VIEW</a></div>
             </div>
 
+            <div class="section2_img2 fixed"
+            data-13000 = "top: 200%; transform: translate(-50%, -50%) scale(1)"
+            data-14500 = "top: 60%; transform: translate(-50%, -50%) scale(1)"
+            data-16000 = "top: 60%; transform: translate(-50%, -50%) scale(1)"
+            data-17000 = "top: 60%; transform: translate(-50%, -50%) scale(0)"
+            >
             <img src="img/MacBook.png" alt="macbook">
             <div class="section2_img1_site">
                 <div class="move"
-                    data-12000 = "top: 0%;"
-                    data-13000 = "top: -350%;"
+                    data-14500 = "top: 0%;"
+                    data-15500 = "top: -350%;"
                 ><img src="img/esfd.jpg" alt="사이트01"><a href="#">VIEW</a></div>
             </div>
-            
         </div>
+
+        <div class="section2_img3 fixed"
+            data-16000 = "top: 200%; transform: translate(-50%, -50%) scale(1)"
+            data-17000 = "top: 60%; transform: translate(-50%, -50%) scale(1)"
+            data-18500 = "top: 60%; transform: translate(-50%, -50%) scale(1)"
+            data-20000 = "top: 60%; transform: translate(-50%, -50%) scale(0)"
+            >
+            <img src="img/MacBook.png" alt="macbook">
+            <div class="section2_img1_site">
+                <div class="move"
+                    data-17000 = "top: 0%;"
+                    data-18000 = "top: -350%;"
+                ><img src="img/esfd.jpg" alt="사이트01"><a href="#">VIEW</a></div>
+            </div>
+        </div>
+
+        <div class="section2_img4 fixed"
+            data-19000 = "top: 200%;"
+            data-20000 = "top: 60%;"
+            data-21500 = "top: 60%; transform: translate(-50%, -50%) scale(1)"
+            data-23000 = "top: 60%; transform: translate(-50%, -50%) scale(0)"
+            >
+            <img src="img/MacBook.png" alt="macbook">
+            <div class="section2_img1_site">
+                <div class="move"
+                    data-20000 = "top: 0%;"
+                    data-21000 = "top: -350%;"
+                ><img src="img/esfd.jpg" alt="사이트01"><a href="#">VIEW</a></div>
+            </div>
+        </div>
+    </section>
     
         </section><!-- //section2 -->
     <section id="section3"></section><!-- //section3 -->
