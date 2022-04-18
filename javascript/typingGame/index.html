@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins";
+        }
+        body {
+            background: #17A2B8;
+        }
+        .typing__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .typing__inner {
+            width: 60vw;
+            min-height: 40vh;
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            min-width: 900px;
+        }
+        .input__field {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            padding: 10px;
+        }
+        .typing__text {
+            border: 1px solid #C3C3C3;
+            border-radius: 10px;
+            padding: 30px;
+            min-height: 300px;
+            font-size: 22px;
+            font-weight: 300;
+            text-align: justify;
+            word-break: break-all;
+        }
+        .typing__text span {
+            position: relative;
+        }
+        .typing__text span.correct {
+            color: rgb(52, 179, 253);
+        }
+        .typing__text span.incorrect {
+            color: red;
+            background: #FFC0CB;
+            outline: 1px solid #fff;
+            border-radius: 4px;
+        }
+        .typing__text span.active {
+            
+        }
+        .typing__text span.active::before {
+            content: '';
+            position: absolute;
+            left: 0;bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: #17A2B8;
+            animation: blink 1s ease-in-out infinite;
+            opacity: 0;
+        }
+        @keyframes blink {
+            50% {opacity: 1;}
+        }
+        .typing__info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .typing__info button {
+            width: 210px;
+            background: #17A2B8;
+            color:#fff;
+            font-family: "Poppins";
+            border: 0;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 22px;
+            margin-left: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .typing__info ul {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+        .typing__info ul li {
+            width: 20%;
+            list-style: none;
+            display: flex;
+            font-size: 20px;
+            border-left: 1px solid #C3C3C3;
+            padding-left: 40px;
+        }
+        .typing__info ul li:first-child {
+            padding-left: 0;
+            border-left: 0;
+        }
+        .typing__info li p {
+            white-space: nowrap;
+        }
+        .typing__info li span {
+            padding: 0 10px;
+        }
+
+    </style>
+<body>
+    <div class="typing__wrap">
+        <input type="text" class="input__field">
+        <div class="typing__inner">
+        <div class="tiping__text">
+            <p></p>
+        </div>
+        <div class="tiping__info">
+            <ul>
+                <li class="time">
+                    <p>Time Left:</p>
+                    <span><b>60</b>s</span>
+                </li>
+                <li class="mistake">
+                    <p>Mistakes</p>
+                    <span>0</span>
+                </li>
+                <li class="wpm">
+                    <p>Mistakes</p>
+                    <span>0</span>
+                </li>
+                <li class="cpm">
+                    <p>Mistakes</p>
+                    <span>0</span>
+                </li>
+            </ul>
+        </div>
+        <button>Try Again</button>
+    </div>
+    </div>
+
+
+    <script>
+        const paragraphs = [
+            "1I'd like to inform you about our Sky Pass which offers various bonuses. We welcome our passengers to the most convenient frequent flyer program called 'SKYPASS'. Simply fill out the membership form and submit it to any local Korean AIr office or crewmember in the cabin. you can also apply online at www. koreanair.com",
+            "2To prepare for departure, please fasten your seat belt and return your seat and tray table to the upright position. We also ask you to turn off all mobile phones as they can interfere with the aircraft's navigational system.",
+            "3Due to different cabin conditions, drinking too much alcoholic beverages in the air affects your body more seriously than on the ground. And, please let me know what you want to buy before you take a rest and I'll get them for your later.",
+            "4It is Bibimbap. It consists of rice, vegetables, sesame oil and hot pepper paste mixed together. If you don't like spicy food, you can eat it without the hot paste. If you don't want your meal right now, please let me know when you want to be served.",
+            "5Each passenger entering the United States must complete these documents. All passengers including transit passengers must fill out the customs form. And, our in -flight magazine has more detailed information on the movie program. May i open the movie program page for you?",
+            "6Hwang, Lee-su & Lee, Je-Young. Correlation Analysis between the text variables and item difficulty in CSAT: Focusing on Syntactic Complexity.” Studies in English Language & Literature 46.1 (2020): 265-283. The purpose of this study was to investigate the syntactic text variables related to the item difficulties of CSAT through the indices in the Coh-metrix, the computational tool, using the 299 reading texts from the 2014 to 2018 CSAT and mock CSAT.",
+            "7 The 299 texts of CSAT and mock CSAT from The Korea Institute for Curriculum and Evaluation were made into corpora and the percentage of correct answers were obtained from EBSi website. These texts were analyzed by Coh-Metrix, a linguistic computational program, and then, the correlation analysis was conducted to find out what syntactic text variables have influence on the item difficulties. ",
+            "8 The results of this study are as follows. First, the more sentences with syntactic similarity in the passage, and the longer the distance between new words, the higher percentage of correct answers. Second, frequencies of negative expression was negatively correlated with the percentage of correct answers",
+            "9Although there are many variables having an effect on the item difficulty and the rate of the correct answer, the objective figures of the text variables offered by linguistic devices is expected to be useful in successful predicting the item difficulty of the reading part in CSAT. (Jeonju University)",
+            "10 The purpose of this study was to investigate the cohesion-related text factors that affected thecorrect answer rate of the English reading section in the Korean CSAT. To this end, reading passagesof the 2014-2018 CSAT and CSAT mock test were collected and analyzed in terms of cohesion. ",
+
+    ];
+        const typingText = document.querySelector(".typing__text p");
+        const inputField = document.querySelector(".input__field");
+        const typingMistake = document.querySelector(".mistake span");
+        const typingTime = document.querySelector(".time span b");
+        const wpm = document.querySelector(".wpm span ");
+        const cpm = document.querySelector(".cpm span ");
+     
+        
+        let charIndex = 0; 
+        let mistakes = 0;
+        let timer;
+        let Time
+        let maxTime = 60;
+        let timeLeft = maxTime;
+
+        function randomParagraph(){
+            // let randIndex = Math.floor(Math.random() * paragraphs.length);
+            paragraphs[randIndex].split("").forEach(span => {
+                let spanTag = `<span>${span}</span>`;
+                typingText.innerHTML += spanTag;
+            });
+            document.addEventListener("keydown", () => inputField.focus());
+            typingText.addEventListener("click", () => inputField.focus());
+        }
+      
+        //전체글자수
+        let wpm = Math.round((((charIndex - mistakes)/5) / (maxTime - timeLeft)) * 60);
+            wpm = wpm < 0 || !wpm || wpm == Infinity ? 0 : wpm;
+            typingWpm.innerText = wpm;
+            typingCpm.innerText = charIndex - mistakes;
+
+        function initTyping(){
+            const characters = typingText.querySelectorAll("span");
+            typingText = inputField.value.split("")[charIndex];
+
+            if(charIndex < charIndex)
+            timer = setInterval(initTimer,1000);
+
+           if(typedChar == null){
+               charIndex--;
+            if(characters[charIndex].classList.add("incorrect");
+        }else{
+            mistakes++;
+            chconsole.log("incorrect");
+        }
+        charIndex++;
+    }
+      charIndex;
+      characters.forEach(span => span.classList.remove("active"));
+      characters[charIndex].classList.add("active");
+
+     
+      randomParagraph();
+      inputField.addEventListener("input", initTyping);
+    </script>
+</body>
+</html>

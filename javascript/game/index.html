@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memoryGame</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #007BFF;
+        }
+        .wrap__card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .card__inner {
+            width: 700px; height: 700px;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 30px;
+        }
+        ul {
+            list-style: none;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            width: 100%; height: 100%;
+        }
+        .cards li {
+            width: calc(100% / 4 - 20px);
+            height: calc(100% / 4 - 20px);
+            /* border: 1px solid lightgrey; */
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        .cards li .view {
+            position: absolute;
+            background: rgb(128, 228, 206);
+            padding: 10%;
+            transition: transform 0.25s linear;
+           backface-visibility: hidden;
+           border-radius: 10px;
+           width: 100%;
+           height: 100%;
+           user-select: none;
+           pointer-events: none;
+
+        }
+        .cards li .view.front {
+            transform: rotateY(0deg)
+        }
+        .cards li .view.back {
+            transform: rotateY(-180deg)
+        }
+        .cards li.flip .view.front {
+            transform: rotateY(180deg)
+        }
+        .cards li.flip .view.back {
+            transform: rotateY(0deg)
+        }
+        .cards li.shake {
+            animation: shake 0.35s ease-in-out;
+        }
+        @keyframes shake {
+            0% {transform: translateX(0);}
+            20% {transform: translateX(-13px);}
+            40% {transform: translateX(13px);}
+            60% {transform: translateX(-8px);}
+            80% {transform: translateX(8px);}
+            100% {transform: translateX(0);}
+            
+        }
+        .card__sound {
+            position: absolute;
+            right: 20px;
+            top:20px;
+           
+        }
+        .card__sound span {
+            line-height: 40px;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+           color: #007bff;
+           text-align: center;
+           line-break: 40px;
+           border-radius: 50%;
+           cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap__card">
+        <div class="card__inner">
+            <div class="card">
+
+            </div>
+        <div class="card__sound">
+
+            <ul class="cards">
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer1.png" alt="코코넛">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer2.png" alt="개">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer2.png" alt="개">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer3.png" alt="물고기">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer5.png" alt="아이스크림">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer4.png" alt="슬리퍼">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer3.png" alt="물고기">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer5.png" alt="아이스크림">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer7.png" alt="사진">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer1.png" alt="코코넛">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer8.png" alt="여행">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer8.png" alt="여행">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer7.png" alt="사진">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer9.png" alt="수박">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer9.png" alt="수박">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/sumer6.png" alt="앵그리">
+                    </div>
+                    <div class="view back">
+                        <img src="img/sumer4.png" alt="슬리퍼">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        //01. HTML/CSS 디자인 구성
+        //02.클릭한 카드 뒤집기
+        //03. 두개의 카드 뒤집기 확인하기(첫번째,두번째)
+        //04클릭한카드 두개의 이미지확인
+        //05 두개의 이미지 비교하기
+        //06 틀린 이미지 애니메이션 효과 주기
+        //07 빨릭 클릭하면 버그 발생
+        const cards = document.querySelectorAll(".cards li");
+        console.log(cards)
+        const cardSound = document.querySelector('.card__sound span');
+        const cardSong = document.querySelector('#song');
+        const cardstart = document.querySelector('#cardstart');
+
+        let cardOne, cardTwo;
+        let disableDeck = false;
+
+        let sound= [
+            "audio/match2.mp3",
+            "audio/match.mp3",
+            "audio/up.mp3",
+        ]
+        let 
+
+        //카드 섞기
+        function suffledCard(){
+            cardOne,cardTwo="";
+            disableDeck = false;
+            matchedCard = 0;
+
+            let arr = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
+            let result = arr.sort(() => Math.random() > 0.5 ? 1: -1);
+
+            console.log(result)
+          
+            cards.forEach((card,index) => {
+                card.classList.add("filp");
+
+                setTimeout(()=>
+                card.classList.remove("flip");
+            },3000);
+                let imgTag= card.querySelector("back img");
+                imgTag.src=`img/img-${arr[index]}.png`;
+
+            })
+        }
+
+
+
+
+        //뮤직재생
+        cardSound.addEventListener("click",function(){
+            this.classList.toggle("is-playing")
+
+            if(cardSound.classList.contanis("is-playing")){
+                cardSound.innerText = "volume_up"
+                cardSong.play();
+            
+            }else{
+                cardSound.innerText = "volume_off"
+                cardSong.pause();
+            }
+        });
+
+        //시작 버튼 
+
+        function flipCard(e){
+            let clickedCard = e.target;
+
+            if(clickedCard !== cardOne && !disableDeck){
+                clickedCard.classList.add("filp");
+
+            clickedCard.classList.add("flip");
+            if(!cardOne){
+                return cardOne = clickedCard;
+            }
+            cardTwo = clickedCard;
+            disableDeck = true;
+             
+            let cardOneImg = cardOne.querySelector(".back img").src;
+            let cardTwoImg = cardTwo.querySelector(".back img").src;
+
+            // console.log(cardOne, cardTwo);
+            // console.log(cardOneImg, cardTwoImg);
+
+            matchCards(cardOneImg, cardTwoImg);
+        }
+
+    }
+    //05. 두개의 이미지 비교하기
+        function matchCards(img1, img2){
+            if(img1 == img2){
+                matchedCard++;
+
+                if(matchCard == 8){
+                    setTimeout(() => {
+
+                    })
+                }
+                cardOne.removeEventListener("click", flipCard);
+                cardTwo.removeEventListener("click", flipCard);
+                cardOne = cardTwo ="";
+                disableDeck = false;
+                soundMatch.play();
+            } else {
+                setTimeout(() => {
+                    cardOne.classList.add("shake");
+                    cardTwo.classList.add("shake");
+                },400);
+                setTimeout(() => {
+                    cardOne.classList.remove("flip", "shake");
+                    cardTwo.classList.remove("flip", "shake");
+                    cardOne = cardTwo ="";
+                    disableDeck = false;
+                },1200);
+
+                soundNoMatch.play();
+            }
+        }
+        cards.forEach(card => {
+            card.addEventListener("click", flipCard);
+        })
+
+        //시작버튼
+        cardstart.addEventListener
+      
+    </script>
+
+</body>
+</html>

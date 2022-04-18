@@ -61,7 +61,7 @@
     </style>
 </head>
 
-<body>
+<body class="img06">
     <!-- main -->
     <main>
         <section id="mouseType03">
@@ -149,30 +149,26 @@
     <script src="js/custom.js"></script>
     <script src="js/gsap.min.js"></script>
     <script>
-        // highlight();
-        // modal();
-        // tabMenu();
-        // const circle1 = document.querySelector(".cursor").clientWidth; //190:border 빠진 상태
-        // const circle2 = document.querySelector(".cursor").offsetWidth; //200:border 포함 상태
-        const circle3 = document.querySelector(".cursor").getBoundingClientRect(); //botton, height, left, right, top, width, x, y
+     // highlight();
+    // modal();
+    // tabMenu();
 
-        // const circle3 = {
-        //     bottom : 0,
-        //     height : 200,
-        //     left: 0,
-        //     width: 200
-        // }
+    // const circle1 = document.querySelector(".cursor").clientWidth; //190 : border 빠진 상태
+    // const circle2 = document.querySelector(".cursor").offsetWidth; //200 : border 포함 상태
+    const circle = document.querySelector(".cursor").getBoundingClientRect(); // bottom. height, left, right, top, width, x, y
 
-        function follow(e) {
 
-            gsap.to(".cursor", {duration: .3, left: e.pageX - circle.width/2, top: e.pageY - circle.height/2})
 
-            //출력용
-            document.querySelector(".pageX").innerText = e.pageX;
-            document.querySelector(".pageY").innerText = e.pageY;
-        }
+function follow(e){
+    
+    gsap.to(".cursor", {duration: .3, left: e.pageX - circle.width/2, top: e.pageY - circle.height/2});
+            
+    //출력
+    document.querySelector(".pageX").innerText = e.pageX;
+    document.querySelector(".pageY").innerText = e.pageY;
+}
 
-        window.addEventListener("mousemove", follow)
+window.addEventListener("mousemove", follow);
     </script>
 </body>
 

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이펙트</title>
+    <link rel="stylesheet" href="css/nexon.css">
+    <link rel="stylesheet" href="css/dracula.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        body::before {
+            background: rgba(5, 36, 70, 0.57)
+        }
+        .mouse__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            cursor: none;
+        }
+
+        :root {
+        --white-color: rgb(230, 230, 230);
+        --black-color: rgb(20, 20, 20);
+        --primary-color: rgb(29, 30, 34);
+
+        --deg-1: 25deg;
+        --skew-1: var(--deg-1);
+        --skew-inverse-1: calc(-1 * var(--deg-1) );
+        }
+
+        
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="info">
+        <div class="title">
+            <h1><a href="mouseEffect.html">JavaScript Mouse Effect07</a></h1>
+            <p>마우스 이펙트 -</p>
+        </div>
+        <div class="number">
+            <ul>
+                <li><a href="mouseEffect01.html">1</a></li>
+                <li><a href="mouseEffect02.html">2</a></li>
+                <li><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li><a href="mouseEffect05.html">5</a></li>
+                <li><a href="mouseEffect06.html">6</a></li>
+                <li ><a href="mouseEffect07.html">7</a></li>
+                <li class="active"><a href="mouseEffect08.html">8</a></li>
+            </ul>
+        </div>
+        <div class="source">
+    <!-- main -->
+    <main>
+        <div class="mouse__wrap">
+            <div class="content-text">
+              <div class="bg-fix--white">
+                <div class="first__name">
+                  <div class="text__name">You're the person who needs it the most in the world.</div>
+                </div>
+              </div>
+              <div class="bg-fix--black">
+                <div class="second__name">
+                  <div class="text__name">You're the person who needs it the most in the world.</div>
+                </div>
+              </div>
+          
+              <div class="bg-fix--white">
+                <div class="first__name">
+                  <div class="text__name">You're the person who needs it the most in the world.</div>
+                </div>
+              </div>
+              <div class="bg-fix--black">
+                <div class="second__name">
+                  <div class="text__name">You're the person who needs it the most in the world.</div>
+                </div>
+              </div>
+          
+              <div class="bg-fix--white">
+                <div class="first__name">
+                  <div class="text__name">You're the person who needs it the most in the world.</div>
+                </div>
+              </div>
+              <div class="bg-fix--black">
+                <div class="second__name">
+                  <div class="text__name">You're the person who needs it the most in the world.</div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-fix--white">
+                <div class="first__name">
+                  <div class="text__name">당신은 이세상에서 가장 필요한 사람이에요</div>
+                </div>
+              </div>
+              <div class="bg-fix--black">
+                <div class="second__name">
+                  <div class="text__name">당신은 이세상에서 가장 필요한 사람이에요</div>
+                </div>
+              </div>
+          
+              <div class="bg-fix--white">
+                <div class="first__name">
+                  <div class="text__name">당신은 이세상에서 가장 필요한 사람이에요</div>
+                </div>
+              </div>
+              <div class="bg-fix--black">
+                <div class="second__name">
+                  <div class="text__name">당신은 이세상에서 가장 필요한 사람이에요</div>
+                </div>
+              </div>
+            </div>
+    
+          
+    </main>
+
+    <!-- //main -->
+    
+
+    <!-- info -->
+   
+           
+           
+    <!-- //info -->
+
+    <!-- script -->
+    <script src="/javascript/effect/js/highlight.min.js"></script>
+    <script src="/javascript/effect/js/custom.js"></script>
+    <script src="/javascript/effect/js/gsap.min.js"></script>
+    <script>
+      
+      const fistText = document.querySelector('.first__name .text__name')
+
+const onMouseMove = ({clientX}) => {
+  const x = clientX - innerWidth / 6
+  gsap.to('.first__name .text__name, .second__name .text__name', 1, {
+    x: x
+  })
+}
+
+window.addEventListener('mousemove', onMouseMove)
+
+              
+    </script>
+</body>
+
+</html>
